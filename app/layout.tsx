@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Ovation: Explore and Earn NFTs with Personalized Portfolios',
@@ -24,13 +24,18 @@ export const metadata: Metadata = {
     images: ['/twitter-card.jpg'], // Add the path to your Twitter card image
   },
   icons: { shortcut: ['/favicon.ico'] },
-  keywords: 'nft marketplace, digital collectibles, personalized portfolios, explore nfts, earn nfts',
-};
+  keywords:
+    'nft marketplace, digital collectibles, personalized portfolios, explore nfts, earn nfts',
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
-  );
+  )
 }
