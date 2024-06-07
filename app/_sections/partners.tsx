@@ -1,0 +1,30 @@
+/* eslint-disable @next/next/no-img-element */
+export default function Partners() {
+  return (
+    <div className="container flex flex-col items-center max-w-5xl w-full">
+      <p className="text-sm font-semibold text-center">On your screen via</p>
+      <div className="flex items-center justify-between gap-5 my-7 h-[60px] w-full">
+        <img
+          src={'assets/images/partners/1.png'}
+          className="h-full"
+          alt="fox"
+        />
+        <img
+          src={'assets/images/partners/2.png'}
+          className="h-full"
+          alt="digital journal"
+        />
+        <img
+          src={'assets/images/partners/3.png'}
+          className="h-full"
+          alt="market watch"
+        />
+        <img
+          src={'assets/images/partners/4.png'}
+          className="h-full"
+          alt="usa today"
+        />
+      </div>
+    </div>
+  )
+}
