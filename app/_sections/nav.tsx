@@ -1,13 +1,13 @@
 'use client'
 import { useState } from 'react'
-import { ArrowRightIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
+import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 export function Header({ navLinks = links }: HeaderProps) {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-[#00000033] bg-background">
-      <nav className="container mx-auto  flex w-full items-center justify-between bg-background px-6 py-4">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-[#FFFFFF33] bg-background">
+      <nav className="container mx-auto  flex w-full items-center justify-between bg-background px-4 md:px-6 py-6">
         <a href="/">
           <Logo />
         </a>
@@ -19,7 +19,15 @@ export function Header({ navLinks = links }: HeaderProps) {
 }
 
 function Logo() {
-  return <Image src="/assets/logo.png" width={75} height={50} alt="logo" />
+  return (
+    <Image
+      src="/assets/images/logo/logo.png"
+      width={200}
+      height={40}
+      alt="logo"
+      className="-ml-[15%] sm:ml-0"
+    />
+  )
 }
 const links: NavLink[] = [
   {
@@ -39,26 +47,25 @@ const links: NavLink[] = [
 function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
   const [mobileNavigationOpened, setMobileNavigationOpened] = useState(false)
 
-  const navClassName = ` text-base bg-background space-x-2
+  const navClassName = ` text-lg bg-background text-primary-foreground space-x-2
     ${
       mobile
-        ? `transition transform -right-2/3 fixed top-0 z-20 py-4 pb-7 w-2/3 overflow-y-auto py-4 sm:hidden ${
-            mobileNavigationOpened ? '-translate-x-full shadow-2xl' : ''
+        ? `transition transform -right-full fixed top-[90px] z-20 py-4 pb-7 w-full overflow-y-auto sm:hidden ${
+            mobileNavigationOpened ? '-translate-x-full' : ''
           }`
         : 'hidden sm:flex'
     }
   `
+
   const navListClassName = `
     flex
-    ${mobile ? 'flex-col space-y-2 w-full ' : 'items-center gap-12'}
+    ${mobile ? 'flex-col space-y-2 w-full ' : 'items-center gap-5'}
   `
   const navListItemClassName = `
-    group relative hover:scale-105 transform transition-transform
-    ${mobile ? 'w-full overflow-x-visible text-right' : ''}
+    group relative rounded-full  px-5 py-2 hover:shadow-[0px_4px_20px_0px_#AFC76B4D] text-lg text-primary-foreground transform transition-transform
+    ${mobile ? 'w-full overflow-x-visible' : ''}
   `
-  const navListLinkClassName = mobile
-    ? 'mx-4 text- dark:text-white rounded-[20px]'
-    : ''
+  const navListLinkClassName = mobile ? 'mx-2 rounded-[20px]' : ''
 
   const closeMobileNavigation = () => setMobileNavigationOpened(false)
 
@@ -67,34 +74,24 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
       {mobile && (
         <div className="flex gap-2 md:hidden ">
           <Button
-            className="block text-slate-900  dark:text-slate-50 sm:hidden"
+            className="block bg-transparent sm:hidden"
             onClick={() => setMobileNavigationOpened(true)}
             title="Open navigation menu"
           >
-            <HamburgerMenuIcon />
+            <HamburgerMenuIcon height={'15px'} width={'20px'} />
           </Button>
         </div>
       )}
 
       {mobile && mobileNavigationOpened && (
         <Button
-          className="fixed right-0 top-0 z-10 h-full w-full opacity-70 dark:opacity-90 sm:hidden"
+          className="fixed right-0 top-0 z-10 h-full w-full opacity-0 sm:hidden"
           onClick={closeMobileNavigation}
         />
       )}
 
       <nav className={navClassName}>
         <ul className={navListClassName}>
-          {mobile && (
-            <li className="text-right">
-              <Button
-                className="px-6 py-2  text-slate-900 dark:text-slate-50"
-                onClick={closeMobileNavigation}
-              >
-                <ArrowRightIcon />
-              </Button>
-            </li>
-          )}
           {navLinks.map(({ title, href, button }) => (
             <li
               className={navListItemClassName}
@@ -128,7 +125,7 @@ function NavLink({ children, className, mobile, href }: NavLinkProps) {
   return (
     <a
       className={`
-        block whitespace-nowrap px-2 py-2 text-base no-underline transition 
+        block whitespace-nowrap  text-lg text-primary-foreground no-underline transition 
         ${mobile && ''}
         ${className}
       `}
