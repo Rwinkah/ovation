@@ -6,8 +6,8 @@ import Image from 'next/image'
 
 export function Header({ navLinks = links }: HeaderProps) {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-[#FFFFFF33] bg-background">
-      <nav className="container mx-auto  flex w-full items-center justify-between bg-background px-4 md:px-6 py-6">
+    <header className="relative border-b border-[#FFFFFF33] bg-transparent">
+      <nav className="container mx-auto  flex w-full items-center justify-between  px-4 md:px-6 py-6">
         <a href="/">
           <Logo />
         </a>
@@ -47,11 +47,13 @@ const links: NavLink[] = [
 function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
   const [mobileNavigationOpened, setMobileNavigationOpened] = useState(false)
 
-  const navClassName = ` text-lg bg-background text-primary-foreground space-x-2
+  const navClassName = ` text-lg text-primary-foreground space-x-2
     ${
       mobile
-        ? `transition transform -right-full fixed top-[90px] z-20 py-4 pb-7 w-full overflow-y-auto sm:hidden ${
-            mobileNavigationOpened ? '-translate-x-full' : ''
+        ? `transition transform -right-full absolute top-[90px] z-20 py-4 pb-7 w-full overflow-y-auto sm:hidden backdrop-filter backdrop-blur-md ${
+            mobileNavigationOpened
+              ? '-translate-x-full visible opacity-100'
+              : 'hidden opacity-0'
           }`
         : 'hidden sm:flex'
     }

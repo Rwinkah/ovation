@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { Header } from './_sections/nav'
 import Partners from './_sections/partners'
+import Features from './_sections/features'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           />
         </div>
         <Partners />
+        <Features />
       </main>
     </>
   )
