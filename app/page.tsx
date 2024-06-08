@@ -4,6 +4,7 @@ import { Header } from './_sections/nav'
 import Partners from './_sections/partners'
 import Features from './_sections/features'
 import Hero from './_sections/hero'
+import Footer from './_sections/footer'
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
 
         <Partners />
         <Features />
+        <Footer />
       </main>
     </>
   )
