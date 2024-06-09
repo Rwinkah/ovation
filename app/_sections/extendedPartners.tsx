@@ -81,12 +81,12 @@ export default function Extendedpartners() {
       </p>
 
       <div className="grid grid-cols-2 gap-6 w-[70%] mt-20 extended-partners-det-ctn">
-        <p className="text-white font-bold text-3xl font-heading">
+        <p className="text-white font-bold text-3xl font-heading section-header">
           Over 100 launch partners have already joined us on our journey
         </p>
 
         <div className="flex flex-col gap-9">
-          <p className="text-2xl font-semibold tracking-[-0.87px]">
+          <p className="text-2xl font-semibold tracking-[-0.87px] section-description">
             Are you ready to build your community on Ovation before anyone
             else?, Are you ready to build your community on Ovation before
             anyone else? Are you ready to build your community on Ovation before

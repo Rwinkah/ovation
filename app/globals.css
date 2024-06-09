@@ -118,6 +118,10 @@ body {
     @apply grid-cols-3;
   }
 
+  .video-ctn {
+    @apply p-8 w-[85%];
+  }
+
   footer {
     @apply flex-col gap-14;
   }
@@ -204,6 +208,18 @@ body {
   .more-section {
     @apply w-[80%] grid-cols-1;
   }
+
+  .video-ctn {
+    @apply items-start p-5;
+  }
+
+  .video-ctn p {
+    @apply text-left w-full;
+  }
+
+  .video-ctn div {
+    @apply w-full;
+  }
 }
 
 @media screen and (max-width: 478px) {
@@ -217,5 +233,17 @@ body {
 
   .more-section {
     @apply w-[90%];
+  }
+
+  .video-ctn {
+    @apply w-[90%];
+  }
+
+  .section-header {
+    @apply text-2xl;
+  }
+
+  .section-description {
+    @apply text-base;
   }
 }

@@ -7,6 +7,8 @@ import Hero from './_sections/hero'
 import Footer from './_sections/footer'
 import Extendedpartners from './_sections/extendedPartners'
 import MoreFromOvation from './_sections/more'
+import InfoCards from './_sections/infoCards'
+import HowItWorks from './_sections/howItWorks'
 
 export default function Home() {
   return (
@@ -28,7 +30,9 @@ export default function Home() {
 
         <Partners />
         <Features />
+        <InfoCards />
         <Extendedpartners />
+        <HowItWorks />
         <MoreFromOvation />
         <Footer />
       </main>
