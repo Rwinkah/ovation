@@ -19,8 +19,17 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        top: '0px -75px 15px 30px rgba(189, 255, 0, 0.09)',
+      },
       fontFamily: {
         heading: ['Istok Web', 'sans-serif'],
+      },
+      backgroundImage: {
+        'vector-one': "url('/assets/images/vector.png')",
+        'custom-gradient':
+          'linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50.88%, rgba(255, 255, 255, 0.1) 100%)',
+        'card-gradient': 'linear-gradient(180deg, #2B301B 0%, #121215 100%)',
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -56,6 +65,8 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        button: '#CFF073',
+        buttonTextColor: '#0B0A10',
       },
       borderRadius: {
         lg: 'var(--radius)',
