@@ -5,6 +5,8 @@ import Partners from './_sections/partners'
 import Features from './_sections/features'
 import Hero from './_sections/hero'
 import Footer from './_sections/footer'
+import Extendedpartners from './_sections/extendedPartners'
+import MoreFromOvation from './_sections/more'
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
 
         <Partners />
         <Features />
+        <Extendedpartners />
+        <MoreFromOvation />
         <Footer />
       </main>
     </>

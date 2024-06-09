@@ -64,6 +64,8 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        button: '#CFF073',
+        buttonTextColor: '#0B0A10',
       },
       borderRadius: {
         lg: 'var(--radius)',

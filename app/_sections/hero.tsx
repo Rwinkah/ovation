@@ -4,25 +4,25 @@ export default function Hero() {
       <img
         src="assets/images/hero/hero1.png"
         alt=""
-        className="absolute left-60 top-24"
+        className="absolute left-60 top-24 hero-img-top-left"
       />
 
       <img
         src="assets/images/hero/hero2.png"
         alt=""
-        className="absolute right-60 top-24"
+        className="absolute right-60 top-24 hero-img-top-right"
       />
 
       <img
         src="assets/images/hero/hero3.png"
         alt=""
-        className="absolute left-40 bottom-[190px]"
+        className="absolute left-40 bottom-[190px] hero-img-bottom-left"
       />
 
       <img
         src="assets/images/hero/hero4.png"
         alt=""
-        className="absolute right-40 bottom-[190px]"
+        className="absolute right-40 bottom-[190px] hero-img-bottom-right"
       />
 
       <p className="text-base text-[#C1FE17] py-[6.5px] px-4 rounded-[20px] border border-[#828774] flex items-center gap-3 bg-custom-gradient mb-10">
@@ -34,11 +34,11 @@ export default function Hero() {
         THE LEADING NFT SOCIAL PLATFORM
       </p>
 
-      <p className="text-primary-foreground font-heading text-5xl text-center w-[60%] mb-3 leading-[60px]">
+      <p className="text-primary-foreground font-heading text-5xl text-center w-[60%] mb-3 leading-[60px] hero-header">
         Explore and Earn NFTs with Personalised Portfolios
       </p>
 
-      <p className="text-[22px] leading-9 w-[40%] text-center mb-10">
+      <p className="text-[22px] leading-9 w-[40%] text-center mb-10 hero-description">
         The only web3 social platform offering intelligent profiles,
         personalised portfolios, and a blockchain-enabled UI for a unified NFT
         experience.

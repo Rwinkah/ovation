@@ -65,3 +65,157 @@ body {
 * {
   scroll-behavior: smooth;
 }
+
+@media screen and (max-width: 1024px) {
+  .hero-img-top-left,
+  .hero-img-top-right {
+    @apply top-5;
+  }
+
+  .hero-img-top-left {
+    @apply left-[275px];
+  }
+
+  .hero-img-top-right {
+    @apply right-[275px];
+  }
+
+  .hero-img-bottom-left {
+    @apply top-14 left-[112px];
+  }
+
+  .hero-img-bottom-right {
+    @apply top-14 right-[112px];
+  }
+
+  .hero-header {
+    @apply w-[80%];
+  }
+
+  .hero-description {
+    @apply w-[75%];
+  }
+
+  .extended-partners-det-ctn {
+    @apply w-[90%];
+  }
+
+  .extended-partners-partners-ctn {
+    @apply w-[90%];
+  }
+
+  .more-section {
+    @apply w-[90%];
+  }
+
+  .footer-right {
+    @apply w-[65%];
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .extended-partners-partners-ctn {
+    @apply grid-cols-3;
+  }
+
+  footer {
+    @apply flex-col gap-14;
+  }
+
+  .footer-left {
+    @apply gap-1;
+  }
+
+  .footer-right {
+    @apply flex-col;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .extended-partners-det-ctn {
+    @apply flex flex-col;
+  }
+
+  .more-section {
+    @apply grid-cols-2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-img-top-left {
+    @apply left-60;
+  }
+
+  .hero-img-top-right {
+    @apply right-60;
+  }
+
+  .hero-img-bottom-left {
+    @apply top-24 left-[112px];
+  }
+
+  .hero-img-bottom-right {
+    @apply top-24 right-[112px];
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .hero-img-top-left {
+    @apply left-32 w-10;
+  }
+
+  .hero-img-top-right {
+    @apply right-32 w-10;
+  }
+
+  .hero-img-bottom-left {
+    @apply top-24 left-10 w-10;
+  }
+
+  .hero-img-bottom-right {
+    @apply top-24 right-10 w-10;
+  }
+
+  .hero-header {
+    @apply w-[95%];
+  }
+
+  .hero-description,
+  .section-header {
+    @apply w-[90%];
+  }
+
+  .extended-partners-partners-ctn {
+    @apply grid-cols-2 gap-x-10;
+  }
+
+  .extended-partners-partners-ctn img {
+    @apply w-[160px] h-[160px];
+  }
+
+  .partners-name {
+    @apply text-base;
+  }
+
+  .partners-position {
+    @apply text-[10px];
+  }
+
+  .more-section {
+    @apply w-[80%] grid-cols-1;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .hero-img-bottom-left {
+    @apply top-16;
+  }
+
+  .hero-img-bottom-right {
+    @apply top-16;
+  }
+
+  .more-section {
+    @apply w-[90%];
+  }
+}
