@@ -66,6 +66,17 @@ body {
   scroll-behavior: smooth;
 }
 
+/*.info-card {
+  border: 1px solid;
+  border-image: linear-gradient(
+      180deg,
+      #353538 0%,
+      rgba(179, 179, 179, 0.6) 47.5%,
+      #353538 100%
+    )
+    1;
+}*/
+
 @media screen and (max-width: 1024px) {
   .hero-img-top-left,
   .hero-img-top-right {
@@ -164,6 +175,10 @@ body {
 }
 
 @media screen and (max-width: 540px) {
+  .promotion {
+    @apply hidden;
+  }
+
   .hero-img-top-left {
     @apply left-32 w-10;
   }
@@ -233,6 +248,10 @@ body {
 
   .more-section {
     @apply w-[90%];
+  }
+
+  .more-section img {
+    @apply h-[270px];
   }
 
   .video-ctn {
