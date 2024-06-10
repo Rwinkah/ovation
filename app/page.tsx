@@ -9,10 +9,12 @@ import Extendedpartners from './_sections/extendedPartners'
 import MoreFromOvation from './_sections/more'
 import InfoCards from './_sections/infoCards'
 import HowItWorks from './_sections/howItWorks'
+import Promotion from './_sections/promotion'
 
 export default function Home() {
   return (
     <>
+      <Promotion />
       <Header />
 
       <main className="flex flex-col items-center justify-between pt-24">

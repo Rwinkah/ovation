@@ -40,12 +40,12 @@ export default function MoreFromOvation() {
 
       {moreCards.map((card, index) => (
         <div
-          className="p-[10px] flex flex-col rounded-[20px] bg-[#1C1D19]"
+          className="p-[10px] flex flex-col rounded-[20px] bg-[#1C1D19] more-card"
           key={index}
         >
           <img
             className="rounded-lg p-[8px]"
-            src="assets/images/more.png"
+            src="assets/images/more-3x.png"
             alt=""
           />
 

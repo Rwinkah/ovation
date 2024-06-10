@@ -1,16 +1,19 @@
 export default function Hero() {
+  //closest bg-gradient
+  //bg-gradient-to-t from-green-400 to-cyan-900
+
   return (
     <section className="flex flex-col items-center justify-center w-fit h-fit bg-vector-one bg-top bg-contain bg-no-repeat relative py-32">
       <img
         src="assets/images/hero/hero1.png"
         alt=""
-        className="absolute left-60 top-24 hero-img-top-left"
+        className="absolute hero-img-top-left left-72 top-[70px]"
       />
 
       <img
         src="assets/images/hero/hero2.png"
         alt=""
-        className="absolute right-60 top-24 hero-img-top-right"
+        className="absolute right-72 top-[72px] hero-img-top-right"
       />
 
       <img

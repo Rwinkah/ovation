@@ -107,10 +107,10 @@ export default function Extendedpartners() {
               src={partner.imgSrc}
               alt="Partner Display Picture"
             />
-            <p className="text-white text-xl font-medium partners-name">
+            <p className="text-white text-xl font-medium text-center partners-name">
               {partner.name}
             </p>
-            <p className="text-sm">{partner.position}</p>
+            <p className="text-sm text-center">{partner.position}</p>
           </div>
         ))}
       </div>

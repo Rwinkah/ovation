@@ -4,25 +4,25 @@ export default function InfoCards() {
       header: 'Social Media',
       description:
         'Users will be enabled to have more meaningful interactions, the ability to create unique posts, recognise post contributions, and filtering.',
-      imgSrc: 'assets/images/info/info1.png',
+      imgSrc: 'assets/images/info/info1-3x.png',
     },
     {
       header: 'Personalised Portfolio',
       description:
         'Through blockchain interoperability, and an NFT centric UI/UX, users have one pane into their NFT portfolio, notoriety, and social notoriety.',
-      imgSrc: 'assets/images/info/info2.png',
+      imgSrc: 'assets/images/info/info2-3x.png',
     },
     {
       header: 'Earn $OVA',
       description:
         'Earn $OVA tokens in a variety of ways: Sharing NFTs, Earning badges, Drawing engagement, Interacting on the platform, Owning a Genesis NFT',
-      imgSrc: 'assets/images/info/info3.png',
+      imgSrc: 'assets/images/info/info3-3x.png',
     },
     {
       header: 'Discover collections',
       description:
         'Discover NFT collections by genre, ranking, trending, and other metrics. Users are recommended collections based upon their interests and NFT portfolio.',
-      imgSrc: 'assets/images/info/info4.png',
+      imgSrc: 'assets/images/info/info4-3x.png',
     },
   ]
 
@@ -30,11 +30,11 @@ export default function InfoCards() {
     <section className="w-[70%] grid grid-cols-2 gap-x-[20px] gap-y-12 py-20 more-section">
       {moreCards.map((card, index) => (
         <div
-          className="p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient border h-fit py-10"
+          className="p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient border h-fit py-10 info-card"
           key={index}
         >
           <img
-            className="rounded-lg p-[8px] w-[320px] h-[250px]"
+            className="rounded-lg p-[8px] w-auto h-[295px]"
             src={card.imgSrc}
             alt=""
           />
