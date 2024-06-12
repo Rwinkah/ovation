@@ -210,7 +210,7 @@ body {
 
 @media screen and (max-width: 540px) {
   .promotion {
-    @apply flex justify-start px-5;
+    @apply justify-start px-5;
   }
 
   .promotion p {
