@@ -75,12 +75,12 @@ export default function Extendedpartners() {
   ]
 
   return (
-    <section className="flex flex-col w-full items-center justify-center h-fit py-20">
+    <section className="container flex flex-col w-full items-center justify-center h-fit py-20">
       <p className="font-heading text-5xl font-medium text-center text-white section-header">
         JOIN US AS A PARTNER
       </p>
 
-      <div className="grid grid-cols-2 gap-6 w-[70%] mt-20 extended-partners-det-ctn">
+      <div className="grid grid-cols-2 gap-6 w-[95%] mt-20 extended-partners-det-ctn">
         <p className="text-white font-bold text-3xl font-heading section-header">
           Over 100 launch partners have already joined us on our journey
         </p>
@@ -99,7 +99,7 @@ export default function Extendedpartners() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-x-10 gap-y-[20px] w-[75%] mt-20 extended-partners-partners-ctn">
+      <div className="grid grid-cols-4 gap-x-10 gap-y-[20px] w-[95%] mt-20 extended-partners-partners-ctn">
         {extendedPartners.map((partner, index) => (
           <div className="flex flex-col items-center" key={index}>
             <img

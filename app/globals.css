@@ -178,7 +178,7 @@ body {
   }
 
   .info-card {
-    @apply grid-cols-2;
+    @apply grid-cols-2 w-full;
   }
 
   .extended-partners-det-ctn {
@@ -210,7 +210,15 @@ body {
 
 @media screen and (max-width: 540px) {
   .promotion {
-    @apply hidden;
+    @apply flex justify-start px-5;
+  }
+
+  .promotion p {
+    @apply text-base;
+  }
+
+  .promotion svg {
+    @apply w-4 h-4;
   }
 
   .hero-img-top-left {
@@ -273,6 +281,18 @@ body {
 }
 
 @media screen and (max-width: 478px) {
+  .promotion {
+    @apply gap-1;
+  }
+
+  .promotion img {
+    @apply w-4 h-4;
+  }
+
+  .promotion p {
+    @apply text-sm gap-1;
+  }
+
   .hero-img-top-left {
     @apply top-0 left-[120px];
   }
@@ -290,8 +310,9 @@ body {
   }
 
   .more-section,
-  .info-card {
-    @apply w-[90%];
+  .info-card,
+  .extended-partners-partners-ctn {
+    @apply w-full;
   }
 
   .more-section img {

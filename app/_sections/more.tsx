@@ -23,7 +23,7 @@ export default function MoreFromOvation() {
   ]
 
   return (
-    <section className="w-[75%] grid grid-cols-3 gap-x-[20px] gap-y-12 py-20 more-section">
+    <section className="container w-[75%] grid grid-cols-3 gap-x-[20px] gap-y-12 py-20 more-section">
       <div className="flex flex-col">
         <p className="font-heading text-white font-bold text-3xl section-header">
           More from ovation

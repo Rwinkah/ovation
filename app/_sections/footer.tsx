@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="flex flex-wrap justify-between w-[90%] py-10 border-t">
+    <footer className="container flex flex-wrap justify-between w-[90%] py-10 border-t px-0">
       <div className="flex flex-col gap-10 footer-left">
         <img
           src="/assets/images/logo/logo.png"
@@ -13,7 +13,7 @@ export default function Footer() {
         <p>© 2024 Ovation Technologies.</p>
       </div>
 
-      <div className="flex items-stretch justify-between gap-7 w-1/2 h-fit footer-right">
+      <div className="flex items-stretch justify-between gap-7 w-[60%] h-fit footer-right">
         <div className="flex flex-col gap-6 footer-left">
           <p className="font-heading text-primary-foreground text-xl">
             Contact

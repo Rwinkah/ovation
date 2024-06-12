@@ -27,10 +27,10 @@ export default function InfoCards() {
   ]
 
   return (
-    <section className="w-[70%] grid grid-cols-2 gap-x-5 gap-y-12 py-20 info-card">
+    <section className="container w-[70%] grid grid-cols-2 gap-x-5 gap-y-12 py-20 info-card">
       {moreCards.map((card, index) => (
         <div
-          className="p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient border h-fit py-10 info-card"
+          className="p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient border h-auto py-10 info-card"
           key={index}
         >
           <img
