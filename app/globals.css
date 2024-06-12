@@ -310,3 +310,12 @@ body {
     @apply text-base;
   }
 }
+
+.hero-gradient {
+  background: #bdff00;
+  background: radial-gradient(
+    ellipse farthest-side at top center,
+    #bdff00 0%,
+    #0b0a10 100%
+  );
+}

@@ -33,6 +33,7 @@ function Application() {
       <Promotion />
       <Header />
 
+      <div className="hero-gradient absolute top-[-60px] z-[-1] opacity-10 w-full h-[600px]" />
       <main className="flex flex-col items-center justify-between pt-24">
         <Hero />
         <div className="container flex items-center justify-center py-20">
