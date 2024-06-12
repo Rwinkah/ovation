@@ -5,24 +5,28 @@ export default function InfoCards() {
       description:
         'Users will be enabled to have more meaningful interactions, the ability to create unique posts, recognise post contributions, and filtering.',
       imgSrc: 'assets/images/info/info1-3x.png',
+      forSmallerScreens: false,
     },
     {
       header: 'Personalised Portfolio',
       description:
         'Through blockchain interoperability, and an NFT centric UI/UX, users have one pane into their NFT portfolio, notoriety, and social notoriety.',
       imgSrc: 'assets/images/info/info2-3x.png',
+      forSmallerScreens: false,
     },
     {
       header: 'Earn $OVA',
       description:
         'Earn $OVA tokens in a variety of ways: Sharing NFTs, Earning badges, Drawing engagement, Interacting on the platform, Owning a Genesis NFT',
       imgSrc: 'assets/images/info/info3-3x.png',
+      forSmallerScreens: false,
     },
     {
       header: 'Discover collections',
       description:
         'Discover NFT collections by genre, ranking, trending, and other metrics. Users are recommended collections based upon their interests and NFT portfolio.',
       imgSrc: 'assets/images/info/info4-3x.png',
+      forSmallerScreens: true,
     },
   ]
 

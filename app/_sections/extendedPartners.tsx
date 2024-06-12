@@ -93,7 +93,7 @@ export default function Extendedpartners() {
             anyone else?
           </p>
 
-          <button className="text-sm py-[18px] px-[22px] rounded-[50px] bg-button w-fit text-buttonTextColor">
+          <button className="text-sm py-[18px] px-[22px] rounded-[50px] bg-button w-fit text-buttonTextColor font-semibold">
             Join us as a patner
           </button>
         </div>

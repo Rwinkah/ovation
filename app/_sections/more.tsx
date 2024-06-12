@@ -33,7 +33,7 @@ export default function MoreFromOvation() {
           Artists, projects, and enthusiasts can effortlessly
         </p>
 
-        <button className="bg-button text-buttonTextColor py-[18px] px-[22px] text-sm w-fit rounded-[50px]">
+        <button className="bg-button text-buttonTextColor py-[18px] px-[22px] text-sm w-fit rounded-[50px] font-semibold">
           Browse articles
         </button>
       </div>

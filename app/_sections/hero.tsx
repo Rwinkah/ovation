@@ -47,8 +47,13 @@ export default function Hero() {
         experience.
       </p>
 
-      <button className="bg-[#CFF073] py-[12px] px-[16px] text-sm text-[#0B0A10] font-semibold rounded-[50px]">
+      <button className="bg-[#CFF073] py-[12px] px-[16px] text-sm text-[#0B0A10] font-semibold rounded-[50px] flex items-center gap-1">
         Launch App
+        <img
+          src="assets/images/hero/arrow-top-right.png"
+          alt=""
+          className="h-5 w-5 hidden small-device"
+        />
       </button>
     </section>
   )
