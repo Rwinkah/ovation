@@ -275,6 +275,10 @@ body {
     @apply h-fit;
   }
 
+  .info-card div img {
+    @apply w-[90%] h-auto;
+  }
+
   .video-ctn {
     @apply items-start p-5;
   }
