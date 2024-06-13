@@ -5,7 +5,6 @@ import Partners from './_sections/partners'
 import Features from './_sections/features'
 import Hero from './_sections/hero'
 import Footer from './_sections/footer'
-import Extendedpartners from './_sections/extendedPartners'
 import MoreFromOvation from './_sections/more'
 import InfoCards from './_sections/infoCards'
 import HowItWorks from './_sections/howItWorks'
@@ -13,6 +12,7 @@ import Promotion from './_sections/promotion'
 import React, { useEffect, useState } from 'react'
 import Preloader from './_components/preloader'
 import { Newsletter } from './_sections/newsletter'
+import ExtendedPartners from './_sections/extendedPartners'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -47,7 +47,7 @@ function Application() {
         <Partners />
         <Features />
         <InfoCards />
-        <Extendedpartners />
+        <ExtendedPartners />
         <HowItWorks />
         <MoreFromOvation />
         <Newsletter />
