@@ -10,7 +10,7 @@ export default function HowItWorks() {
         showcase their NFTs, contributions, and notoriety
       </p>
 
-      <div className="mt-24 w-[90%] h-[400px] bg-[#333726] flex items-center justify-center rounded-[10px]">
+      <div className="mt-24 w-[90%] h-[300px] md:h-[568px] bg-[#333726] flex items-center justify-center rounded-[20px]">
         <img src="assets/images/play.png" alt="play button" />
       </div>
     </section>

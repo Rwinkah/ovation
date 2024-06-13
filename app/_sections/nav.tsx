@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export function Header({ navLinks = links }: HeaderProps) {
   return (
-    <header className="relative border-b border-[#FFFFFF33] bg-transparent">
+    <header className="relative border-b border-[#FFFFFF33] bg-[#BDFF00] bg-opacity-10 md:bg-transparent">
       <nav className="container mx-auto  flex w-full items-center justify-between  px-4 md:px-6 py-6">
         <a href="/">
           <Logo />

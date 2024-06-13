@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="container flex flex-wrap justify-between w-[90%] py-10 border-t px-0">
+    <footer className="container flex flex-wrap justify-between w-[90%] py-10 border-t border-[#FFFFFF80] px-0">
       <div className="flex flex-col gap-10 footer-left">
         <img
           src="/assets/images/logo/logo.png"

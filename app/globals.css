@@ -351,8 +351,13 @@ body {
 .hero-gradient {
   background: #bdff00;
   background: radial-gradient(
-    ellipse farthest-side at top center,
+    ellipse farthest-side at center center,
     #bdff00 0%,
     #0b0a10 100%
   );
+  backdrop-filter: blur(10px);
+}
+.gradient-container {
+  background: #353538;
+  background: linear-gradient(to top, #353538 0%, #939393 60%, #353538 100%);
 }

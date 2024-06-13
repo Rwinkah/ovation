@@ -1,3 +1,5 @@
+import { generateRandomString } from '@/lib/helper-func'
+
 export default function Extendedpartners() {
   const extendedPartners = [
     {
@@ -93,19 +95,25 @@ export default function Extendedpartners() {
             anyone else?
           </p>
 
-          <button className="text-sm py-[18px] px-[22px] rounded-[50px] bg-button w-fit text-buttonTextColor font-semibold">
-            Join us as a patner
+          <button
+            type="button"
+            className="text-sm py-[18px] px-[22px] rounded-[50px] bg-button w-fit text-buttonTextColor font-semibold"
+          >
+            Join us as a partner
           </button>
         </div>
       </div>
 
       <div className="grid grid-cols-4 gap-x-10 gap-y-[20px] w-[95%] mt-20 extended-partners-partners-ctn">
         {extendedPartners.map((partner, index) => (
-          <div className="flex flex-col items-center" key={index}>
+          <div
+            className="flex flex-col items-center opacity-30 hover:opacity-100 transition-opacity duration-300"
+            key={generateRandomString()}
+          >
             <img
               className={`rounded-full h-[200px] w-[200px] ${partner.hasBackground ? 'bg-white' : ''}`}
               src={partner.imgSrc}
-              alt="Partner Display Picture"
+              alt="Partner display"
             />
             <p className="text-white text-xl font-medium text-center partners-name">
               {partner.name}

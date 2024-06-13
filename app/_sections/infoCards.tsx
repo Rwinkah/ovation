@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+import { generateRandomString } from '@/lib/helper-func'
+
 export default function InfoCards() {
   const moreCards = [
     {
@@ -38,33 +41,37 @@ export default function InfoCards() {
     <section className="container w-[70%] grid grid-cols-2 gap-x-5 gap-y-12 py-20 info-card">
       {moreCards.map((card, index) => (
         <div
-          className={`p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient border h-auto py-10 info-card ${card.forSmallerScreens ? 'pr-0' : ''}`}
-          key={index}
+          className="gradient-container bg-opacity-50 rounded-[20px] p-[1px] max-w-[602px]"
+          key={generateRandomString()}
         >
-          <img
-            className="rounded-lg p-[8px] w-auto h-[295px] large-screen"
-            src={card.imgSrc}
-            alt=""
-          />
+          <div
+            className={`p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient h-auto py-10 info-card ${card.forSmallerScreens ? 'pr-0' : ''}`}
+          >
+            <img
+              className="rounded-lg p-[8px] w-auto h-[295px] large-screen"
+              src={card.imgSrc}
+              alt=""
+            />
 
-          <img
-            className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[12.75%] w-[90%] h-auto' : 'w-auto h-[295px]'}`}
-            src={card.smallSreenImage}
-            alt=""
-          />
+            <img
+              className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[12.75%] w-[90%] h-auto' : 'w-auto h-[295px]'}`}
+              src={card.smallSreenImage}
+              alt=""
+            />
 
-          <div className="flex flex-col px-[6px] py-5 gap-3 mt-20">
-            <p
-              className={`text-white text-2xl font-medium text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
-            >
-              {card.header}
-            </p>
+            <div className="flex flex-col px-[6px] py-5 gap-3 mt-20">
+              <p
+                className={`text-white text-2xl font-medium text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
+              >
+                {card.header}
+              </p>
 
-            <p
-              className={`text-xl text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
-            >
-              {card.description}
-            </p>
+              <p
+                className={`text-xl text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
+              >
+                {card.description}
+              </p>
+            </div>
           </div>
         </div>
       ))}

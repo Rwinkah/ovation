@@ -12,6 +12,7 @@ import HowItWorks from './_sections/howItWorks'
 import Promotion from './_sections/promotion'
 import React, { useEffect, useState } from 'react'
 import Preloader from './_components/preloader'
+import { Newsletter } from './_sections/newsletter'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -33,7 +34,7 @@ function Application() {
       <Promotion />
       <Header />
 
-      <div className="hero-gradient absolute top-[-60px] z-[-1] opacity-10 w-full h-[600px]" />
+      <div className="hero-gradient absolute top-[-40px] z-[-1] opacity-10 w-full h-[800px]" />
       <main className="flex flex-col items-center justify-between pt-24">
         <Hero />
         <div className="container flex items-center justify-center py-20">
@@ -49,6 +50,7 @@ function Application() {
         <Extendedpartners />
         <HowItWorks />
         <MoreFromOvation />
+        <Newsletter />
       </main>
       <Footer />
     </React.Fragment>
