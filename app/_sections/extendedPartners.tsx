@@ -1,86 +1,26 @@
-import { generateRandomString } from '@/lib/helper-func'
+/* eslint-disable @next/next/no-img-element */
+import { Button } from '@/components/ui/button'
+import { generateRandomString, useResponsiveAnimation } from '@/lib/helper-func'
+import { motion } from 'framer-motion'
 
-export default function Extendedpartners() {
-  const extendedPartners = [
-    {
-      imgSrc: 'assets/images/extended/extended1.png',
-      name: 'Polygon village',
-      position: 'Polygon community',
-      hasBackground: true,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended2.png',
-      name: 'MetaFarmer',
-      position: 'Agri-tech Solana DAO',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended3.png',
-      name: 'Tommy Trillfigger',
-      position: 'NFT Artist / Musician',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended4.png',
-      name: 'Erenxdolu',
-      position: 'Lens Influencer',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended5.png',
-      name: 'Polygon Alliance',
-      position: 'Polygon community',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended6.png',
-      name: 'SID',
-      position: 'NFT Artist',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended7.png',
-      name: 'Cenk',
-      position: 'Twitter Influencer',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended8.png',
-      name: 'GenK',
-      position: 'Community of Polygon Aritists',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended9.png',
-      name: 'Chika Corp',
-      position: 'NFT Utility Project',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended10.png',
-      name: 'Arlo',
-      position: 'NFT Artist / Illistrator',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended11.png',
-      name: 'MhiztaLOEL',
-      position: 'Twitter Influencer',
-      hasBackground: false,
-    },
-    {
-      imgSrc: 'assets/images/extended/extended12.png',
-      name: 'Mochi Circle',
-      position: 'Web3 Marketing',
-      hasBackground: false,
-    },
-  ]
-
+export default function ExtendedPartners() {
+  const { xValues, duration } = useResponsiveAnimation(
+    [750, -750],
+    [2500, -2500],
+    7.5,
+    15,
+  )
   return (
     <section className="container flex flex-col w-full items-center justify-center h-fit py-20">
-      <p className="font-heading text-5xl font-medium text-center text-white section-header">
-        JOIN US AS A PARTNER
-      </p>
+      <motion.p
+        className="overflow-hidden whitespace-nowrap font-bold font-heading text-[70px] leading-[90px] tracking-[-0.55px] md:text-[280px] md:leading-[355px] md:tracking-[-2px] text-white"
+        initial="animate"
+        animate={{ x: xValues }}
+        // biome-ignore lint/style/useNumberNamespace: <explanation>
+        transition={{ duration: duration, repeat: Infinity, ease: 'linear' }}
+      >
+        JOIN US AS A <span className="text-[#CFF073]">PARTNER</span>
+      </motion.p>
 
       <div className="grid grid-cols-2 gap-6 w-[95%] mt-20 extended-partners-det-ctn">
         <p className="text-white font-bold text-3xl font-heading section-header">
@@ -94,13 +34,7 @@ export default function Extendedpartners() {
             anyone else? Are you ready to build your community on Ovation before
             anyone else?
           </p>
-
-          <button
-            type="button"
-            className="text-sm py-[18px] px-[22px] rounded-[50px] bg-button w-fit text-buttonTextColor font-semibold"
-          >
-            Join us as a partner
-          </button>
+          <Button>Join us as a partner</Button>
         </div>
       </div>
 
@@ -125,3 +59,77 @@ export default function Extendedpartners() {
     </section>
   )
 }
+const extendedPartners = [
+  {
+    imgSrc: 'assets/images/extended/extended1.png',
+    name: 'Polygon village',
+    position: 'Polygon community',
+    hasBackground: true,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended2.png',
+    name: 'MetaFarmer',
+    position: 'Agri-tech Solana DAO',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended3.png',
+    name: 'Tommy Trillfigger',
+    position: 'NFT Artist / Musician',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended4.png',
+    name: 'Erenxdolu',
+    position: 'Lens Influencer',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended5.png',
+    name: 'Polygon Alliance',
+    position: 'Polygon community',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended6.png',
+    name: 'SID',
+    position: 'NFT Artist',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended7.png',
+    name: 'Cenk',
+    position: 'Twitter Influencer',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended8.png',
+    name: 'GenK',
+    position: 'Community of Polygon Aritists',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended9.png',
+    name: 'Chika Corp',
+    position: 'NFT Utility Project',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended10.png',
+    name: 'Arlo',
+    position: 'NFT Artist / Illistrator',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended11.png',
+    name: 'MhiztaLOEL',
+    position: 'Twitter Influencer',
+    hasBackground: false,
+  },
+  {
+    imgSrc: 'assets/images/extended/extended12.png',
+    name: 'Mochi Circle',
+    position: 'Web3 Marketing',
+    hasBackground: false,
+  },
+]

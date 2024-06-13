@@ -16,7 +16,7 @@ const variants = {
     scale: 0.1,
   },
   end: {
-    scale: 0.7,
+    scale: 0.5,
   },
 }
 

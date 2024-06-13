@@ -1,3 +1,6 @@
+import { Button } from '@/components/ui/button'
+import { generateRandomString } from '@/lib/helper-func'
+
 export default function MoreFromOvation() {
   const moreCards = [
     {
@@ -32,16 +35,13 @@ export default function MoreFromOvation() {
         <p className="text-xl font-medium tracking-[-0.87px] mb-8 section-description">
           Artists, projects, and enthusiasts can effortlessly
         </p>
-
-        <button className="bg-button text-buttonTextColor py-[18px] px-[22px] text-sm w-fit rounded-[50px] font-semibold">
-          Browse articles
-        </button>
+        <Button>Browse articles</Button>
       </div>
 
-      {moreCards.map((card, index) => (
+      {moreCards.map((card) => (
         <div
           className="p-[10px] flex flex-col rounded-[20px] bg-[#1C1D19] more-card"
-          key={index}
+          key={generateRandomString()}
         >
           <img
             className="rounded-lg p-[8px]"

@@ -361,3 +361,9 @@ body {
   background: #353538;
   background: linear-gradient(to top, #353538 0%, #939393 60%, #353538 100%);
 }
+.mobile-gradient-container {
+  background: #bdff00;
+  background: linear-gradient(to bottom, #bdff00 0%, #0b0a10 100%);
+
+  backdrop-filter: blur(10px);
+}

@@ -14,7 +14,7 @@ import { Input } from '@/components/ui/input'
 import { toast } from 'sonner'
 
 const formSchema = z.object({
-  email: z.string().min(2, {
+  email: z.string().email({
     message: 'Email must be correct.',
   }),
 })
@@ -32,29 +32,42 @@ export function Newsletter() {
     toast('Thank you for subscribing to our newsletter!')
   }
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem className="relative">
-              <FormControl>
-                <div className="relative">
-                  <Input placeholder="Your email address" {...field} />
-                  <Button
-                    className="absolute top-[50%] right-[15px]"
-                    type="submit"
-                  >
-                    Submit
-                  </Button>
-                </div>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </form>
-    </Form>
+    <section className="pt-[60px] md:pt-[120px] pb-[40px] md:pb-[80px] container flex items-center gap-6 md:gap-12 flex-col md:flex-row ">
+      <div className="w-full">
+        <h2 className="text-2xl font-heading uppercase text-primary-foreground font-bold">
+          subscribe
+        </h2>
+        <p className="text-lg">
+          Learn about the Ovation alpha launch and other important updates.
+        </p>
+      </div>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-8 w-full"
+        >
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem className="relative">
+                <FormControl>
+                  <div className="relative">
+                    <Input placeholder="Your email address" {...field} />
+                    <Button
+                      className="absolute top-[20%] right-[15px]"
+                      type="submit"
+                    >
+                      Subscribe
+                    </Button>
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </form>
+      </Form>
+    </section>
   )
 }
