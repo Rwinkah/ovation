@@ -41,7 +41,7 @@ export default function ExtendedPartners() {
       <div className="grid grid-cols-4 gap-x-10 gap-y-[20px] w-[95%] mt-20 extended-partners-partners-ctn">
         {extendedPartners.map((partner, index) => (
           <div
-            className="flex flex-col items-center opacity-30 hover:opacity-100 transition-opacity duration-300"
+            className="flex flex-col items-center opacity-100 md:opacity-30 md:hover:opacity-100 transition-opacity duration-300"
             key={generateRandomString()}
           >
             <img

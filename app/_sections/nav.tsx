@@ -80,7 +80,7 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
             onClick={() => setMobileNavigationOpened(true)}
             title="Open navigation menu"
           >
-            <HamburgerMenuIcon height={'15px'} width={'20px'} />
+            <HamburgerMenuIcon height={'15px'} width={'20px'} color="#CFF073" />
           </Button>
         </div>
       )}
