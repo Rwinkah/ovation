@@ -5,10 +5,10 @@ export default function Features() {
   return (
     <section className="container flex flex-col items-center gap-10 py-8 md:gap-20 md:py-16 mt-24 md:mt-20">
       <div>
-        <h2 className="text-center font-bold font-heading text-primary-foreground text-[40px] leading-[50px]">
+        <h2 className="text-center font-bold font-heading text-primary-foreground text-[26px] leading-[32px]  md:text-[40px] md:leading-[50px]">
           Ovation makes NFTs easier.
         </h2>
-        <p className="text-center font-medium text-2xl tracking-[-0.87px] mt-2">
+        <p className="text-center font-medium text-base md:text-2xl tracking-[-0.87px] mt-2">
           Imagine if X, Opensea, and Discord had a web3 baby- that would be us.
         </p>
       </div>
@@ -21,12 +21,12 @@ export default function Features() {
             <img
               src={feature.icon}
               alt={feature.title}
-              className="w-14 h-14 mb-6"
+              className="w-9 h-9 md:w-14 md:h-14 mb-6"
             />
-            <h6 className="text-2xl text-center font-bold font-heading">
+            <h6 className="text-lg md:text-2xl text-center font-bold font-heading">
               {feature.title}
             </h6>
-            <p className="text-xl text-center font-light">
+            <p className="text-sm md:text-xl text-center font-light">
               {feature.description}
             </p>
           </div>

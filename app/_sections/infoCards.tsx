@@ -2,41 +2,6 @@
 import { generateRandomString } from '@/lib/helper-func'
 
 export default function InfoCards() {
-  const moreCards = [
-    {
-      header: 'Social Media',
-      description:
-        'Users will be enabled to have more meaningful interactions, the ability to create unique posts, recognise post contributions, and filtering.',
-      imgSrc: 'assets/images/info/info1-3x.png',
-      smallSreenImage: 'assets/images/info/info1-sm.png',
-      forSmallerScreens: false,
-    },
-    {
-      header: 'Personalised Portfolio',
-      description:
-        'Through blockchain interoperability, and an NFT centric UI/UX, users have one pane into their NFT portfolio, notoriety, and social notoriety.',
-      imgSrc: 'assets/images/info/info2-3x.png',
-      smallSreenImage: 'assets/images/info/info2-sm.png',
-      forSmallerScreens: false,
-    },
-    {
-      header: 'Earn $OVA',
-      description:
-        'Earn $OVA tokens in a variety of ways: Sharing NFTs, Earning badges, Drawing engagement, Interacting on the platform, Owning a Genesis NFT',
-      imgSrc: 'assets/images/info/info3-3x.png',
-      smallSreenImage: 'assets/images/info/info3-sm.png',
-      forSmallerScreens: false,
-    },
-    {
-      header: 'Discover collections',
-      description:
-        'Discover NFT collections by genre, ranking, trending, and other metrics. Users are recommended collections based upon their interests and NFT portfolio.',
-      imgSrc: 'assets/images/info/info4-3x.png',
-      smallSreenImage: 'assets/images/info/info-4sm.png',
-      forSmallerScreens: true,
-    },
-  ]
-
   return (
     <section className="container w-[70%] grid grid-cols-2 gap-x-5 gap-y-12 py-20 info-card">
       {moreCards.map((card, index) => (
@@ -61,13 +26,13 @@ export default function InfoCards() {
 
             <div className="flex flex-col px-[6px] py-5 gap-3 mt-20">
               <p
-                className={`text-white text-2xl font-medium text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
+                className={`text-white text-lg md:text-2xl font-medium text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
               >
                 {card.header}
               </p>
 
               <p
-                className={`text-xl text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
+                className={`text-sm md:text-xl text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
               >
                 {card.description}
               </p>
@@ -78,3 +43,37 @@ export default function InfoCards() {
     </section>
   )
 }
+const moreCards = [
+  {
+    header: 'Social Media',
+    description:
+      'Users will be enabled to have more meaningful interactions, the ability to create unique posts, recognise post contributions, and filtering.',
+    imgSrc: 'assets/images/info/info1-3x.png',
+    smallSreenImage: 'assets/images/info/info1-sm.png',
+    forSmallerScreens: false,
+  },
+  {
+    header: 'Personalised Portfolio',
+    description:
+      'Through blockchain interoperability, and an NFT centric UI/UX, users have one pane into their NFT portfolio, notoriety, and social notoriety.',
+    imgSrc: 'assets/images/info/info2-3x.png',
+    smallSreenImage: 'assets/images/info/info2-sm.png',
+    forSmallerScreens: false,
+  },
+  {
+    header: 'Earn $OVA',
+    description:
+      'Earn $OVA tokens in a variety of ways: Sharing NFTs, Earning badges, Drawing engagement, Interacting on the platform, Owning a Genesis NFT',
+    imgSrc: 'assets/images/info/info3-3x.png',
+    smallSreenImage: 'assets/images/info/info3-sm.png',
+    forSmallerScreens: false,
+  },
+  {
+    header: 'Discover collections',
+    description:
+      'Discover NFT collections by genre, ranking, trending, and other metrics. Users are recommended collections based upon their interests and NFT portfolio.',
+    imgSrc: 'assets/images/info/info4-3x.png',
+    smallSreenImage: 'assets/images/info/info-4sm.png',
+    forSmallerScreens: true,
+  },
+]

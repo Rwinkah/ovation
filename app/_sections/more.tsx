@@ -2,37 +2,14 @@ import { Button } from '@/components/ui/button'
 import { generateRandomString } from '@/lib/helper-func'
 
 export default function MoreFromOvation() {
-  const moreCards = [
-    {
-      description:
-        'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
-    },
-    {
-      description:
-        'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
-    },
-    {
-      description:
-        'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
-    },
-    {
-      description:
-        'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
-    },
-    {
-      description:
-        'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
-    },
-  ]
-
   return (
     <section className="container w-[75%] grid grid-cols-3 gap-x-[20px] gap-y-12 py-20 more-section">
       <div className="flex flex-col">
-        <p className="font-heading text-white font-bold text-3xl section-header">
+        <p className="font-heading text-white font-bold text-2xl md:text-3xl section-header">
           More from ovation
         </p>
 
-        <p className="text-xl font-medium tracking-[-0.87px] mb-8 section-description">
+        <p className="text-base md:text-xl font-medium tracking-[-0.87px] mb-8 section-description">
           Artists, projects, and enthusiasts can effortlessly
         </p>
         <Button>Browse articles</Button>
@@ -54,10 +31,32 @@ export default function MoreFromOvation() {
               {card.description}
             </p>
 
-            <p className="text-lg">15/3/2023</p>
+            <p className="text-sm md:text-lg">15/3/2023</p>
           </div>
         </div>
       ))}
     </section>
   )
 }
+const moreCards = [
+  {
+    description:
+      'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
+  },
+  {
+    description:
+      'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
+  },
+  {
+    description:
+      'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
+  },
+  {
+    description:
+      'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
+  },
+  {
+    description:
+      'Ovation. The First NFT Superapp Working to Transform Your NFT Experience.',
+  },
+]

@@ -37,7 +37,7 @@ export function Newsletter() {
         <h2 className="text-2xl font-heading uppercase text-primary-foreground font-bold">
           subscribe
         </h2>
-        <p className="text-lg">
+        <p className="text-base md:text-lg">
           Learn about the Ovation alpha launch and other important updates.
         </p>
       </div>

@@ -37,7 +37,7 @@ function Application() {
       <div className="mobile-gradient-container md:hero-gradient absolute top-[-40px] z-[-1] opacity-10 w-full h-[800px]" />
       <main className="overflow-hidden flex flex-col items-center justify-between pt-24">
         <Hero />
-        <div className="container flex items-center justify-center py-20">
+        <div className="container flex items-center justify-center py-10 md:py-20">
           <img
             src={'assets/images/dashboard-demo.png'}
             alt="dashboard demo"

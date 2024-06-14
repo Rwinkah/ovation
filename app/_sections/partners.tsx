@@ -5,7 +5,7 @@ export default function Partners() {
       <p className="text-sm font-semibold text-center uppercase">
         On your screen via
       </p>
-      <div className="flex items-center justify-center md:justify-between gap-5 my-7 h-[50px] md:h-[60px] w-full flex-wrap">
+      <div className="flex items-center justify-center md:justify-between gap-1 md:gap-5 my-7 h-[50px] md:h-[60px] w-full flex-wrap">
         <img
           src={'assets/images/partners/1.png'}
           className="h-full"

@@ -22,13 +22,13 @@ export default function ExtendedPartners() {
         JOIN US AS A <span className="text-[#CFF073]">PARTNER</span>
       </motion.p>
 
-      <div className="grid grid-cols-2 gap-6 w-[95%] mt-20 extended-partners-det-ctn">
-        <p className="text-white font-bold text-3xl font-heading section-header">
+      <div className="grid grid-cols-2 gap-6 mt-10 md:mt-20 extended-partners-det-ctn">
+        <p className="text-white font-bold text-2xl  md:text-3xl font-heading section-header">
           Over 100 launch partners have already joined us on our journey
         </p>
 
         <div className="flex flex-col gap-9">
-          <p className="text-2xl font-semibold tracking-[-0.87px] section-description">
+          <p className="text-base md:text-2xl font-semibold tracking-[-0.87px] section-description">
             Are you ready to build your community on Ovation before anyone
             else?, Are you ready to build your community on Ovation before
             anyone else? Are you ready to build your community on Ovation before
@@ -49,10 +49,12 @@ export default function ExtendedPartners() {
               src={partner.imgSrc}
               alt="Partner display"
             />
-            <p className="text-white text-xl font-medium text-center partners-name">
+            <p className="text-white text-base md:text-xl font-medium text-center partners-name">
               {partner.name}
             </p>
-            <p className="text-sm text-center">{partner.position}</p>
+            <p className="text-[10px] leading-[14px] md:text-sm text-center">
+              {partner.position}
+            </p>
           </div>
         ))}
       </div>
