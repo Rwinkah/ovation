@@ -284,7 +284,7 @@ body {
   }
 
   .info-card div img {
-    @apply w-auto h-[215px];
+    @apply h-[215px];
   }
 
   .info-card-det-ctn {
@@ -310,7 +310,7 @@ body {
 
 @media screen and (max-width: 478px) {
   .promotion {
-    @apply gap-1 py-5 bg-red-900;
+    @apply gap-1 py-5 bg-blue-900;
   }
 
   .promotion img {
