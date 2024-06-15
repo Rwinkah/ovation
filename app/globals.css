@@ -310,7 +310,7 @@ body {
 
 @media screen and (max-width: 478px) {
   .promotion {
-    @apply gap-1 py-5 bg-red-900;
+    @apply gap-1 py-5;
   }
 
   .promotion img {
@@ -349,7 +349,7 @@ body {
   }
 
   .partners-name {
-    @apply mb-1;
+    @apply mb-[2px];
   }
 
   .partners-name ~ p {
