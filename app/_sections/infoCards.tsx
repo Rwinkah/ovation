@@ -10,7 +10,7 @@ export default function InfoCards() {
           key={generateRandomString()}
         >
           <div
-            className={`p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient h-auto py-10 info-card-ctn ${card.forSmallerScreens ? 'pr-0' : ''}`}
+            className={`p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient h-full py-10 info-card-ctn ${card.forSmallerScreens ? 'pr-0' : ''}`}
           >
             <img
               className="rounded-lg p-[8px] w-auto h-[295px] large-screen"
