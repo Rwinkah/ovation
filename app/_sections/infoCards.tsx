@@ -19,7 +19,7 @@ export default function InfoCards() {
             />
 
             <img
-              className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[15.75%] w-[90%]' : ''}`}
+              className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[14.75%] w-[90%]' : ''}`}
               src={card.smallSreenImage}
               alt=""
             />

@@ -230,11 +230,11 @@ body {
   }
 
   .hero-img-bottom-left {
-    @apply top-11 left-10 w-10;
+    @apply top-20 left-10 w-10;
   }
 
   .hero-img-bottom-right {
-    @apply top-11 right-10 w-10;
+    @apply top-20 right-10 w-10;
   }
 
   .hero-header {
@@ -310,7 +310,7 @@ body {
 
 @media screen and (max-width: 478px) {
   .promotion {
-    @apply gap-1 py-5 bg-blue-900;
+    @apply gap-1 py-5 bg-red-900;
   }
 
   .promotion img {
