@@ -6,11 +6,11 @@ export default function InfoCards() {
     <section className="container w-[70%] grid grid-cols-2 gap-x-5 gap-y-12 py-20 info-card">
       {moreCards.map((card, index) => (
         <div
-          className="gradient-container bg-opacity-50 rounded-[20px] p-[1px] max-w-[602px]"
+          className="gradient-container bg-opacity-50 rounded-[20px] p-[1px] max-w-[602px] relative"
           key={generateRandomString()}
         >
           <div
-            className={`p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient h-auto py-10 info-card ${card.forSmallerScreens ? 'pr-0' : ''}`}
+            className={`p-[10px] flex flex-col items-center rounded-[20px] bg-card-gradient h-auto py-10 info-card-ctn ${card.forSmallerScreens ? 'pr-0' : ''}`}
           >
             <img
               className="rounded-lg p-[8px] w-auto h-[295px] large-screen"
@@ -19,12 +19,12 @@ export default function InfoCards() {
             />
 
             <img
-              className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[15.5%]' : ''}`}
+              className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[45px]' : ''}`}
               src={card.smallSreenImage}
               alt=""
             />
 
-            <div className="flex flex-col px-[6px] py-5 gap-3 mt-20 info-card-det-ctn">
+            <div className="flex flex-col px-[6px] gap-3 mt-20 info-card-det-ctn">
               <p
                 className={`text-white text-lg md:text-2xl font-medium text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
               >
