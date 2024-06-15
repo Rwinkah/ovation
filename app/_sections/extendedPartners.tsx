@@ -23,7 +23,7 @@ export default function ExtendedPartners() {
       </motion.p>
 
       <div className="grid grid-cols-2 gap-6 mt-10 md:mt-20 extended-partners-det-ctn">
-        <p className="text-white font-bold text-2xl  md:text-3xl font-heading section-header">
+        <p className="text-white font-bold text-2xl md:text-3xl font-heading section-header">
           Over 100 launch partners have already joined us on our journey
         </p>
 

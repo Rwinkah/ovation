@@ -19,12 +19,12 @@ export default function InfoCards() {
             />
 
             <img
-              className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[12.75%] w-[90%] h-auto' : 'w-auto h-[295px]'}`}
+              className={`rounded-lg p-[8px] hidden small-device ${card.forSmallerScreens ? 'ml-[15.5%]' : ''}`}
               src={card.smallSreenImage}
               alt=""
             />
 
-            <div className="flex flex-col px-[6px] py-5 gap-3 mt-20">
+            <div className="flex flex-col px-[6px] py-5 gap-3 mt-20 info-card-det-ctn">
               <p
                 className={`text-white text-lg md:text-2xl font-medium text-center ${card.forSmallerScreens ? 'pr-[10px]' : ''}`}
               >
@@ -65,7 +65,7 @@ const moreCards = [
     description:
       'Earn $OVA tokens in a variety of ways: Sharing NFTs, Earning badges, Drawing engagement, Interacting on the platform, Owning a Genesis NFT',
     imgSrc: 'assets/images/info/info3-3x.png',
-    smallSreenImage: 'assets/images/info/info3-sm.png',
+    smallSreenImage: 'assets/images/info/exp.png',
     forSmallerScreens: false,
   },
   {
