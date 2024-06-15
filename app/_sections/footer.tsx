@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="container flex flex-wrap justify-between w-[90%] py-10 border-t border-[#FFFFFF80] px-0">
@@ -38,10 +40,22 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-3 w-fit">
-            <img src="assets/images/footer/footer1.png" alt="" />
-            <img src="assets/images/footer/footer2.png" alt="" />
-            <img src="assets/images/footer/footer3.png" alt="" />
-            <img src="assets/images/footer/footer4.png" alt="" />
+            <Link href="#">
+              {' '}
+              <img src="assets/images/footer/footer1.png" alt="" />
+            </Link>
+            <Link href="#">
+              {' '}
+              <img src="assets/images/footer/footer2.png" alt="" />
+            </Link>
+            <Link href="#">
+              {' '}
+              <img src="assets/images/footer/footer3.png" alt="" />
+            </Link>
+            <Link href="#">
+              {' '}
+              <img src="assets/images/footer/footer4.png" alt="" />
+            </Link>
           </div>
         </div>
       </div>

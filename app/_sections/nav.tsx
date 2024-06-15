@@ -52,7 +52,7 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
       mobile
         ? `transition transform -right-full absolute top-[90px] z-20 py-4 pb-7 w-full overflow-y-auto sm:hidden backdrop-filter backdrop-blur-md ${
             mobileNavigationOpened
-              ? '-translate-x-full visible opacity-100'
+              ? '-translate-x-full visible bg-[#111310] opacity-100'
               : 'hidden opacity-0'
           }`
         : 'hidden sm:flex'
