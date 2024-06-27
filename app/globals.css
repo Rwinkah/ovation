@@ -66,6 +66,26 @@ body {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /*.info-card {
   border: 1px solid;
   border-image: linear-gradient(
@@ -76,6 +96,11 @@ body {
     )
     1;
 }*/
+
+aside,
+.timeline-main {
+  height: calc(100vh - 90px);
+}
 
 @media screen and (max-width: 1024px) {
   .hero-img-top-left,
