@@ -504,9 +504,9 @@ export default function TimelinePosts() {
               Dedicated NFT enthusiast, embracing the
               <span className="text-[#CFF073]"> #digital</span> revolution one
               token at a time. Let's explore the world of blockchain art
-              together! 🌐🎨 #NFTCommunity Let's explore the world of blockchain
-              art together! 🌐🎨 #NFTCommunity Let's explore the world of
-              blockchain art together! 🌐🎨 #NFTCommunity
+              together! #NFTCommunity Let's explore the world of blockchain art
+              together! #NFTCommunity Let's explore the world of blockchain art
+              together! #NFTCommunity
             </p>
 
             <div
