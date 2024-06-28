@@ -5,10 +5,24 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { Button } from '@/components/ui/button'
-import { ReactElement, act } from 'react'
+import { ReactElement } from 'react'
 import React, { useState } from 'react'
 
 export default function TimelinePosts() {
+  const verifyIcon = (
+    <svg
+      viewBox="0 0 13 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-3 h-3"
+    >
+      <path
+        d="M11.2814 5.87027L10.6014 5.08027C10.4714 4.93027 10.3664 4.65027 10.3664 4.45027V3.60027C10.3664 3.07027 9.93141 2.63527 9.4014 2.63527H8.55141C8.35641 2.63527 8.07141 2.53027 7.92141 2.40027L7.13141 1.72027C6.78641 1.42527 6.22141 1.42527 5.87141 1.72027L5.08641 2.40527C4.93641 2.53027 4.65141 2.63527 4.45641 2.63527H3.59141C3.06141 2.63527 2.62641 3.07027 2.62641 3.60027V4.45527C2.62641 4.65027 2.52141 4.93027 2.39641 5.08027L1.72141 5.87527C1.43141 6.22027 1.43141 6.78027 1.72141 7.12527L2.39641 7.92027C2.52141 8.07027 2.62641 8.35027 2.62641 8.54527V9.40027C2.62641 9.93027 3.06141 10.3653 3.59141 10.3653H4.45641C4.65141 10.3653 4.93641 10.4703 5.08641 10.6003L5.87641 11.2803C6.22141 11.5753 6.78641 11.5753 7.13641 11.2803L7.92641 10.6003C8.07641 10.4703 8.35641 10.3653 8.55641 10.3653H9.4064C9.93641 10.3653 10.3714 9.93027 10.3714 9.40027V8.55027C10.3714 8.35527 10.4764 8.07027 10.6064 7.92027L11.2864 7.13027C11.5764 6.78527 11.5764 6.21527 11.2814 5.87027ZM8.58141 5.55527L6.16641 7.97027C6.09641 8.04027 6.00141 8.08027 5.90141 8.08027C5.80141 8.08027 5.70641 8.04027 5.63641 7.97027L4.42641 6.76027C4.28141 6.61527 4.28141 6.37527 4.42641 6.23027C4.57141 6.08527 4.81141 6.08527 4.95641 6.23027L5.90141 7.17527L8.05141 5.02527C8.19641 4.88027 8.43641 4.88027 8.58141 5.02527C8.72641 5.17027 8.72641 5.41027 8.58141 5.55527Z"
+        fill="#4865FC"
+      />
+    </svg>
+  )
+
   const moreIcon = (
     <svg
       viewBox="0 0 18 5"
@@ -262,6 +276,20 @@ export default function TimelinePosts() {
     </svg>
   )
 
+  const playIcon = (
+    <svg
+      viewBox="0 0 21 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-[21px] h-[21px]"
+    >
+      <path
+        d="M10.4688 0C4.94875 0 0.46875 4.48 0.46875 10C0.46875 15.52 4.94875 20 10.4688 20C15.9888 20 20.4688 15.52 20.4688 10C20.4688 4.48 15.9988 0 10.4688 0ZM13.4688 12.23L10.5687 13.9C10.2087 14.11 9.80875 14.21 9.41875 14.21C9.01875 14.21 8.62875 14.11 8.26875 13.9C7.54875 13.48 7.11875 12.74 7.11875 11.9V8.55C7.11875 7.72 7.54875 6.97 8.26875 6.55C8.98875 6.13 9.84875 6.13 10.5787 6.55L13.4787 8.22C14.1987 8.64 14.6287 9.38 14.6287 10.22C14.6287 11.06 14.1987 11.81 13.4688 12.23Z"
+        fill="white"
+      />
+    </svg>
+  )
+
   interface PostMenu {
     icon: ReactElement
     text: string
@@ -289,6 +317,127 @@ export default function TimelinePosts() {
     { icon: clapIcon, value: 43, isActive: false },
   ])
 
+  const [isShown, setIsShown] = useState<boolean>(false)
+
+  const posts = [
+    {
+      id: 1,
+      userDisplayPicture: '/assets/images/timeline/Shape.png',
+      displayName: 'Trevor Belmont',
+      userName: 'trevor12',
+      imgSrc: '/assets/images/timeline/_post/post-media.png',
+      transcripts: [
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+      ],
+      extraTranscripts: [
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+      ],
+      eventHeader: '',
+      eventImage: '',
+      eventDate: '',
+      eventLocation: '',
+      hasMedia: true,
+      hasEvent: false,
+      hasVoiceRecord: false,
+      isPlainText: false,
+    },
+    {
+      id: 2,
+      userDisplayPicture: '/assets/images/timeline/Oval.png',
+      displayName: 'Alucard',
+      userName: 'alucard12',
+      imgSrc: '',
+      transcripts: [
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+      ],
+      extraTranscripts: [
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+      ],
+      eventHeader: 'MINT DAY: Kansas city',
+      eventImage: '/assets/images/timeline/_post/image7.png',
+      eventDate: 'Wed, 24 Jan, 15:00 - 20:00',
+      eventLocation: 'Virtual event',
+      hasMedia: false,
+      hasEvent: true,
+      hasVoiceRecord: false,
+      isPlainText: false,
+    },
+    {
+      id: 3,
+      userDisplayPicture: '/assets/images/timeline/Oval.png',
+      displayName: 'Outcast',
+      userName: 'lummie12',
+      imgSrc: '',
+      transcripts: [
+        { time: '00.00', text: 'How are you?' },
+        { time: '00.05', text: 'Hope you are good?' },
+        { time: '00.09', text: 'Where are you?' },
+        { time: '00.15', text: 'Come on in' },
+        { time: '00.19', text: 'Everyone is welcomed here' },
+      ],
+      extraTranscripts: [
+        { time: '00:26', text: 'Lorem ipsum', isHidden: isShown },
+        { time: '00:30', text: 'Lorem ipsum', isHidden: isShown },
+        { time: '00:37', text: 'Lorem ipsum', isHidden: isShown },
+        { time: '00:44', text: 'Lorem ipsum', isHidden: isShown },
+        { time: '00:56', text: 'Lorem ipsum', isHidden: isShown },
+      ],
+      eventHeader: '',
+      eventImage: '',
+      eventDate: '',
+      eventLocation: '',
+      hasMedia: false,
+      hasEvent: false,
+      hasVoiceRecord: true,
+      isPlainText: false,
+    },
+    {
+      id: 4,
+      userDisplayPicture: '/assets/images/timeline/Shape.png',
+      displayName: 'Nino Uptown',
+      userName: 'sametime',
+      imgSrc: '',
+      transcripts: [
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+        { time: '', text: '' },
+      ],
+      extraTranscripts: [
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+        { time: '', text: '', isHidden: isShown },
+      ],
+      eventHeader: '',
+      eventImage: '',
+      eventDate: '',
+      eventLocation: '',
+      hasMedia: false,
+      hasEvent: false,
+      hasVoiceRecord: false,
+      isPlainText: true,
+    },
+  ]
+
   const handleClick = (index: number) => {
     const updatedList = postActions.map((action, i) => ({
       ...action,
@@ -299,79 +448,183 @@ export default function TimelinePosts() {
   }
 
   return (
-    <div className="w-full h-fit py-10 px-[10px] flex flex-col items-end gap-2 mb-20">
-      <div className="w-full flex h-fit items-center justify-between">
-        <div className="flex items-center gap-[10px]">
-          <Image
-            src="/assets/images/timeline/Shape.png"
-            alt="User Display Picture"
-            width={36}
-            height={36}
-          />
+    <>
+      {posts.map((post) => (
+        <div
+          className="w-full h-fit py-10 px-[10px] flex flex-col items-end gap-2 border-t border-[#1A1A1A]"
+          key={post.id}
+        >
+          <div className="w-full flex h-fit items-center justify-between">
+            <div className="flex items-center gap-[10px]">
+              <Image
+                src={post.userDisplayPicture}
+                alt="User Display Picture"
+                width={36}
+                height={36}
+              />
 
-          <div className="flex items-center gap-1">
-            <p className="text-base font-semibold leading-5 text-white mr-2">
-              0xrxc.....d67579
+              <div className="flex items-center gap-1">
+                <p className="text-base font-semibold text-white mr-2 flex items-center gap-1">
+                  {post.displayName}
+                  {verifyIcon}
+                </p>
+                <p className="text-xs font-medium text-[#808080]">
+                  {post.userName}
+                </p>
+                <div className="w-1 h-1 rounded-full bg-[#808080]"></div>
+                <p className="text-xs leading-5 font-medium text-[#808080]">
+                  2h
+                </p>
+              </div>
+            </div>
+
+            <Popover>
+              <PopoverTrigger className="p-1 rounded-full">
+                {moreIcon}
+              </PopoverTrigger>
+              <PopoverContent className="w-fit bg-[#232227] flex flex-col items-start px-2 py-4 border-none">
+                {postMenu.map((menu, index) => (
+                  <Button
+                    variant="default"
+                    className={`flex py-[10px] w-full justify-start bg-transparent gap-2 font-medium rounded-none ${menu.isDeleteButton ? 'text-[#FF0000]' : 'text-white'}`}
+                    key={index}
+                  >
+                    {menu.icon}
+                    {menu.text}
+                  </Button>
+                ))}
+              </PopoverContent>
+            </Popover>
+          </div>
+
+          <div
+            className={`flex flex-col w-[93.5%] h-fit max-w-[820px] gap-[22px]`}
+          >
+            <p className="text-sm leading-5 text-[#E6E6E6]">
+              Dedicated NFT enthusiast, embracing the
+              <span className="text-[#CFF073]"> #digital</span> revolution one
+              token at a time. Let's explore the world of blockchain art
+              together! 🌐🎨 #NFTCommunity Let's explore the world of blockchain
+              art together! 🌐🎨 #NFTCommunity Let's explore the world of
+              blockchain art together! 🌐🎨 #NFTCommunity
             </p>
-            <p className="text-xs leading-5 font-medium text-[#808080]">
-              @username
-            </p>
-            <div className="w-1 h-1 rounded-full bg-[#808080]"></div>
-            <p className="text-xs leading-5 font-medium text-[#808080]">2h</p>
+
+            <div
+              className={`${post.hasMedia ? 'flex' : 'hidden'} w-full h-auto rounded-[20px] flex-col`}
+            >
+              <img
+                src={post.imgSrc}
+                alt="Post media"
+                className="w-full h-auto"
+              />
+            </div>
+
+            <div
+              className={`${post.hasVoiceRecord ? 'flex' : 'hidden'} flex-col w-full h-fit`}
+            >
+              <div className="flex w-full py-3 px-[17px] rounded-[500px] items-center gap-[6px] bg-[#232227] mb-5">
+                <div className="w-fit h-fit rounded-full bg-black">
+                  {playIcon}
+                </div>
+                <img
+                  src="/assets/images/timeline/frame121.svg"
+                  alt="Recording"
+                  className="w-[82%] h-4"
+                />
+                <p className="text-white text-sm">05:04</p>
+                <Button
+                  variant="default"
+                  className="px-3 py-0 h-[20px] bg-[#111115] rounded-[500px] leading-4 text-xs text-white"
+                >
+                  1x
+                </Button>
+              </div>
+
+              <div className="flex flex-col w-full h-fit px-4 gap-3 border-l-[4px] border-[#4D4D4D]">
+                {post.transcripts.map((list, index) => (
+                  <p
+                    className="flex items-center gap-2 text-sm text-[#808080]"
+                    key={index}
+                  >
+                    {list.time} <span className="text-white">{list.text}</span>
+                  </p>
+                ))}
+                {post.extraTranscripts.map((list, index) => (
+                  <p
+                    className={`${list.isHidden ? 'flex' : 'hidden'} items-center gap-2 text-sm text-[#808080]`}
+                    key={index}
+                  >
+                    {list.time} <span className="text-white">{list.text}</span>
+                  </p>
+                ))}
+                <Button
+                  variant="default"
+                  className="p-0 w-fit h-fit bg-transparent text-sm text-[#9CBD40] font-normal hover:opacity-80 transition-all duration-300"
+                  onClick={() => setIsShown(!isShown)}
+                >
+                  View transcript
+                </Button>
+              </div>
+            </div>
+
+            <div
+              className={`${post.hasEvent ? 'flex' : 'hidden'} flex-col w-full h-fit border border-[#18181C] rounded-lg`}
+            >
+              <p className="py-5 px-3 text-sm font-semibold text-white bg-[#18181C]">
+                {post.eventHeader}
+              </p>
+              <img
+                src={post.eventImage}
+                alt="Link Preview"
+                className="w-full h-auto"
+              />
+              <div className="px-3 flex flex-col bg-[#18181C] pt-3 py-1">
+                <p className="flex items-center gap-[6px] text-[11px] leading-[15px] text-[#B3B3B3]">
+                  <Image
+                    src="/assets/images/timeline/_post/calender.png"
+                    alt="calender icon"
+                    width={12}
+                    height={12}
+                  />
+                  {post.eventDate}
+                </p>
+                <Button
+                  variant="link"
+                  className="flex items-center w-fit p-0 leading-[15px] underline gap-[6px] text-[11px] text-[#B3B3B3] bg-transparent font-normal"
+                >
+                  <Image
+                    src="/assets/images/timeline/_post/location.png"
+                    alt="calender icon"
+                    width={12}
+                    height={12}
+                  />
+                  {post.eventLocation}
+                </Button>
+              </div>
+
+              <div className="flex w-full items-center justify-end p-3">
+                <Button className="text-[10px] leading-3 text-[#111115] py-2 px-[10px] bg-[#CFF073]">
+                  Add to calender
+                </Button>
+              </div>
+            </div>
+
+            <div className="w-full flex h-fit gap-3">
+              {postActions.map((action, index) => (
+                <Button
+                  variant="default"
+                  className={`flex gap-1 bg-transparent outline-none px-1 py-0 rounded-none text-xs leading-4 ${action.isActive ? 'text-[#cff073cc] fill-[#cff07366] stroke-[#cff07366]' : 'text-[#B3B3B3] fill-[#B3B3B3] stroke-[#B3B3B3]'}`}
+                  key={index}
+                  onClick={() => handleClick(index)}
+                >
+                  {action.icon}
+                  {action.value}
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
-
-        <Popover>
-          <PopoverTrigger className="p-1 rounded-full">
-            {moreIcon}
-          </PopoverTrigger>
-          <PopoverContent className="w-fit bg-[#232227] flex flex-col items-start px-2 py-4 border-none">
-            {postMenu.map((menu, index) => (
-              <Button
-                variant="default"
-                className={`flex py-[10px] w-full justify-start bg-transparent gap-2 font-medium rounded-none ${menu.isDeleteButton ? 'text-[#FF0000]' : 'text-white'}`}
-                key={index}
-              >
-                {menu.icon}
-                {menu.text}
-              </Button>
-            ))}
-          </PopoverContent>
-        </Popover>
-      </div>
-
-      <div className="flex flex-col w-[93.5%] h-fit max-w-[820px] gap-[22px]">
-        <p className="text-sm leading-5 text-[#E6E6E6]">
-          Dedicated NFT enthusiast, embracing the{' '}
-          <span className="text-[#CFF073]">#digital</span> revolution one token
-          at a time. Let's explore the world of blockchain art together! 🌐🎨
-          #NFTCommunity Let's explore the world of blockchain art together! 🌐🎨
-          #NFTCommunity Let's explore the world of blockchain art together! 🌐🎨
-          #NFTCommunity
-        </p>
-
-        <div className="w-full h-auto rounded-[20px]">
-          <img
-            src="/assets/images/timeline/_post/post-media.png"
-            alt="Post media"
-            className="w-full h-auto"
-          />
-        </div>
-
-        <div className="w-full flex h-fit gap-3">
-          {postActions.map((action, index) => (
-            <Button
-              variant="default"
-              className={`flex gap-1 bg-transparent outline-none px-1 py-0 rounded-none text-xs leading-4 ${action.isActive ? 'text-[#cff073cc] fill-[#cff07366] stroke-[#cff07366]' : 'text-[#B3B3B3] fill-[#B3B3B3] stroke-[#B3B3B3]'}`}
-              key={index}
-              onClick={() => handleClick(index)}
-            >
-              {action.icon}
-              {action.value}
-            </Button>
-          ))}
-        </div>
-      </div>
-    </div>
+      ))}
+    </>
   )
 }
