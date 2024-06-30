@@ -98,7 +98,8 @@ body {
 }*/
 
 aside,
-.timeline-main {
+.timeline-main,
+.other-link {
   height: calc(100vh - 90px);
 }
 
