@@ -1,7 +1,6 @@
+import FriendList from '@/app/_sections/_messages/friendLists'
+import MessageContainer from './messageContainer'
+
 export default function page() {
-	return (
-		<section>
-			<h1>messages</h1>
-		</section>
-	);
+  return <FriendList />
 }
