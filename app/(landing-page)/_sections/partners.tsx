@@ -5,28 +5,35 @@ export default function Partners() {
       <p className="text-sm font-semibold text-center uppercase">
         On your screen via
       </p>
-      <div className="flex items-center justify-center md:justify-between gap-1 md:gap-5 my-7 h-[50px] md:h-[60px] w-full flex-wrap">
-        <img
-          src={'assets/images/partners/1.png'}
-          className="h-full"
-          alt="fox"
-        />
-        <img
-          src={'assets/images/partners/4.png'}
-          className="h-full"
-          alt="usa today"
-        />
-        <img
-          src={'assets/images/partners/3.png'}
-          className="h-full"
-          alt="market watch"
-        />
-        <img
-          src={'assets/images/partners/2.png'}
-          className="h-full"
-          alt="digital journal"
-        />
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-5 my-7 w-full ">
+        {partnersImg.map((partner) => (
+          <div
+            key={partner.alt}
+            className="h-[90px] flex items-center justify-center"
+          >
+            <img src={partner.src} className="h-[60px]" alt={partner.alt} />
+          </div>
+        ))}
       </div>
     </div>
   )
 }
+
+const partnersImg = [
+  {
+    src: 'assets/images/partners/1.png',
+    alt: 'fox',
+  },
+  {
+    src: 'assets/images/partners/4.png',
+    alt: 'usa today',
+  },
+  {
+    src: 'assets/images/partners/3.png',
+    alt: 'market watch',
+  },
+  {
+    src: 'assets/images/partners/2.png',
+    alt: 'digital journal',
+  },
+]
