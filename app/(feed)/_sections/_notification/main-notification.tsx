@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import VerifiedNotification from './verifiedNotification'
+import VerifiedNotification from './verified-notification'
 
 export default function MainNotification() {
   return (

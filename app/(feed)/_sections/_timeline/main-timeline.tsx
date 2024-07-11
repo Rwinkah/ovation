@@ -1,7 +1,6 @@
 'use client'
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import TimelineTab from '@/app/(feed)/_components/_timeline/timelineTab'
+import TimelineTab from '../../_components/_timeline/timeline-tab'
 
 export default function MainTimeline() {
   return (

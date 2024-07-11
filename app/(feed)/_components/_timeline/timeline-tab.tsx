@@ -1,5 +1,5 @@
-import PublishPost from './publishPost'
-import TimelinePosts from './timelinePosts'
+import PublishPost from './publish-post'
+import TimelinePosts from './timeline-posts'
 
 export default function TimelineTab() {
   return (
@@ -9,9 +9,7 @@ export default function TimelineTab() {
           Timeline
         </p>
       </div>
-
       <PublishPost />
-
       <TimelinePosts />
     </section>
   )

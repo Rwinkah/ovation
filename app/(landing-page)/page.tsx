@@ -6,13 +6,13 @@ import Features from './_sections/features'
 import Hero from './_sections/hero'
 import Footer from './_sections/footer'
 import MoreFromOvation from './_sections/more'
-import InfoCards from './_sections/infoCards'
-import HowItWorks from './_sections/howItWorks'
+import InfoCards from './_sections/info-cards'
+import HowItWorks from './_sections/how-it-works'
 import Promotion from './_sections/promotion'
 import React, { useEffect, useState } from 'react'
 import Preloader from './_components/preloader'
 import { Newsletter } from './_sections/newsletter'
-import ExtendedPartners from './_sections/extendedPartners'
+import ExtendedPartners from './_sections/extended-partners'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -33,7 +33,6 @@ function Application() {
     <React.Fragment>
       <Promotion />
       <Header />
-
       <div className="mobile-gradient-container md:hero-gradient absolute top-[-40px] z-[-1] opacity-10 w-full h-[800px]" />
       <main className="overflow-hidden flex flex-col items-center justify-between pt-24">
         <Hero />
