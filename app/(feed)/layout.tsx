@@ -1,5 +1,5 @@
 import TimelineHeader from './_sections/_timeline/timeline-header'
-import Aside from './_sections/Aside'
+import Aside from './_sections/aside'
 
 export default function AsideLayout({
   children,
