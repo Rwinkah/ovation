@@ -1,9 +1,8 @@
 'use client'
-
-import MessageContainer from '@/app/(feed)/messages/messageContainer'
-import SearcInput from '@/app/(feed)/_components/_timeline/searchInput'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import SearcInput from '../../_components/_timeline/search-input'
+import MessageContainer from '../../messages/message-container'
 
 export default function FriendList() {
   interface Friend {
