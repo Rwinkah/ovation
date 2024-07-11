@@ -1,6 +1,6 @@
-import Topics from '@/app/_components/_timeline/Topic'
-import FeaturedCard from '@/app/_components/_timeline/featuredCard'
-import SearcInput from '@/app/_components/_timeline/searchInput'
+import Topics from '@/app/(feed)/_components/_timeline/Topic'
+import FeaturedCard from '@/app/(feed)/_components/_timeline/featuredCard'
+import SearcInput from '@/app/(feed)/_components/_timeline/searchInput'
 
 export default function OtherLinks() {
   return (

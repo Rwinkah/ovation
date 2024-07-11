@@ -1,5 +1,5 @@
 import { Input } from '@/components/ui/input'
-import SearchIcon from '../_icons/searchIcon'
+import SearchIcon from '../../../../components/icons/searchIcon'
 
 export default function SearcInput() {
   return (

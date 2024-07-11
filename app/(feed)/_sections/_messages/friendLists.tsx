@@ -1,7 +1,7 @@
 'use client'
 
 import MessageContainer from '@/app/(feed)/messages/messageContainer'
-import SearcInput from '@/app/_components/_timeline/searchInput'
+import SearcInput from '@/app/(feed)/_components/_timeline/searchInput'
 import Image from 'next/image'
 import React, { useState } from 'react'
 

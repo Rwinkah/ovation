@@ -1,10 +1,10 @@
 'use client'
 
-import EmojiIcon from '@/app/_components/_icons/emojiIcon'
-import GalleryIcon from '@/app/_components/_icons/galleryIcon'
+import EmojiIcon from '@/components/icons/emojiIcon'
+import GalleryIcon from '@/components/icons/galleryIcon'
 import Image from 'next/image'
 import { Input } from '@/components/ui/input'
-import SendIcon from '@/app/_components/_icons/sendIcon'
+import SendIcon from '@/components/icons/sendIcon'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 

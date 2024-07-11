@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import VerifyIcon from '../_icons/verifyIcon'
+import VerifyIcon from '../../../../components/icons/verifyIcon'
 
 export default function FeaturedCard() {
   return (

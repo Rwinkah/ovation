@@ -1,4 +1,4 @@
-import MoreIcon from '@/app/_components/_icons/moreIcon'
+import MoreIcon from '@/components/icons/moreIcon'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 

@@ -1,5 +1,4 @@
-import FriendList from '@/app/_sections/_messages/friendLists'
-import MessageContainer from './messageContainer'
+import FriendList from '../_sections/_messages/friendLists'
 
 export default function page() {
   return <FriendList />

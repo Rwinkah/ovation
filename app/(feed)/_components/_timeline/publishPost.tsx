@@ -4,12 +4,12 @@ import Image from 'next/image'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { ReactElement, useState, ChangeEvent } from 'react'
-import VerifyIcon from '../_icons/verifyIcon'
-import NftIcon from '../_icons/nftIcon'
-import GalleryIcon from '../_icons/galleryIcon'
-import PollIcon from '../_icons/pollIcon'
-import EventIcon from '../_icons/eventIcon'
-import MicrophoneIcon from '../_icons/microphoneIcon'
+import VerifyIcon from '../../../../components/icons/verifyIcon'
+import NftIcon from '../../../../components/icons/nftIcon'
+import GalleryIcon from '../../../../components/icons/galleryIcon'
+import PollIcon from '../../../../components/icons/pollIcon'
+import EventIcon from '../../../../components/icons/eventIcon'
+import MicrophoneIcon from '../../../../components/icons/microphoneIcon'
 
 export default function PublishPost() {
   interface Tag {
