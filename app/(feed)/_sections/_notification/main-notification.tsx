@@ -3,7 +3,7 @@ import VerifiedNotification from './verified-notification'
 
 export default function MainNotification() {
   return (
-    <section className="w-full flex flex-col col-span-2 other-link overflow-auto">
+    <section className="w-full flex flex-col col-span-2 other-link overflow-auto bg-[#111115] border-r-[1px] border-[#111115]">
       <Tabs defaultValue="all" className="w-full px-0">
         <TabsList className="w-full border-b border-[#1A1A1A] px-0 rounded-none">
           <TabsTrigger
@@ -19,8 +19,10 @@ export default function MainNotification() {
             Verified
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="all">Change your name</TabsContent>
-        <TabsContent value="verified">
+        <TabsContent className='p-4 flex flex-col w-full text-center ' value="all">
+          <h2  className='text-6xl mt-[10rem]'>No notifications available</h2>
+        </TabsContent>
+        <TabsContent  value="verified">
           <VerifiedNotification />
         </TabsContent>
       </Tabs>
