@@ -102,8 +102,11 @@ aside,
 .other-link {
   height: calc(100vh - 90px);
 }
-
-@media screen and (max-width: 1024px) {
+textarea:focus, input:focus{
+  outline: 10px green;
+  border: white 10px solid;
+}
+@mediascreen and (max-width: 1024px) {
   .hero-img-top-left,
   .hero-img-top-right {
     @apply top-7;

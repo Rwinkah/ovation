@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import SearcInput from '../../_components/_timeline/search-input'
+import SearchInput from '../../_components/_timeline/search-input'
 import MessageContainer from '../../messages/message-container'
 
 export default function FriendList() {
@@ -96,7 +96,7 @@ export default function FriendList() {
       <div className="col-span-1 flex flex-col other-link border-r border-[#1A1A1A] overflow-auto">
         <div className="flex flex-col gap-5 px-[30px] py-8">
           <p className="text-[28px] text-white font-semibold">Mesaages</p>
-          <SearcInput />
+          <SearchInput />
         </div>
 
         <div className="flex flex-col gap-1 w-full">

@@ -1,5 +1,5 @@
 import TimelineHeader from './_sections/_timeline/timeline-header'
-import Aside from './_sections/aside'
+import Aside from './_sections/Aside'
 
 export default function AsideLayout({
   children,
@@ -10,7 +10,7 @@ export default function AsideLayout({
     <html lang="en">
       <body>
         <TimelineHeader />
-        <main className="flex w-full">
+        <main className="flex w-full overflow-y-visible">
           <Aside />
           {children}
         </main>

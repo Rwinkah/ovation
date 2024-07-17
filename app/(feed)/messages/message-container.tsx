@@ -1,12 +1,15 @@
 'use client'
-
-import EmojiIcon from '@/components/icons/emojiIcon'
-import GalleryIcon from '@/components/icons/galleryIcon'
+import EmojiPicker, { EmojiStyle, Theme } from 'emoji-picker-react';
+import GalleryIcon from '@/components/icons/galleryIcon';
+import EmojiIcon from '@/components/icons/emojiIcon';
 import Image from 'next/image'
 import { Input } from '@/components/ui/input'
 import SendIcon from '@/components/icons/sendIcon'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { Popover } from '@/components/ui/popover';
+import { PopoverContent, PopoverTrigger } from '@radix-ui/react-popover';
+import { Textarea } from '@/components/ui/textarea';
 
 interface FriendProps {
   friendDisplayPicture: string
@@ -22,6 +25,7 @@ interface FriendProps {
 
 export default function MessageContainer({ friend }: any) {
   const [sendStatus, setSendStatus] = useState<boolean>(true)
+  const [message, setMessage] = useState<string>('')
 
   const handleChange = (e: any) => {
     if (e.target.value === '') {
@@ -29,11 +33,17 @@ export default function MessageContainer({ friend }: any) {
     } else {
       setSendStatus(false)
     }
+
+    setMessage(e.target.value)
   }
+  const handleEmojiSelect = (emojiObject:any) => {
+    console.log(emojiObject)
+    setMessage((prevMessage) => prevMessage + emojiObject.emoji);
+  };
 
   return (
-    <section className="col-span-2 flex flex-col other-link overflow-auto bg-[#111115]">
-      <div className="w-full border-b border-[#1A1A1A] py-9 flex flex-col items-center gap-4">
+    <section className="col-span-2 flex flex-col other-link  bg-[#111115] overflow-hidden">
+      <div className="w-full border-b border-[#1A1A1A] py-9 flex flex-col items-center gap-4 h-fit">
         <Image
           src={friend.friendDisplayPicture}
           alt="User Display Picture"
@@ -99,23 +109,40 @@ export default function MessageContainer({ friend }: any) {
       </div>
 
       <div className="w-full py-[34px] px-9 border-t border-[#1A1A1A] sticky bottom-0 bg-[#111115]">
-        <div className="w-full flex items-center h-fit bg-[#232227] rounded-[500px] p-5">
-          <div className="flex gap-3">
-            <GalleryIcon className="w-6 h-6 fill-[#E7F8B9] stroke-[#E7F8B9]" />
-            <EmojiIcon className="w-6 h-6" />
+
+        <div className="w-full flex items-center h bg-[#232227] rounded-[500px] p-5 h-fit">
+          <div className="flex">
+            <Button variant={'msgBox'}>
+              <GalleryIcon className="w-6 h-6 fill-[#E7F8B9] stroke-[#E7F8B9]" />
+            </Button>
+
+
+            <Popover>
+              <PopoverTrigger>
+                <Button variant={'msgBox'}>
+                  <EmojiIcon className="w-6 h-6" />
+                </Button>
+              </PopoverTrigger>
+
+              <PopoverContent>
+                <EmojiPicker  emojiStyle={EmojiStyle.TWITTER} theme={Theme.DARK} onEmojiClick={handleEmojiSelect}/>
+              </PopoverContent>
+            </Popover>
+
           </div>
 
-          <Input
+          <Textarea
             placeholder="Type out a new message..."
-            className="text-[#808080] bg-transparent border-none outline-none ring-0 focus-visible:ring-0 ml-0 py-0 h-fit"
+            value={message}
+            className="min-h-[58px] h-auto text-white bg-transparent border-[10rem] border-black outline-none ring-0 focus:outline-none focus-visible:border-none ml-0 py-0"
             onChange={handleChange}
           />
 
-          <Button
-            className="p-0 h-fit w-fit bg-transparent"
+          <Button variant={'msgBox'}
+
             disabled={sendStatus}
           >
-            <SendIcon />
+            <SendIcon className='' />
           </Button>
         </div>
       </div>

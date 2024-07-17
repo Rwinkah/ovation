@@ -46,7 +46,7 @@ export default function Topics() {
       <div className="flex flex-col gap-4 w-full">
         {topics.map((topic, index) => (
           <div
-            className="flex flex-col w-full gap-[10px] p-4 bg-[#18181C] border border-[#35353880] rounded-[17px]"
+            className="flex hover:scale-105 transition-all flex-col w-full gap-[10px] p-4 bg-[#18181C] border border-[#35353880] rounded-[17px]"
             key={index}
           >
             <p className="font-semibold text-[#E6E6E6] leading-5">
