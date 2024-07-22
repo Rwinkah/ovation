@@ -2,10 +2,13 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import VerifyIcon from '../../../../components/icons/verifyIcon'
 
-export default function FeaturedCard() {
+
+interface FeaturedCardProps {
+  className?: string
+}
+export default function FeaturedCard({className}:FeaturedCardProps) {
   return (
-    <>
-      <div className="flex flex-col w-full border border-[#FFFFFF14] rounded-[14px] p-6 gap-9">
+      <div className={`flex flex-col w-full border border-[#FFFFFF14] rounded-[14px] p-6 gap-9 ${className}`}>
         <div className="flex items-center w-full justify-between">
           <p className="text-base font-medium text-white">FEATURED</p>
 
@@ -53,6 +56,6 @@ export default function FeaturedCard() {
           </p>
         </div>
       </div>
-    </>
+
   )
 }

@@ -20,7 +20,8 @@ const buttonVariants = cva(
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
         msgBox: 'hover:scale-110 hover:text-accent-foreground',
-
+        active:
+          'bg-white text-buttonTextColor py-[18px] px-[22px] text-sm w-fit rounded-[50px] font-semibold',
       },
       size: {
         default: 'h-10 px-4 py-2',
