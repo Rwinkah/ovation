@@ -22,12 +22,12 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { icon: <HomeIcon />, text: 'Home', path: '/timeline' },
-  { icon: <DiscoverIcon />, text: 'Discover', path: '/discover' },
-  { icon: <ProfileIcon />, text: 'Profile', path: '/profile' },
-  { icon: <SettingsIcon />, text: 'Settings', path: '/settings' },
-  { icon: <AsideMsgIcon />, text: 'Messages', path: '/messages' },
-  { icon: <NotificationIcon />, text: 'Notification', path: '/notification' },
+  { icon: <HomeIcon />, text: 'Home', path: '/apps/timeline' },
+  { icon: <DiscoverIcon />, text: 'Discover', path: '/apps/discover' },
+  { icon: <ProfileIcon />, text: 'Profile', path: '/apps/profile' },
+  { icon: <SettingsIcon />, text: 'Settings', path: '/apps/settings' },
+  { icon: <AsideMsgIcon />, text: 'Messages', path: '/apps/messages' },
+  { icon: <NotificationIcon />, text: 'Notification', path: '/apps/notification' },
 ]
 
 export default function Aside() {

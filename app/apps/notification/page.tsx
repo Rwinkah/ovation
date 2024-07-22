@@ -1,5 +1,5 @@
-import MainNotification from '@/app/(feed)/_sections/_notification/main-notification'
-import OtherLinks from '@/app/(feed)/_sections/_timeline/other-link'
+import MainNotification from '@/app/apps/_sections/_notification/main-notification'
+import OtherLinks from '@/app/apps/_sections/_timeline/other-link'
 
 export default function Notifications() {
   return (

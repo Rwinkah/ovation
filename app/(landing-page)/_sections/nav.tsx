@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Header({ navLinks = links }: HeaderProps) {
 	return (
@@ -117,7 +118,19 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
 							)}
 						</li>
 					))}
-				</ul>
+					<Button className="hover:bg-transparent hover:scale-105 border-[#bdff00] border-2 text-black rounded-full" variant={'ghost'}>
+						<Link 	
+							className={`
+							block whitespace-nowrap  text-lg text-primary-foreground no-underline transition 
+							${mobile && ""}
+							`}
+							href='/apps/timeline'>
+
+							Dashboard
+						</Link>
+					</Button>
+
+								</ul>
 			</nav>
 		</>
 	);
@@ -126,17 +139,17 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
 function NavLink({ children, className, mobile, href }: NavLinkProps) {
 	return (
 		<Button variant={"ghost"} disabled>
-			<a
+			<Link
 				className={`
         block whitespace-nowrap  text-lg text-primary-foreground no-underline transition 
         ${mobile && ""}
         ${className}
         `}
 				aria-disabled
-				href={href}
+				href={`${href}`}
 			>
 				{children}
-			</a>
+			</Link>
 		</Button>
 	);
 }

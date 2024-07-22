@@ -1,10 +1,17 @@
 import { Input } from '@/components/ui/input'
 import SearchIcon from '../../../../components/icons/searchIcon'
+import { CustomIconProps } from '@/app/types';
 
-export default function SearchInput() {
+
+interface SearchInputProps {
+  inpClass?: string;
+  iconClass?: CustomIconProps
+}
+
+export default function SearchInput({inpClass, iconClass}:SearchInputProps) {
   return (
-    <div className="h-[54px] w-[450px] border-[1px] flex items-center rounded-full border-[#353538] rounded- gap-[15px] pl-3">
-      <SearchIcon />
+    <div className={`h-[54px] w-[450px] border-[1px] flex items-center rounded-full border-[#353538] rounded- gap-[15px] pl-3 ${inpClass}`}>
+      <SearchIcon className={iconClass?.className} fill={iconClass?.fill}  />
 
       <Input
         type="text"
