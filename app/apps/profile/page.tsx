@@ -4,12 +4,13 @@ import { Button } from '@/components/ui/button'
 import AsideMsgIcon from '@/components/icons/asideMsgIcon'
 import StatusUpIcon from '@/components/icons/statusUpIcon'
 import UserProfile from '../_sections/_profile/userProfile'
-import MainProfileSection from '../_sections/_profile/mainProfileSection'
+import MainProfileSection from '../_sections/_profile/main-profile-section'
+import ComingSoon from '../_components/_profile/coming-soon'
 
 export default function page() {
   return (
-    <section className="w-full flex flex-col overflow-auto">
-      <div className="w-full h-[262px] flex items-end justify-end pr-10 pb-10 gap-3 bg-profile-banner bg-contain bg-center">
+    <section className="w-full h-fit flex flex-col">
+      <div className="relative w-full h-[262px] flex items-end justify-end pr-10 pb-10 gap-3 bg-profile-banner bg-contain bg-center">
         <Button
           variant="default"
           className="bg-[#333333] p-[11px] border border-[#E6E6E64D]"

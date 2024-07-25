@@ -96,7 +96,7 @@ export default function FriendList() {
       <div className="col-span-1 flex flex-col other-link border-r border-[#1A1A1A] overflow-auto">
         <div className="flex flex-col gap-5 px-[30px] py-8">
           <p className="text-[28px] text-white font-semibold">Mesaages</p>
-          <SearchInput />
+          <SearchInput width="full" />
         </div>
 
         <div className="flex flex-col gap-1 w-full">

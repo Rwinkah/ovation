@@ -2,11 +2,11 @@ import EventIcon from '@/components/icons/eventIcon'
 import Image from 'next/image'
 import Badges from './badges'
 import Socials from './socials'
-import FavouriteNft from './favouriteNft'
+import FavouriteNft from './favourite-nft'
 
 export default function UserProfile() {
   return (
-    <div className="col-span-1 flex flex-col min-h-screen px-4 pb-4 gap-11 border-r border-[#1A1A1A] bg-[#111115]">
+    <div className="col-span-1 flex flex-col min-h-screen px-4 pb-4 gap-11 border-r border-[#1A1A1A] bg-[#111115] sticky top-0">
       <Image
         src="/assets/images/profile/image1.png"
         alt="User Display Picture"

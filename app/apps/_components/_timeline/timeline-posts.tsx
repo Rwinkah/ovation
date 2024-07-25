@@ -42,7 +42,7 @@ const postMenu: PostMenu[] = [
 
 export default function TimelinePosts() {
   const [postActions, setPostActions] = useState<PostAction[]>([
-    { icon: <LikeIcon />, value: 43, isActive: false },
+    { icon: <LikeIcon className="w-[17px] h-4" />, value: 43, isActive: false },
     { icon: <MessageIcon />, value: 43, isActive: false },
     { icon: <RepostIcon />, value: 43, isActive: false },
     { icon: <ClapIcon />, value: 43, isActive: false },
