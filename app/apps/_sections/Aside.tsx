@@ -26,8 +26,16 @@ const menuItems: MenuItem[] = [
   { icon: <DiscoverIcon />, text: 'Discover', path: '/apps/discover' },
   { icon: <ProfileIcon />, text: 'Profile', path: '/apps/profile' },
   { icon: <SettingsIcon />, text: 'Settings', path: '/apps/settings' },
-  { icon: <AsideMsgIcon />, text: 'Messages', path: '/apps/messages' },
-  { icon: <NotificationIcon />, text: 'Notification', path: '/apps/notification' },
+  {
+    icon: <AsideMsgIcon className="w-6 h-6 group-hover:stroke-white" />,
+    text: 'Messages',
+    path: '/apps/messages',
+  },
+  {
+    icon: <NotificationIcon />,
+    text: 'Notification',
+    path: '/apps/notification',
+  },
 ]
 
 export default function Aside() {

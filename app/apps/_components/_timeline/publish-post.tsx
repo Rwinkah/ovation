@@ -19,7 +19,11 @@ export default function PublishPost() {
   }
 
   const [tags, setTags] = useState<Tag[]>([
-    { icon: <NftIcon />, text: 'NFT', isActive: false },
+    {
+      icon: <NftIcon className="w-[15px] h-4 stroke-[#E6E6E6]" />,
+      text: 'NFT',
+      isActive: false,
+    },
     {
       icon: (
         <GalleryIcon className="h-4 w-[17px] fill-[#E6E6E6] stroke-[#E6E6E6]" />
@@ -28,7 +32,11 @@ export default function PublishPost() {
       isActive: false,
     },
     { icon: <PollIcon />, text: 'Poll', isActive: false },
-    { icon: <EventIcon />, text: 'Event', isActive: false },
+    {
+      icon: <EventIcon className="w-[17px] h-4 stroke-[#E6E6E6]" />,
+      text: 'Event',
+      isActive: false,
+    },
     { icon: <MicrophoneIcon />, text: 'Record', isActive: false },
   ])
 
