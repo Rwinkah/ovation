@@ -40,130 +40,146 @@ const postMenu: PostMenu[] = [
   { icon: <DeleteIcon />, text: 'Delete post', isDeleteButton: true },
 ]
 
+const posts = [
+  {
+    id: 1,
+    userDisplayPicture: '/assets/images/timeline/Shape.png',
+    displayName: 'Trevor Belmont',
+    userName: 'trevor12',
+    imgSrc: '/assets/images/timeline/_post/post-media.png',
+    transcripts: [
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+    ],
+    extraTranscripts: [
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+    ],
+    eventHeader: '',
+    eventImage: '',
+    eventDate: '',
+    eventLocation: '',
+    hasMedia: true,
+    hasEvent: false,
+    hasVoiceRecord: false,
+  },
+  {
+    id: 2,
+    userDisplayPicture: '/assets/images/timeline/Oval.png',
+    displayName: 'Alucard',
+    userName: 'alucard12',
+    imgSrc: '',
+    transcripts: [
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+    ],
+    extraTranscripts: [
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+    ],
+    eventHeader: 'MINT DAY: Kansas city',
+    eventImage: '/assets/images/timeline/_post/image7.png',
+    eventDate: 'Wed, 24 Jan, 15:00 - 20:00',
+    eventLocation: 'Virtual event',
+    hasMedia: false,
+    hasEvent: true,
+    hasVoiceRecord: false,
+  },
+  {
+    id: 3,
+    userDisplayPicture: '/assets/images/timeline/Oval.png',
+    displayName: 'Outcast',
+    userName: 'lummie12',
+    imgSrc: '',
+    transcripts: [
+      { time: '00.00', text: 'How are you?' },
+      { time: '00.05', text: 'Hope you are good?' },
+      { time: '00.09', text: 'Where are you?' },
+      { time: '00.15', text: 'Come on in' },
+      { time: '00.19', text: 'Everyone is welcomed here' },
+    ],
+    extraTranscripts: [
+      { time: '00:26', text: 'Lorem ipsum', isHidden: false },
+      { time: '00:30', text: 'Lorem ipsum', isHidden: false },
+      { time: '00:37', text: 'Lorem ipsum', isHidden: false },
+      { time: '00:44', text: 'Lorem ipsum', isHidden: false },
+      { time: '00:56', text: 'Lorem ipsum', isHidden: false },
+    ],
+    eventHeader: '',
+    eventImage: '',
+    eventDate: '',
+    eventLocation: '',
+    hasMedia: false,
+    hasEvent: false,
+    hasVoiceRecord: true,
+  },
+  {
+    id: 4,
+    userDisplayPicture: '/assets/images/timeline/Shape.png',
+    displayName: 'Nino Uptown',
+    userName: 'sametime',
+    imgSrc: '',
+    transcripts: [
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+      { time: '', text: '' },
+    ],
+    extraTranscripts: [
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+      { time: '', text: '', isHidden: false },
+    ],
+    eventHeader: '',
+    eventImage: '',
+    eventDate: '',
+    eventLocation: '',
+    hasMedia: false,
+    hasEvent: false,
+    hasVoiceRecord: false,
+  },
+]
+
 export default function TimelinePosts() {
+  const [isShown, setIsShown] = useState(posts)
+
+  const toggleTranscripts = (index: number) => {
+    const updatedList = isShown.map((item, i) =>
+      i === index
+        ? {
+            ...item,
+            extraTranscripts: item.extraTranscripts.map((transcript) => ({
+              ...transcript,
+              isHidden: !transcript.isHidden,
+            })),
+          }
+        : item,
+    )
+
+    setIsShown(updatedList)
+  }
+
   const [postActions, setPostActions] = useState<PostAction[]>([
     { icon: <LikeIcon className="w-[17px] h-4" />, value: 43, isActive: false },
     { icon: <MessageIcon />, value: 43, isActive: false },
     { icon: <RepostIcon />, value: 43, isActive: false },
     { icon: <ClapIcon />, value: 43, isActive: false },
   ])
-
-  const [isShown, setIsShown] = useState<boolean>(false)
-
-  const posts = [
-    {
-      id: 1,
-      userDisplayPicture: '/assets/images/timeline/Shape.png',
-      displayName: 'Trevor Belmont',
-      userName: 'trevor12',
-      imgSrc: '/assets/images/timeline/_post/post-media.png',
-      transcripts: [
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-      ],
-      extraTranscripts: [
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-      ],
-      eventHeader: '',
-      eventImage: '',
-      eventDate: '',
-      eventLocation: '',
-      hasMedia: true,
-      hasEvent: false,
-      hasVoiceRecord: false,
-    },
-    {
-      id: 2,
-      userDisplayPicture: '/assets/images/timeline/Oval.png',
-      displayName: 'Alucard',
-      userName: 'alucard12',
-      imgSrc: '',
-      transcripts: [
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-      ],
-      extraTranscripts: [
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-      ],
-      eventHeader: 'MINT DAY: Kansas city',
-      eventImage: '/assets/images/timeline/_post/image7.png',
-      eventDate: 'Wed, 24 Jan, 15:00 - 20:00',
-      eventLocation: 'Virtual event',
-      hasMedia: false,
-      hasEvent: true,
-      hasVoiceRecord: false,
-    },
-    {
-      id: 3,
-      userDisplayPicture: '/assets/images/timeline/Oval.png',
-      displayName: 'Outcast',
-      userName: 'lummie12',
-      imgSrc: '',
-      transcripts: [
-        { time: '00.00', text: 'How are you?' },
-        { time: '00.05', text: 'Hope you are good?' },
-        { time: '00.09', text: 'Where are you?' },
-        { time: '00.15', text: 'Come on in' },
-        { time: '00.19', text: 'Everyone is welcomed here' },
-      ],
-      extraTranscripts: [
-        { time: '00:26', text: 'Lorem ipsum', isHidden: isShown },
-        { time: '00:30', text: 'Lorem ipsum', isHidden: isShown },
-        { time: '00:37', text: 'Lorem ipsum', isHidden: isShown },
-        { time: '00:44', text: 'Lorem ipsum', isHidden: isShown },
-        { time: '00:56', text: 'Lorem ipsum', isHidden: isShown },
-      ],
-      eventHeader: '',
-      eventImage: '',
-      eventDate: '',
-      eventLocation: '',
-      hasMedia: false,
-      hasEvent: false,
-      hasVoiceRecord: true,
-    },
-    {
-      id: 4,
-      userDisplayPicture: '/assets/images/timeline/Shape.png',
-      displayName: 'Nino Uptown',
-      userName: 'sametime',
-      imgSrc: '',
-      transcripts: [
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-        { time: '', text: '' },
-      ],
-      extraTranscripts: [
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-        { time: '', text: '', isHidden: isShown },
-      ],
-      eventHeader: '',
-      eventImage: '',
-      eventDate: '',
-      eventLocation: '',
-      hasMedia: false,
-      hasEvent: false,
-      hasVoiceRecord: false,
-    },
-  ]
 
   const handleClick = (index: number) => {
     const updatedList = postActions.map((action, i) => ({
@@ -176,7 +192,7 @@ export default function TimelinePosts() {
 
   return (
     <>
-      {posts.map((post) => (
+      {isShown.map((post, index) => (
         <section
           className="w-full  h-fit py-10 px-[10px] flex flex-col  items-center  border-t border-[#1A1A1A]"
           key={post.id}
@@ -292,7 +308,7 @@ export default function TimelinePosts() {
                   <Button
                     variant="default"
                     className="p-0 w-fit h-fit bg-transparent text-sm text-[#9CBD40] font-normal hover:opacity-80 transition-all duration-300"
-                    onClick={() => setIsShown(!isShown)}
+                    onClick={() => toggleTranscripts(index)}
                   >
                     {isShown ? 'Hide transcript' : 'View transcript'}
                   </Button>

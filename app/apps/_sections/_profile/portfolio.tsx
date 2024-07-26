@@ -1,8 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   Select,
   SelectContent,
@@ -10,8 +8,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import React, { useState } from 'react'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 import LikeIcon from '@/components/icons/likeIcon'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 interface Button {
   name: string
@@ -24,8 +24,6 @@ interface CreatedNFT {
   artist: string
   price: number
   isLiked: boolean
-  likeCount: number
-  isHidden: boolean
   isComplete: boolean
   isDomain: boolean
   isCollectible: boolean
@@ -48,8 +46,6 @@ const createdNFT: CreatedNFT[] = [
     artist: 'Bored Ape',
     price: 14,
     isLiked: false,
-    likeCount: 40,
-    isHidden: false,
     isComplete: true,
     isDomain: false,
     isCollectible: false,
@@ -61,8 +57,6 @@ const createdNFT: CreatedNFT[] = [
     artist: 'Micheal Marcagi',
     price: 14,
     isLiked: false,
-    likeCount: 39,
-    isHidden: false,
     isComplete: false,
     isDomain: true,
     isCollectible: false,
@@ -74,8 +68,6 @@ const createdNFT: CreatedNFT[] = [
     artist: 'Hozier',
     price: 14,
     isLiked: false,
-    likeCount: 38,
-    isHidden: false,
     isComplete: false,
     isDomain: false,
     isCollectible: true,
@@ -87,8 +79,6 @@ const createdNFT: CreatedNFT[] = [
     artist: 'Royel Otis',
     price: 14,
     isLiked: false,
-    likeCount: 37,
-    isHidden: false,
     isComplete: false,
     isDomain: false,
     isCollectible: false,
@@ -100,8 +90,6 @@ const createdNFT: CreatedNFT[] = [
     artist: 'Matt Hansen',
     price: 14,
     isLiked: false,
-    likeCount: 36,
-    isHidden: false,
     isComplete: false,
     isDomain: false,
     isCollectible: false,
@@ -110,16 +98,8 @@ const createdNFT: CreatedNFT[] = [
   },
 ]
 
-export default function Created() {
+export default function Portfolio() {
   const [items, setItems] = useState<CreatedNFT[]>(createdNFT)
-
-  const toggleHidden = (index: number) => {
-    const updatedList = items.map((item, i) =>
-      i === index ? { ...item, isHidden: !item.isHidden } : item,
-    )
-
-    setItems(updatedList)
-  }
 
   const toggleLike = (index: number) => {
     const updatedList = items.map((item, i) =>
@@ -133,7 +113,7 @@ export default function Created() {
     <div className="w-full py-10 flex items-center justify-center">
       <div className="w-[95%] px-7 py-6 rounded-[14px] border border-[#353538] flex flex-col gap-[42px]">
         <div className="flex flex-col gap-[21px]">
-          <p className="text-white font-medium">Created</p>
+          <p className="text-white font-medium">NFTS</p>
 
           <div className="flex items-center justify-between">
             <Tabs defaultValue="All" className="w-full flex flex-col gap-10">
@@ -165,9 +145,15 @@ export default function Created() {
                 <div className="flex flex-wrap gap-4">
                   {items.map((item, index) => (
                     <div
-                      className="w-[296px] flex flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px]"
+                      className="w-[296px] flex flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px] relative"
                       key={index}
                     >
+                      <div className="flex items-center p-2 rounded-full bg-[#333726] absolute right-5 top-3">
+                        <LikeIcon
+                          className={`w-4 h-4 transition-all duration-300 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-[#CFF073] fill-none'}`}
+                          onClick={() => toggleLike(index)}
+                        />
+                      </div>
                       <Image
                         src={item.imgSrc}
                         alt="NFT Preview"
@@ -179,38 +165,21 @@ export default function Created() {
                       <div className="flex flex-col items-center justify-between bg-[#111115] border border-[#FFFFFF0D] px-3 py-3 rounded-b-[10px] gap-3">
                         <div className="flex items-center justify-between w-full">
                           <div className="flex flex-col items-start">
-                            <p className="text-[11px] text-[#999999]">Artist</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[11px] text-white">
                               {item.artist}
                             </p>
-                          </div>
-                          <div className="flex flex-col items-end">
-                            <p className="text-[11px] text-[#999999]">Price</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[#999999] text-[11px] font-semibold">
                               {item.price + ' ' + 'ETH'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex w-full items-center justify-between pt-3 border-t border-[#353538]">
-                          <div className="flex items-center gap-1">
-                            <LikeIcon
-                              className={`w-4 h-4 transition-all duration-300 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-white fill-none'}`}
-                              onClick={() => toggleLike(index)}
-                            />
-                            <p className="text-xs text-white font-normal">
-                              {item.isLiked
-                                ? item.likeCount + 1
-                                : item.likeCount}
                             </p>
                           </div>
 
                           <Button
                             variant="default"
-                            className={`${item.isHidden ? 'outline outline-1 outline-[#CFF073] bg-transparent text-[#CFF073]' : 'bg-[#CFF073] text-[#111115]'} px-3 py-[6px] h-fit text-[10px] font-medium`}
-                            onClick={() => toggleHidden(index)}
+                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
                           >
-                            {item.isHidden ? 'Unhide' : 'Hide'}
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                           </Button>
                         </div>
                       </div>
@@ -222,9 +191,15 @@ export default function Created() {
                 <div className="flex flex-wrap gap-4">
                   {items.map((item, index) => (
                     <div
-                      className={`${item.isComplete ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px]`}
+                      className={`${item.isComplete ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px] relative`}
                       key={index}
                     >
+                      <div className="flex items-center p-2 rounded-full bg-[#333726] absolute right-5 top-3">
+                        <LikeIcon
+                          className={`w-4 h-4 transition-all duration-300 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-[#CFF073] fill-none'}`}
+                          onClick={() => toggleLike(index)}
+                        />
+                      </div>
                       <Image
                         src={item.imgSrc}
                         alt="NFT Preview"
@@ -236,38 +211,21 @@ export default function Created() {
                       <div className="flex flex-col items-center justify-between bg-[#111115] border border-[#FFFFFF0D] px-3 py-3 rounded-b-[10px] gap-3">
                         <div className="flex items-center justify-between w-full">
                           <div className="flex flex-col items-start">
-                            <p className="text-[11px] text-[#999999]">Artist</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[11px] text-white">
                               {item.artist}
                             </p>
-                          </div>
-                          <div className="flex flex-col items-end">
-                            <p className="text-[11px] text-[#999999]">Price</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[#999999] text-[11px] font-semibold">
                               {item.price + ' ' + 'ETH'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex w-full items-center justify-between pt-3 border-t border-[#353538]">
-                          <div className="flex items-center gap-1">
-                            <LikeIcon
-                              className={`w-4 h-4 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-white fill-none'}`}
-                              onClick={() => toggleLike(index)}
-                            />
-                            <p className="text-xs text-white font-normal">
-                              {item.isLiked
-                                ? item.likeCount + 1
-                                : item.likeCount}
                             </p>
                           </div>
 
                           <Button
                             variant="default"
-                            className={`${item.isHidden ? 'outline outline-1 outline-[#CFF073] bg-transparent text-[#CFF073]' : 'bg-[#CFF073] text-[#111115]'} px-3 py-[6px] h-fit text-[10px] font-medium`}
-                            onClick={() => toggleHidden(index)}
+                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
                           >
-                            {item.isHidden ? 'Unhide' : 'Hide'}
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                           </Button>
                         </div>
                       </div>
@@ -279,9 +237,15 @@ export default function Created() {
                 <div className="flex flex-wrap gap-4">
                   {items.map((item, index) => (
                     <div
-                      className={`${item.isDomain ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px]`}
+                      className={`${item.isDomain ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px] relative`}
                       key={index}
                     >
+                      <div className="flex items-center p-2 rounded-full bg-[#333726] absolute right-5 top-3">
+                        <LikeIcon
+                          className={`w-4 h-4 transition-all duration-300 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-[#CFF073] fill-none'}`}
+                          onClick={() => toggleLike(index)}
+                        />
+                      </div>
                       <Image
                         src={item.imgSrc}
                         alt="NFT Preview"
@@ -293,38 +257,21 @@ export default function Created() {
                       <div className="flex flex-col items-center justify-between bg-[#111115] border border-[#FFFFFF0D] px-3 py-3 rounded-b-[10px] gap-3">
                         <div className="flex items-center justify-between w-full">
                           <div className="flex flex-col items-start">
-                            <p className="text-[11px] text-[#999999]">Artist</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[11px] text-white">
                               {item.artist}
                             </p>
-                          </div>
-                          <div className="flex flex-col items-end">
-                            <p className="text-[11px] text-[#999999]">Price</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[#999999] text-[11px] font-semibold">
                               {item.price + ' ' + 'ETH'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex w-full items-center justify-between pt-3 border-t border-[#353538]">
-                          <div className="flex items-center gap-1">
-                            <LikeIcon
-                              className={`w-4 h-4 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-white fill-none'}`}
-                              onClick={() => toggleLike(index)}
-                            />
-                            <p className="text-xs text-white font-normal">
-                              {item.isLiked
-                                ? item.likeCount + 1
-                                : item.likeCount}
                             </p>
                           </div>
 
                           <Button
                             variant="default"
-                            className={`${item.isHidden ? 'outline outline-1 outline-[#CFF073] bg-transparent text-[#CFF073]' : 'bg-[#CFF073] text-[#111115]'} px-3 py-[6px] h-fit text-[10px] font-medium`}
-                            onClick={() => toggleHidden(index)}
+                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
                           >
-                            {item.isHidden ? 'Unhide' : 'Hide'}
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                           </Button>
                         </div>
                       </div>
@@ -336,9 +283,15 @@ export default function Created() {
                 <div className="flex flex-wrap gap-4">
                   {items.map((item, index) => (
                     <div
-                      className={`${item.isCollectible ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px]`}
+                      className={`${item.isCollectible ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px] relative`}
                       key={index}
                     >
+                      <div className="flex items-center p-2 rounded-full bg-[#333726] absolute right-5 top-3">
+                        <LikeIcon
+                          className={`w-4 h-4 transition-all duration-300 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-[#CFF073] fill-none'}`}
+                          onClick={() => toggleLike(index)}
+                        />
+                      </div>
                       <Image
                         src={item.imgSrc}
                         alt="NFT Preview"
@@ -350,38 +303,21 @@ export default function Created() {
                       <div className="flex flex-col items-center justify-between bg-[#111115] border border-[#FFFFFF0D] px-3 py-3 rounded-b-[10px] gap-3">
                         <div className="flex items-center justify-between w-full">
                           <div className="flex flex-col items-start">
-                            <p className="text-[11px] text-[#999999]">Artist</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[11px] text-white">
                               {item.artist}
                             </p>
-                          </div>
-                          <div className="flex flex-col items-end">
-                            <p className="text-[11px] text-[#999999]">Price</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[#999999] text-[11px] font-semibold">
                               {item.price + ' ' + 'ETH'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex w-full items-center justify-between pt-3 border-t border-[#353538]">
-                          <div className="flex items-center gap-1">
-                            <LikeIcon
-                              className={`w-4 h-4 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-white fill-none'}`}
-                              onClick={() => toggleLike(index)}
-                            />
-                            <p className="text-xs text-white font-normal">
-                              {item.isLiked
-                                ? item.likeCount + 1
-                                : item.likeCount}
                             </p>
                           </div>
 
                           <Button
                             variant="default"
-                            className={`${item.isHidden ? 'outline outline-1 outline-[#CFF073] bg-transparent text-[#CFF073]' : 'bg-[#CFF073] text-[#111115]'} px-3 py-[6px] h-fit text-[10px] font-medium`}
-                            onClick={() => toggleHidden(index)}
+                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
                           >
-                            {item.isHidden ? 'Unhide' : 'Hide'}
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                           </Button>
                         </div>
                       </div>
@@ -393,9 +329,15 @@ export default function Created() {
                 <div className="flex flex-wrap gap-4">
                   {items.map((item, index) => (
                     <div
-                      className={`${item.isMetaverse ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px]`}
+                      className={`${item.isMetaverse ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px] relative`}
                       key={index}
                     >
+                      <div className="flex items-center p-2 rounded-full bg-[#333726] absolute right-5 top-3">
+                        <LikeIcon
+                          className={`w-4 h-4 transition-all duration-300 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-[#CFF073] fill-none'}`}
+                          onClick={() => toggleLike(index)}
+                        />
+                      </div>
                       <Image
                         src={item.imgSrc}
                         alt="NFT Preview"
@@ -407,38 +349,21 @@ export default function Created() {
                       <div className="flex flex-col items-center justify-between bg-[#111115] border border-[#FFFFFF0D] px-3 py-3 rounded-b-[10px] gap-3">
                         <div className="flex items-center justify-between w-full">
                           <div className="flex flex-col items-start">
-                            <p className="text-[11px] text-[#999999]">Artist</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[11px] text-white">
                               {item.artist}
                             </p>
-                          </div>
-                          <div className="flex flex-col items-end">
-                            <p className="text-[11px] text-[#999999]">Price</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[#999999] text-[11px] font-semibold">
                               {item.price + ' ' + 'ETH'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex w-full items-center justify-between pt-3 border-t border-[#353538]">
-                          <div className="flex items-center gap-1">
-                            <LikeIcon
-                              className={`w-4 h-4 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-white fill-none'}`}
-                              onClick={() => toggleLike(index)}
-                            />
-                            <p className="text-xs text-white font-normal">
-                              {item.isLiked
-                                ? item.likeCount + 1
-                                : item.likeCount}
                             </p>
                           </div>
 
                           <Button
                             variant="default"
-                            className={`${item.isHidden ? 'outline outline-1 outline-[#CFF073] bg-transparent text-[#CFF073]' : 'bg-[#CFF073] text-[#111115]'} px-3 py-[6px] h-fit text-[10px] font-medium`}
-                            onClick={() => toggleHidden(index)}
+                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
                           >
-                            {item.isHidden ? 'Unhide' : 'Hide'}
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                           </Button>
                         </div>
                       </div>
@@ -450,9 +375,15 @@ export default function Created() {
                 <div className="flex flex-wrap gap-4">
                   {items.map((item, index) => (
                     <div
-                      className={`${item.isArt ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px]`}
+                      className={`${item.isArt ? 'flex' : 'hidden'} w-[296px] flex-col bg-[#18181C] border border-[#FFFFFF14] rounded-[10px] relative`}
                       key={index}
                     >
+                      <div className="flex items-center p-2 rounded-full bg-[#333726] absolute right-5 top-3">
+                        <LikeIcon
+                          className={`w-4 h-4 transition-all duration-300 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-[#CFF073] fill-none'}`}
+                          onClick={() => toggleLike(index)}
+                        />
+                      </div>
                       <Image
                         src={item.imgSrc}
                         alt="NFT Preview"
@@ -464,38 +395,21 @@ export default function Created() {
                       <div className="flex flex-col items-center justify-between bg-[#111115] border border-[#FFFFFF0D] px-3 py-3 rounded-b-[10px] gap-3">
                         <div className="flex items-center justify-between w-full">
                           <div className="flex flex-col items-start">
-                            <p className="text-[11px] text-[#999999]">Artist</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[11px] text-white">
                               {item.artist}
                             </p>
-                          </div>
-                          <div className="flex flex-col items-end">
-                            <p className="text-[11px] text-[#999999]">Price</p>
-                            <p className="text-white text-sm font-semibold">
+                            <p className="text-[#999999] text-[11px] font-semibold">
                               {item.price + ' ' + 'ETH'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex w-full items-center justify-between pt-3 border-t border-[#353538]">
-                          <div className="flex items-center gap-1">
-                            <LikeIcon
-                              className={`w-4 h-4 ${item.isLiked ? 'stroke-none fill-[#CFF073]' : 'stroke-white fill-none'}`}
-                              onClick={() => toggleLike(index)}
-                            />
-                            <p className="text-xs text-white font-normal">
-                              {item.isLiked
-                                ? item.likeCount + 1
-                                : item.likeCount}
                             </p>
                           </div>
 
                           <Button
                             variant="default"
-                            className={`${item.isHidden ? 'outline outline-1 outline-[#CFF073] bg-transparent text-[#CFF073]' : 'bg-[#CFF073] text-[#111115]'} px-3 py-[6px] h-fit text-[10px] font-medium`}
-                            onClick={() => toggleHidden(index)}
+                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
                           >
-                            {item.isHidden ? 'Unhide' : 'Hide'}
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                           </Button>
                         </div>
                       </div>

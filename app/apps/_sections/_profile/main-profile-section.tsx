@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Created from './created'
+import Stats from './stats'
+import Portfolio from './portfolio'
+import Experience from './experience'
 
 interface Featured {
   imgSrc: string
@@ -106,12 +109,18 @@ export default function MainProfileSection() {
         </TabsList>
         <TabsContent value="post">Change your password here.</TabsContent>
         <TabsContent value="replies">Change your password here.</TabsContent>
-        <TabsContent value="portfolio">Change your password here.</TabsContent>
+        <TabsContent value="portfolio">
+          <Portfolio />
+        </TabsContent>
         <TabsContent value="created">
           <Created />
         </TabsContent>
-        <TabsContent value="stat">Change your password here.</TabsContent>
-        <TabsContent value="experience">Change your password here.</TabsContent>
+        <TabsContent value="stat">
+          <Stats />
+        </TabsContent>
+        <TabsContent value="experience">
+          <Experience />
+        </TabsContent>
       </Tabs>
     </div>
   )
