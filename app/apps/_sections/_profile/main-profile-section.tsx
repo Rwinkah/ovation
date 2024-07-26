@@ -4,6 +4,7 @@ import Created from './created'
 import Stats from './stats'
 import Portfolio from './portfolio'
 import Experience from './experience'
+import ComingSoon from './coming-soon'
 
 interface Featured {
   imgSrc: string
@@ -69,7 +70,7 @@ export default function MainProfileSection() {
       </div>
 
       <Tabs defaultValue="post" className="w-full  my-16">
-        <TabsList className="w-full rounded-none gap-5 px-7 py-5 border-y border-[#353538]">
+        <TabsList className="flex flex-row items-center rounded-none px-7 py-5 border-y border-[#353538]">
           <TabsTrigger
             value="post"
             className="text-xs text-[#999999] px-5 py-[10px] rounded-[603px] bg-[#232227] border-none font-normal data-[state=active]:bg-white data-[state=active]:text-[#232227]"
@@ -107,7 +108,9 @@ export default function MainProfileSection() {
             Experience
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="post">Change your password here.</TabsContent>
+        <TabsContent value="post">
+          <ComingSoon />
+        </TabsContent>
         <TabsContent value="replies">Change your password here.</TabsContent>
         <TabsContent value="portfolio">
           <Portfolio />

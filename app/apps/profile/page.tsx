@@ -1,11 +1,9 @@
 import NftIcon from '@/components/icons/nftIcon'
-import MessageIcon from '@/components/icons/messageIcon'
 import { Button } from '@/components/ui/button'
 import AsideMsgIcon from '@/components/icons/asideMsgIcon'
 import StatusUpIcon from '@/components/icons/statusUpIcon'
 import UserProfile from '../_sections/_profile/user-profile'
 import MainProfileSection from '../_sections/_profile/main-profile-section'
-import ComingSoon from '../_components/_profile/coming-soon'
 
 export default function page() {
   return (
