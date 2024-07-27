@@ -37,6 +37,7 @@ export default function page() {
 
       <div className="grid grid-cols-3 relative">
         <UserProfile />
+
         <MainProfileSection />
       </div>
     </section>
