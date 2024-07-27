@@ -1,4 +1,28 @@
 import Circle from '@/components/icons/circle'
+import CircleProgress from '../../_components/_profile/circular-progress'
+
+const badges = [
+  {
+    progress: 75,
+    name: 'Portfolio',
+    imgSrc: '/assets/images/profile/badge1.png',
+  },
+  {
+    progress: 75,
+    name: 'Portfolio',
+    imgSrc: '/assets/images/profile/badge2.png',
+  },
+  {
+    progress: 75,
+    name: 'Portfolio',
+    imgSrc: '/assets/images/profile/badge3.png',
+  },
+  {
+    progress: 75,
+    name: 'Portfolio',
+    imgSrc: '/assets/images/profile/badge4.png',
+  },
+]
 
 export default function Badges() {
   return (
@@ -6,12 +30,15 @@ export default function Badges() {
       <p className="text-sm font-medium text-[#808080]">Badges</p>
 
       <div className="flex justify-between">
-        <div className="flex flex-col gap-[6px]">
-          <div className="outline outline-[3px] outline-[#808080] h-[50px] w-[50px] rounded-full relative">
-            <Circle className="p-0 absolute" />
+        {badges.map((item, index) => (
+          <div
+            className="flex flex-col gap-[6px] justify-center items-center"
+            key={index}
+          >
+            <CircleProgress value={item.progress} imgSrc={item.imgSrc} />
+            <p className="text-[11px] text-[#B3B3B3]">{item.name}</p>
           </div>
-          <p className="text-[11px] text-[#B3B3B3]">Portfolio</p>
-        </div>
+        ))}
       </div>
     </div>
   )

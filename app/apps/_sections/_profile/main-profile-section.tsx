@@ -70,7 +70,7 @@ export default function MainProfileSection() {
       </div>
 
       <Tabs defaultValue="post" className="w-full  my-16">
-        <TabsList className="flex flex-row items-center rounded-none px-7 py-5 border-y border-[#353538]">
+        <TabsList className="items-center rounded-none px-7 py-5 border-y gap-4 border-[#353538] w-full justify-start">
           <TabsTrigger
             value="post"
             className="text-xs text-[#999999] px-5 py-[10px] rounded-[603px] bg-[#232227] border-none font-normal data-[state=active]:bg-white data-[state=active]:text-[#232227]"

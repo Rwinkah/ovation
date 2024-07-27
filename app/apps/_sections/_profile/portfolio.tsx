@@ -8,6 +8,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
@@ -173,14 +178,32 @@ export default function Portfolio() {
                             </p>
                           </div>
 
-                          <Button
-                            variant="default"
-                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
-                          >
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                          </Button>
+                          <Popover>
+                            <PopoverTrigger>
+                              <Button
+                                variant="default"
+                                className="text-white gap-1 flex items-center bg-transparent h-fit p-1"
+                              >
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                              </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="rounded-[7px] bg-[#232227] flex flex-col w-fit p-0 border-none">
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] bg-transparent w-full h-fit border-b border-[#333333] rounded-none"
+                              >
+                                Feature NFT
+                              </Button>
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] w-full bg-transparent h-fit"
+                              >
+                                Make NFT public
+                              </Button>
+                            </PopoverContent>
+                          </Popover>
                         </div>
                       </div>
                     </div>
@@ -219,14 +242,32 @@ export default function Portfolio() {
                             </p>
                           </div>
 
-                          <Button
-                            variant="default"
-                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
-                          >
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                          </Button>
+                          <Popover>
+                            <PopoverTrigger>
+                              <Button
+                                variant="default"
+                                className="text-white gap-1 flex items-center bg-transparent h-fit p-1"
+                              >
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                              </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="rounded-[7px] bg-[#232227] flex flex-col w-fit p-0 border-none">
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] bg-transparent w-full h-fit border-b border-[#333333] rounded-none"
+                              >
+                                Feature NFT
+                              </Button>
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] w-full bg-transparent h-fit"
+                              >
+                                Make NFT public
+                              </Button>
+                            </PopoverContent>
+                          </Popover>
                         </div>
                       </div>
                     </div>
@@ -265,14 +306,32 @@ export default function Portfolio() {
                             </p>
                           </div>
 
-                          <Button
-                            variant="default"
-                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
-                          >
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                          </Button>
+                          <Popover>
+                            <PopoverTrigger>
+                              <Button
+                                variant="default"
+                                className="text-white gap-1 flex items-center bg-transparent h-fit p-1"
+                              >
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                              </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="rounded-[7px] bg-[#232227] flex flex-col w-fit p-0 border-none">
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] bg-transparent w-full h-fit border-b border-[#333333] rounded-none"
+                              >
+                                Feature NFT
+                              </Button>
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] w-full bg-transparent h-fit"
+                              >
+                                Make NFT public
+                              </Button>
+                            </PopoverContent>
+                          </Popover>
                         </div>
                       </div>
                     </div>
@@ -311,14 +370,32 @@ export default function Portfolio() {
                             </p>
                           </div>
 
-                          <Button
-                            variant="default"
-                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
-                          >
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                          </Button>
+                          <Popover>
+                            <PopoverTrigger>
+                              <Button
+                                variant="default"
+                                className="text-white gap-1 flex items-center bg-transparent h-fit p-1"
+                              >
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                              </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="rounded-[7px] bg-[#232227] flex flex-col w-fit p-0 border-none">
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] bg-transparent w-full h-fit border-b border-[#333333] rounded-none"
+                              >
+                                Feature NFT
+                              </Button>
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] w-full bg-transparent h-fit"
+                              >
+                                Make NFT public
+                              </Button>
+                            </PopoverContent>
+                          </Popover>
                         </div>
                       </div>
                     </div>
@@ -357,14 +434,32 @@ export default function Portfolio() {
                             </p>
                           </div>
 
-                          <Button
-                            variant="default"
-                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
-                          >
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                          </Button>
+                          <Popover>
+                            <PopoverTrigger>
+                              <Button
+                                variant="default"
+                                className="text-white gap-1 flex items-center bg-transparent h-fit p-1"
+                              >
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                              </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="rounded-[7px] bg-[#232227] flex flex-col w-fit p-0 border-none">
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] bg-transparent w-full h-fit border-b border-[#333333] rounded-none"
+                              >
+                                Feature NFT
+                              </Button>
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] w-full bg-transparent h-fit"
+                              >
+                                Make NFT public
+                              </Button>
+                            </PopoverContent>
+                          </Popover>
                         </div>
                       </div>
                     </div>
@@ -403,14 +498,32 @@ export default function Portfolio() {
                             </p>
                           </div>
 
-                          <Button
-                            variant="default"
-                            className="text-white gap-1 flex items-center p-0 bg-transparent h-fit"
-                          >
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                            <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
-                          </Button>
+                          <Popover>
+                            <PopoverTrigger>
+                              <Button
+                                variant="default"
+                                className="text-white gap-1 flex items-center bg-transparent h-fit p-1"
+                              >
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                              </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="rounded-[7px] bg-[#232227] flex flex-col w-fit p-0 border-none">
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] bg-transparent w-full h-fit border-b border-[#333333] rounded-none"
+                              >
+                                Feature NFT
+                              </Button>
+                              <Button
+                                variant="default"
+                                className="text-white text-xs justify-start font-medium px-3 py-[10px] w-full bg-transparent h-fit"
+                              >
+                                Make NFT public
+                              </Button>
+                            </PopoverContent>
+                          </Popover>
                         </div>
                       </div>
                     </div>
