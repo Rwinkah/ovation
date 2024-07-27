@@ -1,6 +1,7 @@
 export interface CustomIconProps {
   className?: string
   fill?: string
+  strokeLine?: string
 }
 
 export interface BadgedHolders {
@@ -26,6 +27,9 @@ export interface FeaturedUser {
   badges: number
   img: string
   desc: string
+  bio?: string
+  role?: string
+  organization?: string
 }
 
 export enum DiscoverFilter {
