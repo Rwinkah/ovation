@@ -14,7 +14,7 @@ import {
 } from '@/app/types'
 import { useEffect, useState } from 'react'
 
-export const TestData: BadgedHolders[] = [
+const TestData: BadgedHolders[] = [
   {
     id: '1',
     displayName: 'ETHplorer',
