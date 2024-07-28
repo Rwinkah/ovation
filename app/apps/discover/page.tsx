@@ -175,7 +175,7 @@ export default function page() {
   return (
     <div className="flex flex-col w-full bg-[#111115]">
       <div
-        className="h-[25vh] w-full g-orange-400 flex items-center justify-center bg-cover"
+        className="h-[25vh] w-full g-orange-400 flex items-center justify-center bg-cover shadow"
         style={{ backgroundImage: `url('/assets/images/discoverBack.svg')` }}
       >
         <SearchInput
@@ -541,7 +541,7 @@ interface DiscoverRightProps {
 
 function DiscoverRight({ filteredData }: DiscoverRightProps) {
   return (
-    <div className="h-[60vh] overflow-scroll">
+    <div className="h-[60vh] overflow-scroll pt-10">
       <div
         className={`flex flex-col w-full border border-[#FFFFFF14] rounded-[14px] p-6 gap-9`}
       >
@@ -592,7 +592,7 @@ function DiscoverRight({ filteredData }: DiscoverRightProps) {
           </p>
         </div>
       </div>
-      <div id="top-4-10 section" className="flex flex-col gap-5 w-full">
+      <div id="top-4-10 section" className="flex flex-col gap-5 w-full pt-5">
         {filteredData.slice(3).map((user, index) => (
           <div key={index} className="w-full">
             <div className="flex  h-[80px] text-white pl-4 pr-4 bg-[#1A1A1A] rounded-[20px] items-center justify-between">
