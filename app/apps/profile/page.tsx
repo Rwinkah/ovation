@@ -6,6 +6,7 @@ import UserProfile from '../_sections/_profile/user-profile'
 import MainProfileSection from '../_sections/_profile/main-profile-section'
 
 export default function page() {
+
   return (
     <section className="w-full h-fit flex flex-col">
       <div className="relative w-full h-[262px] flex items-end justify-end pr-10 pb-10 gap-3 bg-profile-banner bg-contain bg-center">
@@ -42,4 +43,5 @@ export default function page() {
       </div>
     </section>
   )
+
 }
