@@ -132,9 +132,7 @@ textarea:focus, input:focus{
     @apply w-[80%];
   }
 
-  .hero-description {
-    @apply w-[75%];
-  }
+ 
 
   .extended-partners-det-ctn {
     @apply w-[90%];
