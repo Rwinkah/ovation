@@ -185,7 +185,7 @@ export default function page() {
         />
       </div>
       <GetStarted />
-      <div className="grid grid-cols-[7fr,3fr] w-[95%] gap-10">
+      <div className="grid grid-cols-3 w-[95%] gap-5">
         <DiscoverLeft />
         {/* <OtherLinks /> */}
         <DiscoverRight filteredData={TestData} />
@@ -311,7 +311,7 @@ function GetStarted() {
 function DiscoverLeft() {
   const [Filter, setFilter] = useState<DiscoverFilter>(DiscoverFilter.Creators)
   return (
-    <div className="mt-10 mb-[20px] flex flex-col gap-10">
+    <div className="col-span-2 mt-10 mb-[20px] flex flex-col gap-10">
       <DiscoverFeature {...FeaturedTest} />
       <DiscoverHolders setFilter={setFilter} Filter={Filter} data={TestData} />
     </div>
@@ -332,7 +332,7 @@ function DiscoverFeature(user: FeaturedUser) {
         <img
           src="/assets/images/timeline/_other-section/featured.png"
           alt={`${user.userName}'s display picture`}
-          className="w-[420px] h-auto rounded-2xl"
+          className="w-[50%] h-auto rounded-2xl"
         />
 
         <div className="flex flex-col max-w-[372px] gap-4">
@@ -431,7 +431,7 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
       </div>
 
       <div className="p-4 items-center w-full rounded-lg flex flex-col gap-10 border-[#353538] border-[1px]">
-        <div className="flex gap-2">
+        <div className="w-full flex gap-2 overflow-auto hide-scrollbar">
           <Button
             className={`${Filter === DiscoverFilter.Contributors ? 'bg-white text-[#232227]' : 'bg-[#232227] text-[#999999]'} rounded-full px-5 py-[10px] h-fit text-xs`}
             onClick={() => {
@@ -490,7 +490,7 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
             }}
           >
             <div className="flex w-[90%] text-white py-5 px-4 bg-[#1A1A1A] rounded-[18px] mb-10 items-center justify-between border border-[#FFFFFF4D]">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
                 <span className="font-semibold">1</span>
                 <div className="w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
                   <img
@@ -502,16 +502,16 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
                 </div>
 
                 <div className="flex flex-col">
-                  <p className="text-xl font-semibold">
+                  <p className="2xl:text-xl text-sm font-semibold">
                     {filteredData[0].displayName}
                   </p>
-                  <p className="flex gap-2 text-sm items-center text-[#E6E6E6]">
+                  <p className="flex gap-1 text-xs items-center text-[#E6E6E6]">
                     <span>@{filteredData[0].userName} </span>
                     <VerifyIcon />
                   </p>
                 </div>
               </div>
-              <div className="bg-white text-[#0B0A10] px-[10px] py-[6px] rounded-3xl">
+              <div className="bg-white text-[#0B0A10] px-[10px] text-[9px] py-[6px] rounded-3xl">
                 {filteredData[0].collectorAmount > 1000
                   ? (filteredData[0].collectorAmount / 1000).toFixed(1) + 'k'
                   : filteredData[0].collectorAmount}{' '}
@@ -528,7 +528,7 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
               }}
             >
               <div className="flex w-[90%] h-[90px] text-white py-5 px-4 bg-[#1A1A1A] rounded-[18px] mb-10 items-center justify-between border border-[#FFFFFF4D]">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                   <span className="font-semibold">2</span>
                   <div className="w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
                     <img
@@ -540,16 +540,16 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
                   </div>
 
                   <div className="flex flex-col">
-                    <p className="text-xl font-semibold">
+                    <p className="2xl:text-xl text-sm font-semibold">
                       {filteredData[1].displayName}
                     </p>
-                    <p className="flex gap-2 text-sm items-center">
+                    <p className="flex gap-1 text-xs items-center">
                       <span>@{filteredData[1].userName} </span>
                       <VerifyIcon />
                     </p>
                   </div>
                 </div>
-                <div className="bg-white text-[#0B0A10] px-[10px] py-[6px] rounded-3xl">
+                <div className="bg-white text-[#0B0A10] text-[9px] px-[10px] py-[6px] rounded-3xl">
                   {filteredData[1].collectorAmount > 1000
                     ? (filteredData[1].collectorAmount / 1000).toFixed(1) + 'k'
                     : filteredData[1].collectorAmount}{' '}
@@ -565,7 +565,7 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
               }}
             >
               <div className="flex w-[90%] h-[90px] text-white py-5 px-4 bg-[#1A1A1A] rounded-[18px] mb-10 items-center justify-between border border-[#FFFFFF4D]">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                   <span className="font-semibold">3</span>
                   <div className="w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
                     <img
@@ -577,16 +577,16 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
                   </div>
 
                   <div className="flex flex-col">
-                    <p className="text-xl font-semibold">
+                    <p className="2xl:text-xl text-sm font-semibold">
                       {filteredData[2].displayName}
                     </p>
-                    <p className="flex gap-2 text-sm items-center">
+                    <p className="flex gap-1 text-xs items-center">
                       <span>@{filteredData[2].userName} </span>
                       <VerifyIcon />
                     </p>
                   </div>
                 </div>
-                <div className="bg-white text-[#0B0A10] px-[10px] py-[6px] rounded-3xl">
+                <div className="bg-white text-[#0B0A10] text-[9px] px-[10px] py-[6px] rounded-3xl">
                   {filteredData[2].collectorAmount > 1000
                     ? (filteredData[2].collectorAmount / 1000).toFixed(1) + 'k'
                     : filteredData[2].collectorAmount}{' '}
@@ -600,7 +600,7 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
           {filteredData.slice(3).map((user, index) => (
             <div key={index} className="w-full">
               <div className="flex  h-[90px] text-white pl-4 pr-4 bg-[#18181C] rounded-[20px] items-center justify-between border border-[#35353880]">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                   <span className="font-semibold">{index + 4}</span>
                   <div className="w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
                     <img
@@ -612,14 +612,16 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
                   </div>
 
                   <div className="flex flex-col">
-                    <p className="text-xl font-semibold">{user.displayName}</p>
-                    <p className="flex gap-2 text-sm items-center">
+                    <p className="2xl:text-xl text-sm font-semibold">
+                      {user.displayName}
+                    </p>
+                    <p className="flex gap-2 text-xs items-center">
                       <span>@{user.userName} </span>
                       <VerifyIcon />
                     </p>
                   </div>
                 </div>
-                <div className="bg-white text-black px-[10px] py-[6px] rounded-3xl">
+                <div className="bg-[#3C3B40] text-[#B3B3B3] px-[10px] py-[6px] text-[9px] rounded-3xl">
                   {user.collectorAmount > 1000
                     ? (user.collectorAmount / 1000).toFixed(1) + 'k'
                     : user.collectorAmount}{' '}
@@ -713,11 +715,9 @@ function DiscoverRight({ filteredData }: DiscoverRightProps) {
           <div key={index} className="w-full">
             <div className="flex  h-[80px] text-white pl-4 pr-4 bg-[#18181C] rounded-[20px] items-center justify-between border border-[#35353880]">
               <div className="flex items-center gap-2">
-                <div className="w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
+                <div className="w-[30px] h-[30px] rounded-full overflow-hidden border-2 border-white">
                   <img
                     src={`/assets/images/${user.displayImg}`}
-                    width={50}
-                    height={50}
                     className="w-full h-full object-cover"
                   />
                 </div>

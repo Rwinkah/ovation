@@ -102,7 +102,17 @@ aside,
 .other-link {
   height: calc(100vh - 90px);
 }
-textarea:focus, input:focus{
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+textarea:focus,
+input:focus {
   outline: 10px green;
   border: white 10px solid;
 }
