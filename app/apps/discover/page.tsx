@@ -431,7 +431,7 @@ function DiscoverHolders({ setFilter, Filter, data }: DiscoverHoldersProps) {
       </div>
 
       <div className="p-4 items-center w-full rounded-lg flex flex-col gap-10 border-[#353538] border-[1px]">
-        <div className="w-full flex gap-2 overflow-auto hide-scrollbar">
+        <div className="w-full flex gap-2 overflow-auto pb-1">
           <Button
             className={`${Filter === DiscoverFilter.Contributors ? 'bg-white text-[#232227]' : 'bg-[#232227] text-[#999999]'} rounded-full px-5 py-[10px] h-fit text-xs`}
             onClick={() => {
