@@ -75,13 +75,13 @@ export default function Hero() {
         Experience the Next-Generation NFT Social Platform
       </p>
 
-      <p className="text-base md:text-[22px] md:leading-9  text-center w-[45%]">
+      <p className="text-base md:text-[22px] md:leading-9  text-center lg:w-[45%]">
         The only web3 social platform offering intelligent profiles,
         personalized portfolios, and a blockchain-enabled UI for a unified NFT
         experience.
       </p>
 
-      <div className="w-[50%] flex flex-col gap-4 items-center justify-center mb-10">
+      <div className="lg:w-[50%] w-[90%] flex flex-col gap-4 items-center justify-center mb-10">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -95,7 +95,7 @@ export default function Hero() {
                   <FormControl>
                     <div className="relative">
                       <Input
-                        placeholder="ovation.com/username"
+                        placeholder="Enter your email"
                         {...field}
                         className="text-lg"
                       />
@@ -103,7 +103,7 @@ export default function Hero() {
                         className="absolute top-[20%] right-[15px] text-xs text-[#111115] px-4 py-3 h-fit"
                         type="submit"
                       >
-                        Claim username
+                        Submit
                       </Button>
                     </div>
                   </FormControl>
@@ -113,7 +113,7 @@ export default function Hero() {
             />
           </form>
 
-          <p className="text-[#999999]">
+          <p className="text-[#999999] text-center">
             Because you're special, your username is reserved! Claim it now!
           </p>
         </Form>
