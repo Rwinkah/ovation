@@ -50,7 +50,7 @@ export default function Teams() {
       <section className="container flex flex-col mt-12">
         <div className="flex flex-col w-full h-fit gap-[80px]">
           <div className="flex flex-col items-center justify-center gap-2 w-full h-fit">
-            <p className="text-[40px] font-bold">Meet our team</p>
+            <p className="text-5xl font-bold">Meet our team</p>
             <p className="text-[#999999] text-2xl font-medium w-[80%] text-center">
               Discover the dedicated professionals behind our success. Our team
               brings together a wealth of experience, creativity, and passion to
