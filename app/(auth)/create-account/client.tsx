@@ -18,19 +18,13 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from 'sonner'
 import arrow from '@/public/assets/images/arrow-right.png'
-import metamask from '@/public/assets/images/ovationWallets/ovationWalletIcon1.svg'
 import bnb from '@/public/assets/images/ovationWallets/ovationWalletIcon2.svg'
-import trust from '@/public/assets/images/ovationWallets/ovationWalletIcon3.svg'
-import wallet from '@/public/assets/images/ovationWallets/ovationWalletIcon4.svg'
-import phantom from '@/public/assets/images/ovationWallets/ovationWalletIcon5.svg'
-import okx from '@/public/assets/images/ovationWallets/ovationWalletIcon6.svg'
-import cmc from '@/public/assets/images/ovationWallets/ovationWalletIcon7.svg'
-import pal from '@/public/assets/images/ovationWallets/ovationWalletIcon8.svg'
-import tPocket from '@/public/assets/images/ovationWallets/ovationWalletIcon9.svg'
-import brave from '@/public/assets/images/ovationWallets/ovationWalletIcon10.svg'
-import opera from '@/public/assets/images/ovationWallets/ovationWalletIcon11.svg'
-import math from '@/public/assets/images/ovationWallets/ovationWalletIcon12.svg'
+
+import google from '@/public/assets/images/ovationAuthGoogle.svg'
+import ether from '@/public/assets/images/ovationAuthEthereum.svg'
+import walletData from './_data'
 import { useState } from 'react'
+
 const formSchema = z.object({
   email: z.string().email('Input a valid email address'),
   password: z.string(),
@@ -66,97 +60,114 @@ export default function AccountForm() {
 
   function renderForm1() {
     return (
-      <form
-        onSubmit={form.handleSubmit(formSubmit)}
-        className="flex flex-col gap-7"
-      >
-        <FormField
-          control={form.control}
-          name="displayName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Display name</FormLabel>
-              <FormControl {...field}>
-                <Input
-                  className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
-                  placeholder="kvngCZ"
-                  type="text"
-                />
-              </FormControl>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="userName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl {...field}>
-                <Input
-                  className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
-                  placeholder="chang_zhao"
-                  type="text"
-                />
-              </FormControl>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl {...field}>
-                <Input
-                  className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
-                  placeholder="cz@blockchain.com"
-                  type="email"
-                />
-              </FormControl>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl {...field}>
-                <Input
-                  className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
-                  placeholder="*********"
-                  type="password"
-                />
-              </FormControl>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="passwordConfirm"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Confirm Password</FormLabel>
-              <FormControl {...field}>
-                <Input
-                  className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
-                  placeholder="*********"
-                  type="password"
-                />
-              </FormControl>
-            </FormItem>
-          )}
-        />
-        <Button
-          className="w-full h-[52px] hover:scale-95 text-sm font-semibold"
-          onClick={() => setPage(2)}
+      <div>
+        <div className="flex justify-between mb-4">
+          <Button className="w-[48%] bg-white flex gap-4">
+            <Image src={ether} alt="ether image" />
+            <p>Login with Wallet</p>
+          </Button>
+          <Button className="w-[48%] bg-white flex gap-4">
+            <Image src={google} alt="google image" />
+            <p>Login with Google</p>
+          </Button>
+        </div>
+        <div className="flex items-center justify-between mb-5">
+          <span className="w-[46%] h-[1px] border-[#C1C0C6] border-b-0 border-[1px]  text-[#C1C0C6]" />
+          <p className="text-[10px] font-medium text-[#C1C0C6]">OR</p>
+          <span className="w-[46%] h-[1px] border-[#C1C0C6] border-b-0 border-[1px]" />
+        </div>
+        <form
+          onSubmit={form.handleSubmit(formSubmit)}
+          className="flex flex-col gap-7"
         >
-          Continue
-        </Button>
-      </form>
+          <FormField
+            control={form.control}
+            name="displayName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Display name</FormLabel>
+                <FormControl {...field}>
+                  <Input
+                    className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
+                    placeholder="kvngCZ"
+                    type="text"
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="userName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Username</FormLabel>
+                <FormControl {...field}>
+                  <Input
+                    className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
+                    placeholder="chang_zhao"
+                    type="text"
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl {...field}>
+                  <Input
+                    className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
+                    placeholder="cz@blockchain.com"
+                    type="email"
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl {...field}>
+                  <Input
+                    className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
+                    placeholder="*********"
+                    type="password"
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="passwordConfirm"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Confirm Password</FormLabel>
+                <FormControl {...field}>
+                  <Input
+                    className="h-[46px] bg-transparent border-[#353538] border-solid  border-[1px] focus:border-solid focus:border-[1px] focus:border-[#353538] rounded-full"
+                    placeholder="*********"
+                    type="password"
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <Button
+            className="w-full h-[52px] hover:scale-95 text-sm font-semibold"
+            onClick={() => setPage(2)}
+          >
+            Continue
+          </Button>
+        </form>
+      </div>
     )
   }
 
@@ -252,91 +263,18 @@ export default function AccountForm() {
     return (
       <div className="flex flex-col gap-7">
         <div className="grid grid-cols-2 gap-4">
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>Metamask</p>
-            <Image src={metamask} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>Trust Wallet</p>
-            <Image src={trust} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>Phantom</p>
-            <Image src={phantom} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>Binance Chain</p>
-            <Image src={bnb} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>WalletConnect</p>
-            <Image src={wallet} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>Coinmarketcap</p>
-            <Image src={cmc} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>OKX</p>
-            <Image src={okx} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p>Opera Wallet</p>
-            <Image src={opera} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p> BraveWallet</p>
-            <Image src={brave} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p> MathWallet</p>
-            <Image src={math} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p> SafePal</p>
-            <Image src={pal} alt="metamask icon" />
-          </Button>
-          <Button
-            onClick={() => setPage(4)}
-            className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
-          >
-            <p> TokenPocket</p>
-            <Image src={tPocket} alt="metamask icon" />
-          </Button>
+          {walletData.map((wallet) => (
+            <Button
+              key={wallet.id}
+              onClick={() => setPage(4)}
+              className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
+            >
+              <p> {wallet.name}</p>
+              <Image src={wallet.img} alt={`${wallet.name} icon`} />
+            </Button>
+          ))}
         </div>
+
         <div className="flex gap-2 items-center justify-center">
           <p>Wallet not listed?</p> {''}
           <Link href="" className="h-6 text-[#Cff073]">
@@ -351,7 +289,7 @@ export default function AccountForm() {
   function renderForm4() {
     const handleClick = () => {
       toast.success('Profile created successfully')
-      router.push('/')
+      router.push('/apps/timeline')
     }
 
     return (
@@ -366,6 +304,10 @@ export default function AccountForm() {
         >
           Make my profile
         </Button>
+        <p className="text-center mb-4">
+          By clicking "make my profile" you agree to our privacy terms, code of
+          conduct and Conditions.
+        </p>
         <div className="flex gap-2 items-center justify-center">
           <p> Not you?</p> {''}
           <Button
