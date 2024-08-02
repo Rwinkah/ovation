@@ -32,7 +32,7 @@ function Logo() {
 }
 const links: NavLink[] = [
   {
-    title: 'Learn',
+    title: 'Teams',
     href: '#',
   },
   {
@@ -65,7 +65,7 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
     ${mobile ? 'flex-col space-y-2 w-full ' : 'items-center gap-5'}
   `
   const navListItemClassName = `
-    group relative rounded-full  px-5 py-2 hover:shadow-[0px_4px_20px_0px_#AFC76B4D] text-lg text-white transform transition-transform
+    group relative rounded-full  px-5 py-2 hover:shadow-[0px_4px_20px_0px_#AFC76B4D] text-lg text-[#FFFFFF] transform transition-transform
     ${mobile ? 'w-full overflow-x-visible' : ''}
   `
   const navListLinkClassName = mobile ? 'mx-2 rounded-[20px]' : ''
@@ -120,17 +120,6 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
             </li>
           ))}
         </ul>
-        <Button className=" hover:scale-105 border-[#bdff00] border-[.1px] text-black rounded-full">
-          <Link
-            className={`
-							block whitespace-nowrap  text-lg  no-underline transition 
-							${mobile && ''}
-							`}
-            href="/login"
-          >
-            Launch App
-          </Link>
-        </Button>
       </nav>
     </>
   )

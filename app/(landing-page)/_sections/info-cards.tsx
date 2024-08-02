@@ -19,7 +19,7 @@ export default function InfoCards() {
             />
 
             <img
-              className={`rounded-lg hidden small-device ${card.forSmallerScreens ? 'ml-[14.75%] w-[90%]' : ''}`}
+              className={`rounded-lg hidden small-device`}
               src={card.smallSreenImage}
               alt=""
             />
@@ -49,7 +49,7 @@ const moreCards = [
     description:
       'Showcase your NFT collections with intelligent profiles that highlight your unique notoriety, favorite NFTs, sales, experience, and more',
     imgSrc: 'assets/images/info/stats.png',
-    smallSreenImage: 'assets/images/info/info1-sm.png',
+    smallSreenImage: 'assets/images/info/stats.png',
     forSmallerScreens: false,
     isFullWidth: false,
   },
@@ -58,7 +58,7 @@ const moreCards = [
     description:
       'Gain recognition and rewards by earning badges as you highlight experience, sales, and showcase your NFTs.',
     imgSrc: 'assets/images/info/card-2.png',
-    smallSreenImage: 'assets/images/info/info2-sm.png',
+    smallSreenImage: 'assets/images/info/card-2.png',
     forSmallerScreens: false,
     isFullWidth: false,
   },
@@ -67,7 +67,7 @@ const moreCards = [
     description:
       'Easily discover and connect with other users through the discover page, featuring top profiles and badges.',
     imgSrc: 'assets/images/info/card-3.png',
-    smallSreenImage: 'assets/images/info/exp.png',
+    smallSreenImage: 'assets/images/info/card-3.png',
     forSmallerScreens: false,
     isFullWidth: false,
   },
@@ -75,7 +75,7 @@ const moreCards = [
     header: 'Future Features Teaser',
     description: 'Stay tuned for exciting new features!',
     imgSrc: 'assets/images/info/card-4.png',
-    smallSreenImage: 'assets/images/info/info-4sm.png',
+    smallSreenImage: 'assets/images/info/card-4.png',
     forSmallerScreens: true,
     isFullWidth: true,
   },
