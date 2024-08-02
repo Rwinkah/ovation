@@ -114,7 +114,7 @@ export default function Hero() {
           </form>
 
           <p className="text-[#999999] text-center">
-            Because you're special, your username is reserved! Claim it now!
+            Sign up and be the first to know about our MVP Launch!
           </p>
         </Form>
       </div>
