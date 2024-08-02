@@ -305,8 +305,8 @@ export default function AccountForm() {
           Make my profile
         </Button>
         <p className="text-center mb-4">
-          By clicking "make my profile" you agree to our privacy terms, code of
-          conduct and Conditions.
+          By clicking &quot;make my profile&quot; you agree to our privacy
+          terms, code of conduct and Conditions.
         </p>
         <div className="flex gap-2 items-center justify-center">
           <p> Not you?</p> {''}
