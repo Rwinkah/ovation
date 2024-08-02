@@ -21,13 +21,13 @@ export default function Socials() {
         <img
           src="/assets/images/social-LP3.png"
           alt=""
-          className="absolute lg:left-20 left-[8%] lg:bottom-[90px] top-[80px] lg:w-[50px] lg:h-[50px] w-9 h-9"
+          className="absolute lg:left-20 left-[8%] lg:bottom-[90px] bottom-[83%] lg:w-[50px] lg:h-[50px] w-9 h-9"
         />
 
         <img
           src="/assets/images/social-LP4.png"
           alt=""
-          className="absolute lg:right-20 right-[8%] lg:bottom-[90px] top-[80px] lg:w-[50px] lg:h-[50px] w-9 h-9"
+          className="absolute lg:right-20 right-[8%] lg:bottom-[90px] bottom-[83%] lg:w-[50px] lg:h-[50px] w-9 h-9"
         />
 
         <div className="flex flex-col items-center gap-10 mb-10">

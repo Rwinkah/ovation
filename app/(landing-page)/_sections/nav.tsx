@@ -33,7 +33,7 @@ function Logo() {
 const links: NavLink[] = [
   {
     title: 'Teams',
-    href: '#',
+    href: '/teams',
   },
   {
     title: 'News',
@@ -106,7 +106,7 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
             >
               {button ? (
                 <Button variant={'default'} className={` ${mobile && 'mx-4'}`}>
-                  <a href={href}>{title}</a>
+                  <Link href={href}>{title}</Link>
                 </Button>
               ) : (
                 <NavLink

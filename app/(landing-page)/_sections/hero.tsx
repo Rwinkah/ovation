@@ -85,14 +85,14 @@ export default function Hero() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-8 w-full mt-10 border border-[#666666] bg-[#FFFFFF1A] rounded-[500px]"
+            className="space-y-8 w-full mt-10"
           >
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem className="relative">
-                  <FormControl>
+                  <FormControl className="border border-[#666666] bg-[#FFFFFF1A] rounded-[500px]">
                     <div className="relative">
                       <Input
                         placeholder="Enter your email"
