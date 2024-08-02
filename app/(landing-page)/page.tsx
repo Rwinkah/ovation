@@ -1,40 +1,20 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
-import { Header } from './_sections/nav'
 import Partners from './_sections/partners'
 import Features from './_sections/features'
 import Hero from './_sections/hero'
-import Footer from './_sections/footer'
 import MoreFromOvation from './_sections/more'
 import InfoCards from './_sections/info-cards'
 import HowItWorks from './_sections/how-it-works'
-import Promotion from './_sections/promotion'
 import React, { useEffect, useState } from 'react'
-import Preloader from './_components/preloader'
 import { Newsletter } from './_sections/newsletter'
 import ExtendedPartners from './_sections/extended-partners'
 import Ripple from '@/components/animations/ripple'
 import Socials from './_sections/socials'
 
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  return <>{isLoading ? <Preloader /> : <Application />}</>
-}
-
-function Application() {
+export default function Application() {
   return (
     <React.Fragment>
-      <Promotion />
-      <Header />
       <div className="mobile-gradient-container md:hero-gradient absolute top-[-40px] z-[-1] opacity-10 w-full h-[800px]" />
       <main className=" flex flex-col items-center justify-between pt-24">
         <Hero />
@@ -55,7 +35,6 @@ function Application() {
         <Socials />
         <Newsletter />
       </main>
-      <Footer />
     </React.Fragment>
   )
 }
