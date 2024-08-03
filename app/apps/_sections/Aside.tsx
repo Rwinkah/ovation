@@ -102,7 +102,7 @@ export default function Aside() {
         })}
       </div>
 
-      <div className="flex items-center justify-between w-[90%] sticky bottom-0 p py-5 bg-[#111115]">
+      <div className="flex items-center justify-between w-[90%] absolute bottom-0 p py-5 bg-[#111115]">
         <div className="flex items-center gap-2">
           <Image
             src="/assets/images/timeline/Shape.png"
