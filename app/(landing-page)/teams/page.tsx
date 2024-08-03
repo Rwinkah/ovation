@@ -4,37 +4,45 @@ import Image from 'next/image'
 import TwitterIcon from '@/components/icons/twitter-icon'
 import LinkedInIcon from '@/components/icons/linkedin-icon'
 
-const team = [
+interface Teams {
+  image: string
+  name: string
+  position: string
+  social: string
+  href: string
+}
+
+const team: Teams[] = [
   {
-    image: '/assets/images/teams/team2.png',
+    image: '/assets/images/teams/Jack2-teams.png',
     name: 'Jack Bliss',
     position: 'CEO',
     social: 'twitter',
     href: '',
   },
   {
-    image: '/assets/images/teams/team2.png',
+    image: '/assets/images/teams/Grant2-teams.png',
     name: 'Grant Weaver',
     position: 'CEO',
     social: 'twitter',
     href: '',
   },
   {
-    image: '/assets/images/teams/team2.png',
+    image: '/assets/images/teams/Malcom2-teams.png',
     name: 'Malcolm Henzaga',
     position: 'CEO',
     social: 'twitter',
     href: '',
   },
   {
-    image: '/assets/images/teams/team2.png',
+    image: '/assets/images/teams/Maanav-teams.png',
     name: 'Maanav J. Porwal',
     position: 'CEO',
     social: 'linkedin',
     href: '',
   },
   {
-    image: '/assets/images/teams/team2.png',
+    image: '/assets/images/teams/Guy-teams.png',
     name: 'Guy Garcia',
     position: 'CEO',
     social: 'linkedin',
@@ -64,7 +72,7 @@ export default function Teams() {
                 className="flex flex-col gap-6 w-fit max-w-[396px]"
                 key={index}
               >
-                <div className="flex items-baseline justify-center bg-[#CFF073] rounded-[5px]">
+                <div className=" h-[370px] flex flex-col justify-end bg-[#CFF073] rounded-[5px]">
                   <Image
                     src={`${item.image}`}
                     alt={`${item.name} + " " + "Picture"`}
