@@ -4,7 +4,15 @@ import Image from 'next/image'
 import TwitterIcon from '@/components/icons/twitter-icon'
 import LinkedInIcon from '@/components/icons/linkedin-icon'
 
-const team = [
+interface Teams {
+  image: string
+  name: string
+  position: string
+  social: string
+  href: string
+}
+
+const team: Teams[] = [
   {
     image: '/assets/images/teams/Jack2-teams.png',
     name: 'Jack Bliss',
