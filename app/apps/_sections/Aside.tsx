@@ -88,7 +88,7 @@ export default function Aside() {
             >
               {item.icon}
               <p
-                className={`flex items-center gap-2 text-[18px] text-white group-hover:text-white group-focus:text-[#CCCCCC] ${isActive ? 'text-white font-medium' : 'text-[#B3B3B3]'}`}
+                className={`flex items-center gap-2 text-[18px] text-[#F8F8FF] group-hover:text-white group-focus:text-[#CCCCCC] ${isActive ? 'text-white font-medium' : 'text-[#B3B3B3]'}`}
               >
                 {item.text}{' '}
                 <span
