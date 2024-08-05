@@ -46,7 +46,7 @@ export default function LoginForm() {
         </Button>
         <span className="flex gap-2 items-center justify-center">
           <span className="w-1/3 h-[1px] border-[#C1C0C6] border-b-0 border-[1px]  text-[#C1C0C6]" />
-          <p className="text-[10px] font-medium text-[#C1C0C6]">
+          <p className="text-[10px] font-medium text-[#C1C0C6] text-center">
             OR LOGIN WITH USERNAME
           </p>
           <span className="w-1/3 h-[1px] border-[#C1C0C6] border-b-0 border-[1px]" />

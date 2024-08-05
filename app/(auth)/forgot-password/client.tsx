@@ -115,7 +115,7 @@ export default function ResetForm() {
                 <FormLabel className="text-sm text-white">Input OTP</FormLabel>
                 <FormControl {...field}>
                   <InputOTP maxLength={6}>
-                    <InputOTPGroup className="flex gap-4">
+                    <InputOTPGroup className="w-full flex md:gap-4 gap-2">
                       <InputOTPSlot
                         className="border-[1px] border-[#353538] rounded-lg w-16 h-16"
                         index={0}

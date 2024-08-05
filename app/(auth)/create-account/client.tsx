@@ -61,12 +61,12 @@ export default function AccountForm() {
   function renderForm1() {
     return (
       <div>
-        <div className="flex justify-between mb-4">
-          <Button className="w-[48%] bg-white flex gap-4">
+        <div className="  flex justify-between mb-4">
+          <Button className="text-[10px] font-semibold p-4 md:text-base w-[48%] bg-white flex gap-4">
             <Image src={ether} alt="ether image" />
             <p>Login with Wallet</p>
           </Button>
-          <Button className="w-[48%] bg-white flex gap-4">
+          <Button className="p-4 text-[10px] font-semibold md:text-base w-[48%] bg-white flex gap-4">
             <Image src={google} alt="google image" />
             <p>Login with Google</p>
           </Button>
@@ -187,7 +187,7 @@ export default function AccountForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl {...field}>
-                <div className="flex flex-wrap w-full gap-4">
+                <div className="flex flex-col md:flex-row items-center  flex-wrap  w-full gap-4">
                   <Button
                     onClick={() => handleButtonClick(1, 'Artist')}
                     className={` ${active === 1 ? 'border-[#cff073] border-1 shadow-2xl scale-95' : 'border-[#353538]'} h-[234px] hover:scale-95 max-w-[242px]  bg-transparent border-[1px] flex flex-col gap-2 rounded-lg`}
@@ -267,10 +267,14 @@ export default function AccountForm() {
             <Button
               key={wallet.id}
               onClick={() => setPage(4)}
-              className="text-start flex justify-between p-[1rem] h-[58px] w-[242px] text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
+              className="text-start flex justify-between p-2 md:p-[1rem] h-[58px] w-full md:w-[242px] text-xs md:text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
             >
               <p> {wallet.name}</p>
-              <Image src={wallet.img} alt={`${wallet.name} icon`} />
+              <Image
+                className="w-6 h-6s"
+                src={wallet.img}
+                alt={`${wallet.name} icon`}
+              />
             </Button>
           ))}
         </div>
@@ -339,37 +343,39 @@ export default function AccountForm() {
     <div className="flex flex-col gap-11">
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-semibold text-white">Create Account</h1>
-          <div className="flex gap-2 items-center justify-start">
+          <h1 className="text-3xl font-semibold text-white items-center justify-between  flex">
+            <span> Create Account</span>
+            <Button
+              onClick={() => setPage(3)}
+              className={`${page === 2 ? 'visible' : 'hidden'} bg-white text-black font-semibold text-sm`}
+            >
+              Skip
+            </Button>
+          </h1>
+          <div className="flex gap-1 items-center justify-start">
             <p
               onClick={() => setPage(1)}
-              className={`${page >= 1 ? 'text-[#E6E6E6]' : ''} cursor-pointer`}
+              className={`${page >= 1 ? 'text-[#E6E6E6] font-semibold' : ''} text-xs md:text-base  text-center flex gap-0 w-fit cursor-pointer`}
             >
               Personal info
             </p>
             <ChevronRight color="#cff073" height={'14px'} width={'14px'} />
             <p
               onClick={() => setPage(2)}
-              className={`${page >= 2 ? 'text-[#E6E6E6]' : ''} cursor-pointer`}
+              className={`${page >= 2 ? 'text-[#E6E6E6] font-semibold' : ''} text-xs md:text-base  cursor-pointer`}
             >
               Choose path
             </p>
             <ChevronRight color="#cff073" height={'14px'} width={'14px'} />
             <p
               onClick={() => setPage(3)}
-              className={`${page >= 3 ? 'text-[#E6E6E6]' : ''} cursor-pointer`}
+              className={`${page >= 3 ? 'text-[#E6E6E6] font-semibold' : ''} text-xs md:text-base  cursor-pointer`}
             >
               Connect wallet
             </p>
             <ChevronRight color="#cff073" height={'14px'} width={'14px'} />
           </div>
         </div>
-        <Button
-          onClick={() => setPage(3)}
-          className={`${page === 2 ? 'visible' : 'hidden'} bg-white text-black font-semibold text-sm`}
-        >
-          Skip
-        </Button>
       </div>
       <Form {...form}>{renderCurrentForm()}</Form>
     </div>
