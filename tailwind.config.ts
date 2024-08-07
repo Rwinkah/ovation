@@ -38,6 +38,8 @@ const config = {
 
         'profile-banner': "url('/assets/images/profile/image8.png')",
         'team-banner': "url('/assets/images/teams/teambg.png')",
+        'news-gradient':
+          'linear-gradient(112.5deg, #A5DB10 -0.03%, #BC1700 99.94%)',
       },
       colors: {
         border: 'hsl(var(--border))',

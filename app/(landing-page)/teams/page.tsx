@@ -18,48 +18,50 @@ const team: Teams[] = [
     name: 'Jack Bliss',
     position: 'CEO',
     social: 'twitter',
-    href: '',
+    href: 'https://x.com/Jack_Ovation',
   },
   {
     image: '/assets/images/teams/Grant2-teams.png',
     name: 'Grant Weaver',
     position: 'CEO',
     social: 'twitter',
-    href: '',
+    href: 'https://x.com/GOVAWOVA',
   },
   {
     image: '/assets/images/teams/Malcom2-teams.png',
     name: 'Malcolm Henzaga',
     position: 'CEO',
-    social: 'twitter',
-    href: '',
+    social: 'linkedin',
+    href: 'https://www.linkedin.com/in/malcolmhenzaga/',
   },
   {
     image: '/assets/images/teams/Maanav-teams.png',
     name: 'Maanav J. Porwal',
     position: 'CEO',
     social: 'linkedin',
-    href: '',
+    href: 'http://www.linkedin.com/in/manavporwal',
   },
   {
     image: '/assets/images/teams/Guy-teams.png',
     name: 'Guy Garcia',
     position: 'CEO',
     social: 'linkedin',
-    href: '',
+    href: 'https://www.linkedin.com/in/guygarcia/',
   },
 ]
 
 export default function Teams() {
   return (
     <main className="flex flex-col gap-[120px] pt-[120px] pb-[200px]">
-      <div className="container w-full h-[400px] bg-team-banner bg-cover bg-center"></div>
+      <div className="container lg:w-full lg:h-[400px] w-[90%] h-[400px] bg-team-banner bg-cover bg-center"></div>
 
       <section className="container flex flex-col mt-12">
         <div className="flex flex-col w-full h-fit gap-[80px]">
           <div className="flex flex-col items-center justify-center gap-2 w-full h-fit">
-            <p className="text-5xl font-bold">Meet our team</p>
-            <p className="text-[#999999] text-2xl font-medium w-[80%] text-center">
+            <p className="text-white text-[35px] md:text-5xl font-bold text-center">
+              Meet our team
+            </p>
+            <p className="text-[#999999] text-lg md:text-2xl font-medium w-[80%] text-center">
               Discover the dedicated professionals behind our success. Our team
               brings together a wealth of experience, creativity, and passion to
               deliver exceptional results.{' '}
@@ -89,7 +91,7 @@ export default function Teams() {
                     </p>
                   </div>
 
-                  <Link href={item.href}>
+                  <Link href={item.href} target="_blank">
                     {item.name === 'twitter' ? (
                       <TwitterIcon className="w-[37px] h-[37px]" />
                     ) : (
