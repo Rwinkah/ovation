@@ -127,10 +127,10 @@ function Navigation({ mobile = false, navLinks = [] }: NavigationProps) {
 
 function NavLink({ children, className, mobile, href }: NavLinkProps) {
   return (
-    <Button variant={'ghost'} disabled>
+    <Button variant={'ghost'} className="hover:bg-transparent">
       <Link
         className={`
-        block whitespace-nowrap  text-lg text-primary-foreground no-underline transition 
+        block whitespace-nowrap  text-lg text-primary-foreground no-underline transition
         ${mobile && ''}
         ${className}
         `}
