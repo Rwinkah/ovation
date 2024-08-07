@@ -46,7 +46,7 @@ const blogs = [
 
 export default function News() {
   return (
-    <main className="flex flex-col gap-20 pt-[120px] pb-[200px]">
+    <main className="flex flex-col gap-20 pt-[120px] pb-[100px]">
       <section className="container w-full flex flex-col items-center gap-20">
         <div className="flex flex-col gap-[120px] items-center">
           <div className="flex flex-col gap-3 w-fit items-center">
