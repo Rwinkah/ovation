@@ -37,11 +37,11 @@ const links: NavLink[] = [
   },
   {
     title: 'News',
-    href: '#',
+    href: '/news',
   },
   {
     title: 'Founder NFT',
-    href: '#',
+    href: '/founder-nfts',
   },
 ]
 
