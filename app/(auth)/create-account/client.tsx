@@ -289,7 +289,7 @@ export default function AccountForm() {
   function renderForm4() {
     const handleClick = () => {
       toast.success('Profile created successfully')
-      router.push('/apps/timeline')
+      router.push('/apps/discover')
     }
 
     return (

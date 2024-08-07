@@ -36,7 +36,7 @@ export default function LoginForm() {
   function formSubmit() {
     console.log('submitted')
     toast.success('Successful!')
-    router.push('/apps/timeline')
+    router.push('/apps/discover')
   }
 
   return (
