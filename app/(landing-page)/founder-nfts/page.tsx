@@ -111,20 +111,22 @@ export default function FounderNfts() {
           </div>
 
           <Image
-            src={`/assets/images/founder-nft/fn1.png`}
+            src={`/assets/images/founder-nft/phone-gif.gif`}
             alt="Illustration"
             width={400}
             height={400}
           />
         </div>
 
-        <div className="w-[95%] sm:w-fit sm:container flex flex-wrap lg:flex-nowrap items-center gap-[75px] justify-center">
-          <Image
-            src={`/assets/images/founder-nft/fn2.png`}
-            alt="Illustration"
-            width={375}
-            height={400}
-          />
+        <div className="w-[95%] sm:w-fit sm:container sm:px-0 flex flex-wrap lg:flex-nowrap items-center gap-[75px] justify-center">
+          <div className="flex max-w-[400px] h-fit">
+            <p
+              className="text-[70px] md:text-[105px] 2xl:text-[135px] font-bold text-transparent font-heading"
+              style={{ WebkitTextStroke: '3px #4D4D4D' }}
+            >
+              Coming Soon
+            </p>
+          </div>
 
           <div className="flex flex-col gap-1.5 max-w-[576px]">
             <p className="text-[#CFF073]">PFP COLLECTION OF 2000</p>
@@ -151,41 +153,6 @@ export default function FounderNfts() {
               </li>
             </ul>
           </div>
-        </div>
-
-        <div className="w-[95%] sm:w-fit sm:container flex flex-wrap-reverse lg:flex-nowrap items-center gap-[75px] justify-center">
-          <div className="flex flex-col gap-1.5 max-w-[576px]">
-            <p className="text-[#CFF073]">COMMUNITY</p>
-            <p className="text-[#F8F8FF] text-[30px] lg:text-[40px] leading-[50px] font-bold">
-              Ovation Community Dynamic NFTs
-            </p>
-            <p className="text-[#CCCCCC] text-[19px] lg:text-[22px] font-medium">
-              Geared towards the Ovation Community.​
-            </p>
-            <ul className="gap-2 list-disc">
-              <li className="text-lg text-[#999999]">Free-to-mint.</li>
-              <li className="text-lg text-[#999999]">
-                Earn $OVA interacting and contributing to the Ovation community
-              </li>
-              <li className="text-lg text-[#999999] ml-5">
-                Creating Twitter Threads​.
-              </li>
-              <li className="text-lg text-[#999999] ml-5">Creating Blogs</li>
-              <li className="text-lg text-[#999999] ml-5">
-                Show Ovation enthusiast NFT as pfp on Twitter.
-              </li>
-              <li className="text-lg text-[#999999] ml-5">
-                Following, Engaging, Interacting
-              </li>
-            </ul>
-          </div>
-
-          <Image
-            src={`/assets/images/founder-nft/fn3.png`}
-            alt="Illustration"
-            width={350}
-            height={400}
-          />
         </div>
       </section>
 

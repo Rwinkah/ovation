@@ -62,7 +62,7 @@ export default function Promotion() {
 
 			<img
 				className="h-8 w-8 cursor-pointer"
-				src="assets/images/arrow-right.svg"
+				src="/assets/images/arrow-right.svg"
 				alt=""
 			/>
 

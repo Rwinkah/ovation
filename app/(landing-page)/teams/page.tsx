@@ -28,13 +28,6 @@ const team: Teams[] = [
     href: 'https://x.com/GOVAWOVA',
   },
   {
-    image: '/assets/images/teams/Malcom2-teams.png',
-    name: 'Malcolm Henzaga',
-    position: 'CEO',
-    social: 'linkedin',
-    href: 'https://www.linkedin.com/in/malcolmhenzaga/',
-  },
-  {
     image: '/assets/images/teams/Maanav-teams.png',
     name: 'Maanav J. Porwal',
     position: 'CEO',
@@ -48,12 +41,19 @@ const team: Teams[] = [
     social: 'linkedin',
     href: 'https://www.linkedin.com/in/guygarcia/',
   },
+  {
+    image: '/assets/images/teams/Malcom2-teams.png',
+    name: 'Malcolm Henzaga',
+    position: 'CEO',
+    social: 'linkedin',
+    href: 'https://www.linkedin.com/in/malcolmhenzaga/',
+  },
 ]
 
 export default function Teams() {
   return (
     <main className="flex flex-col gap-[120px] pt-[120px] pb-[200px]">
-      <div className="container lg:w-full lg:h-[400px] w-[90%] h-[400px] bg-team-banner bg-cover bg-center"></div>
+      <div className="container lg:w-full lg:h-[568px] w-[90%] h-[400px] bg-team-banner bg-cover bg-center" />
 
       <section className="container flex flex-col mt-12">
         <div className="flex flex-col w-full h-fit gap-[80px]">
