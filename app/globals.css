@@ -319,7 +319,7 @@ input:focus {
     @apply py-7;
   }
 
-  .info-card div img {
+  .info-card ~ div ~ img {
     @apply h-[215px];
   }
 

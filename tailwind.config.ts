@@ -26,6 +26,10 @@ const config = {
           '6px 6px 10px -1px rgba(128, 128, 128, 1), -6px -6px 10px -1px rgba(128, 128, 128, 1)',
         progressInner:
           'inset 4px 4px 6px -1px rgba(207, 240, 115, 1), inset -4px -4px 6px -1px rgba(207, 240, 115, 1), -0.5px -0.5px 0px rgba(207, 240, 115, 1), 0.5px 0.5px 0px rgba(207, 240, 115, 1), 0px 12px 10px -10px rgba(207, 240, 115, 1)',
+        info: '0px 6.52px 24px 0px #AFC76B66',
+        info2: '0px 5.68px 18.2px 0px #AFC76B4D',
+        info3: '0px 5.16px 16.55px 0px #AFC76B40',
+        info4: '0px 4.7px 15.06px 0px #AFC76B1A',
       },
       fontFamily: {
         heading: ['Istok Web', 'sans-serif'],
