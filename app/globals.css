@@ -68,6 +68,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 3px;
+  height: 3px;
 }
 
 /* Track */
@@ -102,7 +103,17 @@ aside,
 .other-link {
   height: calc(100vh - 90px);
 }
-textarea:focus, input:focus{
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+textarea:focus,
+input:focus {
   outline: 10px green;
   border: white 10px solid;
 }
@@ -130,10 +141,6 @@ textarea:focus, input:focus{
 
   .hero-header {
     @apply w-[80%];
-  }
-
-  .hero-description {
-    @apply w-[75%];
   }
 
   .extended-partners-det-ctn {
@@ -312,7 +319,7 @@ textarea:focus, input:focus{
     @apply py-7;
   }
 
-  .info-card div img {
+  .info-card ~ div ~ img {
     @apply h-[215px];
   }
 
