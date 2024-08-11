@@ -70,7 +70,7 @@ export default function Aside() {
   }
 
   return (
-    <aside className="flex flex-col items-center gap-7 pt-4 min-w-[310px] w-[310px] border-r border-[#1A1A1A] sticky top-0 overflow-scroll bg-[#111115]">
+    <aside className=" hidden xl:flex flex-col items-center gap-7 pt-4 min-w-[310px] w-[310px] border-r border-[#1A1A1A] sticky top-0 overflow-scroll bg-[#111115]">
       <div className="w-[85%] flex flex-col h-fit gap-2">
         {menuItems.map((item, index) => {
           const isActive = currentPath.includes(item.path)

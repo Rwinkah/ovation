@@ -1,4 +1,6 @@
-export default function DiscoverIcon() {
+import { CustomIcon } from '@/app/types'
+
+export default function DiscoverIcon(props: CustomIcon) {
   return (
     <svg
       viewBox="0 0 23 23"
@@ -6,6 +8,7 @@ export default function DiscoverIcon() {
       stroke="none"
       xmlns="http://www.w3.org/2000/svg"
       className="w-6 h-6 group-hover:fill-white"
+      {...props}
     >
       <path
         d="M11.8034 21.0296C6.36755 21.0296 1.94922 16.6113 1.94922 11.1755C1.94922 5.73962 6.36755 1.32129 11.8034 1.32129C17.2392 1.32129 21.6576 5.73962 21.6576 11.1755C21.6576 16.6113 17.2392 21.0296 11.8034 21.0296ZM11.8034 2.69629C7.12839 2.69629 3.32422 6.50046 3.32422 11.1755C3.32422 15.8505 7.12839 19.6546 11.8034 19.6546C16.4784 19.6546 20.2826 15.8505 20.2826 11.1755C20.2826 6.50046 16.4784 2.69629 11.8034 2.69629Z"
