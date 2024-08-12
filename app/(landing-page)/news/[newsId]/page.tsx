@@ -560,6 +560,10 @@ const blogs = [
 export default function NewsDetails({ params }: any) {
   const blog = blogs.find((b) => b.id === parseInt(params.newsId))
 
+  if (!blog) {
+    return <div>Blog not found</div>
+  }
+
   const filteredBlogs = blogs.filter((b) => b.id !== blog.id)
 
   const [copied, setCopied] = useState(false)
