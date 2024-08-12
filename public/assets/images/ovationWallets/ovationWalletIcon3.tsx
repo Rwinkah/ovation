@@ -1,7 +1,7 @@
 // OV.tsx
 import React from 'react'
 
-const ovationWalletIcon3: React.FC = () => (
+const trust: React.FC = () => (
   <svg
     width="39"
     height="39"
@@ -36,4 +36,4 @@ const ovationWalletIcon3: React.FC = () => (
     </defs>
   </svg>
 )
-export default ovationWalletIcon3
+export default trust

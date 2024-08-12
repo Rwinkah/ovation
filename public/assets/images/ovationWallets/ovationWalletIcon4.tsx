@@ -1,7 +1,7 @@
 // OV.tsx
 import React from 'react'
 
-const ovationWalletIcon4: React.FC = () => (
+const wallet: React.FC = () => (
   <svg
     width="39"
     height="39"
@@ -36,4 +36,4 @@ const ovationWalletIcon4: React.FC = () => (
     </defs>
   </svg>
 )
-export default ovationWalletIcon4
+export default wallet

@@ -17,20 +17,22 @@ import AsideMsgIcon from '@/components/icons/asideMsgIcon'
 
 interface MenuItem {
   icon: ReactElement
+  iconActive?: ReactElement
   text: string
   path: string
   isNotAvailable: boolean
 }
 
 const menuItems: MenuItem[] = [
-  {
-    icon: <HomeIcon />,
-    text: 'Home',
-    path: '/apps/timeline',
-    isNotAvailable: true,
-  },
+  // {
+  //   icon: <HomeIcon />,
+  //   text: 'Home',
+  //   path: '/apps/timeline',
+  //   isNotAvailable: true,
+  // },
   {
     icon: <DiscoverIcon />,
+    iconActive: <DiscoverIcon fill="#ffffff" />,
     text: 'Discover',
     path: '/apps/discover',
     isNotAvailable: false,
@@ -86,7 +88,8 @@ export default function Aside() {
               key={index}
               onClick={() => handleClick(item.path)}
             >
-              {item.icon}
+              {isActive ? item.iconActive : item.icon}
+
               <p
                 className={`flex items-center gap-2 text-[18px] text-[#F8F8FF] group-hover:text-white group-focus:text-[#CCCCCC] ${isActive ? 'text-white font-medium' : 'text-[#B3B3B3]'}`}
               >

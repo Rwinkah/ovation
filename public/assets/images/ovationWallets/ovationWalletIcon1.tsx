@@ -1,4 +1,4 @@
-const ovationWalletIcon1: React.FC = () => (
+const metamask: React.FC = () => (
   <svg
     width="39"
     height="39"
@@ -33,4 +33,4 @@ const ovationWalletIcon1: React.FC = () => (
     </defs>
   </svg>
 )
-export default ovationWalletIcon1
+export default metamask

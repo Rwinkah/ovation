@@ -4,7 +4,7 @@ export default function HomeIcon(props: CustomIcon) {
   return (
     <svg
       viewBox="0 0 23 23"
-      fill=""
+      fill={props.iconFill}
       stroke="none"
       xmlns="http://www.w3.org/2000/svg"
       className="w-6 h-6 group-hover:fill-white"
