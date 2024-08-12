@@ -20,7 +20,9 @@ export default function TimelineHeader() {
   )
 
   return (
-    <header className="w-full hidden lg:flex items-center h-[90px] border-r border-b border-[#1A1A1A] bg-[#111115] sticky top-0  max-w-[1440px]">
+
+    <header className="w-full hidden  lg:flex items-center h-[90px] border-r border-b border-[#1A1A1A] bg-[#111115] sticky top-0  max-w-[1440px]">
+
       <nav className="flex items-center gap-3">
         <div className="lg:w-[310px] flex items-center h-[90px] border-r border-[#1A1A1A]">
           <Image

@@ -1,4 +1,6 @@
-export default function HomeIcon() {
+import { CustomIcon } from '@/app/types'
+
+export default function HomeIcon(props: CustomIcon) {
   return (
     <svg
       viewBox="0 0 23 23"

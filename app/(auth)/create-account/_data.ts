@@ -18,7 +18,7 @@ const walletData = [
   },
   {
     id: 2,
-    name: 'Truat Wallet',
+    name: 'Trust Wallet',
     img: trust,
   },
   {

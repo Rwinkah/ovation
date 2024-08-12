@@ -4,6 +4,8 @@ export interface CustomIconProps {
   strokeLine?: string
 }
 
+export type CustomIcon = React.SVGProps<SVGSVGElement>
+
 export interface BadgedHolders {
   id: string
   displayName: string
