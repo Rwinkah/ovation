@@ -18,10 +18,10 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from 'sonner'
 import arrow from '@/public/assets/images/arrow-right.png'
-import bnb from '@/public/assets/images/ovationWallets/ovationWalletIcon2.svg'
+import Bnb from '@/public/assets/images/ovationWallets/ovationWalletIcon2'
 
-import google from '@/public/assets/images/ovationAuthGoogle.svg'
-import ether from '@/public/assets/images/ovationAuthEthereum.svg'
+import Google from '@/public/assets/images/ovationAuthGoogle'
+import Ether from '@/public/assets/images/ovationAuthEthereum'
 import walletData from './_data'
 import { useState } from 'react'
 
@@ -63,11 +63,13 @@ export default function AccountForm() {
       <div>
         <div className="  flex justify-between mb-4">
           <Button className="text-[10px] font-semibold p-4 md:text-base w-[48%] bg-white flex gap-4">
-            <Image src={ether} alt="ether image" />
+            {/* <Image src={ether} alt="ether image" /> */}
+            <Ether />
             <p>Login with Wallet</p>
           </Button>
           <Button className="p-4 text-[10px] font-semibold md:text-base w-[48%] bg-white flex gap-4">
-            <Image src={google} alt="google image" />
+            {/* <Image src={Google} alt="google image" /> */}
+            <Google />
             <p>Login with Google</p>
           </Button>
         </div>
@@ -270,11 +272,12 @@ export default function AccountForm() {
               className="text-start flex justify-between p-2 md:p-[1rem] h-[58px] w-full md:w-[242px] text-xs md:text-sm font-semibold text-white border-[1px] border-solid bg-transparent border-[#353538]"
             >
               <p> {wallet.name}</p>
-              <Image
+              {/* <Image
                 className="w-6 h-6s"
                 src={wallet.img}
                 alt={`${wallet.name} icon`}
-              />
+              /> */}
+              <wallet.img />
             </Button>
           ))}
         </div>
@@ -300,7 +303,7 @@ export default function AccountForm() {
       <div className=" flex flex-col gap-7">
         <div className="flex text-white text-sm items-center justify-between p-4 border-[1px] border-[#353538] rounded-full">
           <p>OXrvsh.srvydubhjnikm</p>
-          <Image src={bnb} alt="wallet icon" />
+          <Bnb />
         </div>
         <Button
           onClick={() => handleClick()}

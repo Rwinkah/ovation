@@ -18,20 +18,22 @@ import { Button } from '@/components/ui/button'
 
 interface MenuItem {
   icon: ReactElement
+  iconActive?: ReactElement
   text: string
   path: string
   isNotAvailable: boolean
 }
 
 const menuItems: MenuItem[] = [
-  {
-    icon: <HomeIcon />,
-    text: 'Home',
-    path: '/apps/timeline',
-    isNotAvailable: true,
-  },
+  // {
+  //   icon: <HomeIcon />,
+  //   text: 'Home',
+  //   path: '/apps/timeline',
+  //   isNotAvailable: true,
+  // },
   {
     icon: <DiscoverIcon />,
+    iconActive: <DiscoverIcon fill="#ffffff" />,
     text: 'Discover',
     path: '/apps/discover',
     isNotAvailable: false,
@@ -71,9 +73,7 @@ export default function Aside() {
   }
 
   return (
-
     <aside className=" hidden xl:flex flex-col items-center gap-7 pt-4 min-w-[310px] w-[310px] border-r border-[#1A1A1A] sticky top-0 overflow-scroll bg-[#111115]">
-
       <div className="w-[85%] flex flex-col h-fit gap-2">
         {menuItems.map((item, index) => {
           const isActive = currentPath.includes(item.path)
@@ -90,6 +90,7 @@ export default function Aside() {
               onClick={() => handleClick(item.path)}
             >
               {item.icon}
+
               <p
                 className={`flex items-center gap-2 text-[18px] text-[#F8F8FF] group-hover:text-white group-focus:text-[#CCCCCC] ${isActive ? 'text-white font-medium' : 'text-[#B3B3B3]'}`}
               >
