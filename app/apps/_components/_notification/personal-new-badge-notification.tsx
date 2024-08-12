@@ -16,7 +16,7 @@ export default function PersonalBadgeNotification({
             className="w-[30px] h-[30px] md:w-[44px] md:h-[44px]"
           />
         </div>
-        <div className="w-fit">
+        <div className="w-[85%] md:w-[500px]">
           <p className="text-sm md:text-lg text-white font-medium w-fit">
             New badge
           </p>

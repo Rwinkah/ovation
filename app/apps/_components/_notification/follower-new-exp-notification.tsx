@@ -26,7 +26,7 @@ export default function FollowerExpNotification({
             className="absolute bottom-0 right-[-3px] w-2 h-2 md:w-4 md:h-4"
           />
         </div>
-        <div className="w-fit">
+        <div className="w-[83%] md:w-[500px]">
           <p className="text-sm md:text-lg text-white font-medium w-fit">
             New experience
           </p>

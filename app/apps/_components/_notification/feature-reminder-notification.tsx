@@ -17,7 +17,7 @@ export default function FeatureReminderNotification({
             className="w-[19px] h-[19px]"
           />
         </div>
-        <div className="w-fit">
+        <div className="w-[85%] md:w-[500px]">
           <p className="text-sm md:text-lg text-white font-medium w-fit">
             Reminder: Feature a post
           </p>

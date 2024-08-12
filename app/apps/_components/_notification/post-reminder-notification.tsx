@@ -17,7 +17,7 @@ export default function PostReminderNotification({
             className="w-[18px] h-[18px]"
           />
         </div>
-        <div className="w-fit">
+        <div className="w-[85%] md:w-[500px]">
           <p className="text-sm md:text-lg text-white font-medium w-fit">
             Reminder: Publish a post
           </p>
