@@ -18,7 +18,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from 'sonner'
 import arrow from '@/public/assets/images/arrow-right.png'
-import bnb from '@/public/assets/images/ovationWallets/ovationWalletIcon2'
+import Bnb from '@/public/assets/images/ovationWallets/ovationWalletIcon2'
 
 import Google from '@/public/assets/images/ovationAuthGoogle'
 import Ether from '@/public/assets/images/ovationAuthEthereum'
@@ -303,7 +303,7 @@ export default function AccountForm() {
       <div className=" flex flex-col gap-7">
         <div className="flex text-white text-sm items-center justify-between p-4 border-[1px] border-[#353538] rounded-full">
           <p>OXrvsh.srvydubhjnikm</p>
-          <Image src={bnb} alt="wallet icon" />
+          <Bnb />
         </div>
         <Button
           onClick={() => handleClick()}
