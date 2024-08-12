@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { generateRandomString } from '@/lib/helper-func'
 import CardTwo from '../_components/info-card/card-two'
+import CardFour from '../_components/info-card/card-four'
 
 export default function InfoCards() {
   return (
@@ -72,8 +73,8 @@ const moreCards = [
     header: 'Future Features Teaser',
     description: 'Stay tuned for exciting new features!',
     imgSrc: '/assets/images/info/card-4.png',
-    component: null,
-    hasComponent: false,
+    component: <CardFour />,
+    hasComponent: true,
     isFullWidth: true,
   },
 ]
