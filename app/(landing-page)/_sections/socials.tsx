@@ -1,3 +1,4 @@
+import PulseButton from "@/components/animations/pulse-btn";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -41,30 +42,36 @@ export default function Socials() {
 				</div>
 
 				<div className="flex lg:flex-row flex-col items-center gap-5 w-fit">
-					<Button
-						asChild
-						className="bg-[#CFF073] text-sm text-[#0B0A10] h-fit gap-2"
-					>
-						<Link href="/" className="flex items-center gap-2">
-							<img
-								src="/assets/images/twitter-LP.png"
-								alt="Twitter Logo"
-								className="w-4 h-3"
-							/>
-							Follow us on twitter
-						</Link>
-					</Button>
-
-					<Button asChild className="bg-[#CFF073] text-sm text-[#0B0A10] h-fit">
-						<Link href="/" className="flex items-center gap-2">
-							<img
-								src="/assets/images/linkedIn-LP.png"
-								alt="LinkedIn Logo"
-								className="w-4 h-4"
-							/>
-							Follow us on LinkedIn
-						</Link>
-					</Button>
+					<Link href="/" className="flex items-center gap-2">
+						<Button
+							asChild
+							className="bg-[#CFF073] text-sm text-[#0B0A10] h-fit gap-2"
+						>
+							<PulseButton pulseColor="#CFF073">
+								<img
+									src="/assets/images/twitter-LP.png"
+									alt="Twitter Logo"
+									className="w-4 h-3"
+								/>
+								Follow us on twitter
+							</PulseButton>
+						</Button>
+					</Link>
+					<Link href="/" className="flex items-center gap-2">
+						<Button
+							asChild
+							className="bg-[#CFF073] text-sm text-[#0B0A10] h-fit gap-2"
+						>
+							<PulseButton pulseColor="#CFF073">
+								<img
+									src="/assets/images/linkedIn-LP.png"
+									alt="LinkedIn Logo"
+									className="w-4 h-4"
+								/>
+								Follow us on LinkedIn
+							</PulseButton>
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</section>
