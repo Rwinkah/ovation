@@ -22,10 +22,11 @@ export default function ExtendedPartners() {
 
 				<div className="flex flex-col gap-9">
 					<p className="text-base md:text-2xl font-semibold tracking-[-0.87px] section-description">
-						Are you ready to build your community on Ovation before anyone
-						else?, Are you ready to build your community on Ovation before
-						anyone else? Are you ready to build your community on Ovation before
-						anyone else?
+						Are you ready to join the next-generation NFT Social Platform?
+						Beyond joining our Alpha launch by clicking &quot;Launch App,&quot;
+						our partnerships are a mutual collaborative relationship where
+						Ovation helps with their initiatives, and our partners help us
+						revolutionize the NFT ecosystem.
 					</p>
 					<Link href="/" className="flex items-center gap-2">
 						<Button

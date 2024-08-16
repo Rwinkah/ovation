@@ -4,7 +4,7 @@ import Socials from "../_sections/socials";
 const features = [
 	{
 		title: "Earn more OVA",
-		description: "In-platform points",
+		description: "In-platform points for engagement",
 		icon: "/assets/images/icons/f1.png",
 	},
 	{
@@ -91,26 +91,32 @@ export default function FounderNfts() {
 						</p>
 						<ul className="gap-2 list-disc">
 							<li className="text-lg text-[#999999]">
-							Receive 4 week of sponsored ads on Ovation yearly (Estimated Valuation ~2200 dollars)
+								Receive 4 week of sponsored ads on Ovation yearly (Estimated
+								Valuation ~2200 dollars)
 							</li>
 							<li className="text-lg text-[#999999]">
-							Gain early (alpha/beta) access to start building your community on Ovation before late adopters.
+								Gain early (alpha/beta) access to start building your community
+								on Ovation before late adopters.
 							</li>
 							<li className="text-lg text-[#999999]">
 								One year business or personal Ovation+ subscription
 							</li>
-							
+
 							<li className="text-lg text-[#999999]">
 								Unique Founder badge on Ovation profile.
 							</li>
 						</ul>
 					</div>
 
-					<Image
-						src={"/assets/images/founder-nft/phone-gif.gif"}
-						alt="Illustration"
-						width={400}
-						height={400}
+					<video
+						src="/assets/images/founder-nft/phone.mp4"
+						width={550}
+						height={550}
+						autoPlay
+						loop
+						muted
+						playsInline
+						style={{ borderRadius: "20px" }}
 					/>
 				</div>
 
@@ -132,7 +138,8 @@ export default function FounderNfts() {
 						</p>
 						<ul className="gap-2 list-disc">
 							<li className="text-lg text-[#999999]">
-								Gain early beta access to start building your community on Ovation before late adopters
+								Gain early beta access to start building your community on
+								Ovation before late adopters
 							</li>
 							<li className="text-lg text-[#999999]">
 								50% more OVA points earned through the platform.
