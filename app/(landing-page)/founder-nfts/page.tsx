@@ -3,8 +3,8 @@ import Socials from "../_sections/socials";
 
 const features = [
 	{
-		title: "Earn more $OVA",
-		description: "In-Platform / Airdrops",
+		title: "Earn more OVA",
+		description: "In-platform points",
 		icon: "/assets/images/icons/f1.png",
 	},
 	{
@@ -91,19 +91,15 @@ export default function FounderNfts() {
 						</p>
 						<ul className="gap-2 list-disc">
 							<li className="text-lg text-[#999999]">
-								Receive 4 week of sponsored ads on Ovation yearly (Estimated
-								Valuation ~2200 dollars).
+							Receive 4 week of sponsored ads on Ovation yearly (Estimated Valuation ~2200 dollars)
 							</li>
 							<li className="text-lg text-[#999999]">
-								Holders are airdropped 10% of the $OVA token supply.
+							Gain early (alpha/beta) access to start building your community on Ovation before late adopters.
 							</li>
 							<li className="text-lg text-[#999999]">
-								Gain early (alpha/beta) access to start building your community
-								on Ovation before late adopters.​
+								One year business or personal Ovation+ subscription
 							</li>
-							<li className="text-lg text-[#999999]">
-								100% more $OVA earned through the platform.
-							</li>
+							
 							<li className="text-lg text-[#999999]">
 								Unique Founder badge on Ovation profile.
 							</li>
@@ -136,15 +132,13 @@ export default function FounderNfts() {
 						</p>
 						<ul className="gap-2 list-disc">
 							<li className="text-lg text-[#999999]">
-								Holders are airdropped 5% of the $OVA token supply.​
+								Gain early beta access to start building your community on Ovation before late adopters
 							</li>
 							<li className="text-lg text-[#999999]">
-								Gain early beta access to start building your community on
-								Ovation before late adopters.
+								50% more OVA points earned through the platform.
 							</li>
 							<li className="text-lg text-[#999999]">
-								50% more $OVA earned through the platform. Unique Enthusiast
-								Ovation badge on profile
+								More visibility on posts and Ovation+ subscription for a year
 							</li>
 							<li className="text-lg text-[#999999]">
 								Unique Enthusiast Ovation badge on profile
