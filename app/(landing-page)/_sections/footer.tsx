@@ -1,3 +1,5 @@
+import { DiscordLogoIcon } from "@radix-ui/react-icons";
+import { LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -49,35 +51,37 @@ export default function Footer() {
 					</p>
 
 					<div className="flex gap-3 w-fit">
-						<Link href="#">
-							<img
-								src="/assets/images/footer/footer1.png"
-								alt=""
-								className="w-8 h-8"
-							/>
+						<Link
+							href="https://www.linkedin.com/company/ovationnetwork/posts/?feedView=all"
+							target="_blank"
+						>
+							<div className="rounded-full w-8 h-8 flex justify-center items-center bg-[#272727]">
+								<LinkedinIcon size={18} color="white" />
+							</div>
 						</Link>
-						<Link href="#">
-							{" "}
-							<img
-								src="/assets/images/footer/footer2.png"
-								alt=""
-								className="w-8 h-8"
-							/>
+						<Link target="_blank" href="https://ovation.beehiiv.com/subscribe">
+							<div className="rounded-full w-8 h-8 flex justify-center items-center bg-[#272727]">
+								<DiscordLogoIcon width={18} height={18} color="white" />
+							</div>
 						</Link>
-						<Link href="#">
-							{" "}
+						<Link
+							target="_blank"
+							href="https://x.com/Ovation_Network?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+						>
 							<img
 								src="/assets/images/footer/footer3.png"
 								alt=""
 								className="w-8 h-8"
 							/>
 						</Link>
-						<Link href="#">
-							{" "}
+						<Link
+							target="_blank"
+							href="https://opensea.io/collection/founder-nfts"
+						>
 							<img
-								src="/assets/images/footer/footer4.png"
+								src="/assets/images/footer/footer5.png"
 								alt=""
-								className="w-8 h-8"
+								className="w-8 h-8 rounded-full"
 							/>
 						</Link>
 					</div>
