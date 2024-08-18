@@ -1,10 +1,12 @@
-import Image from 'next/image'
-import Socials from '../_sections/socials'
+/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
+import Socials from '../_sections/socials';
+import Link from 'next/link';
 
 const features = [
   {
-    title: 'Earn more $OVA',
-    description: 'In-Platform / Airdrops',
+    title: 'Earn more OVA',
+    description: 'In-platform points for engagement',
     icon: '/assets/images/icons/f1.png',
   },
   {
@@ -19,10 +21,10 @@ const features = [
   },
   {
     title: 'Promote Collections',
-    description: 'Sponsor personal/professional collections',
+    description: 'Sponsor your unique collections',
     icon: '/assets/images/icons/f3.png',
   },
-]
+];
 
 export default function FounderNfts() {
   return (
@@ -30,18 +32,22 @@ export default function FounderNfts() {
       <section className="container flex flex-col gap-7 items-center">
         <div className="w-fit flex items-center px-[17px] py-[7px] border border-[#828774] rounded-[30px] gap-[10px] bg-custom-gradient">
           <Image
-            src={`/assets/images/founder-nft/OpenS.png`}
+            src={'/assets/images/founder-nft/OpenS.png'}
             alt="OpenSea Logo"
             width={25}
             height={25}
           />
-
-          <p className="text-[17px] text-[#C1FE17] font-medium">
-            AVAILABLE NOW ON
-          </p>
+          <Link
+            target="_blank"
+            href="https://opensea.io/collection/founder-nfts"
+          >
+            <p className="text-[17px] text-[#C1FE17] font-medium">
+              AVAILABLE NOW ON
+            </p>
+          </Link>
 
           <Image
-            src={`/assets/images/founder-nft/arrow-right.png`}
+            src={'/assets/images/founder-nft/arrow-right.png'}
             alt="Arrow top-right"
             width={25}
             height={25}
@@ -92,41 +98,41 @@ export default function FounderNfts() {
             <ul className="gap-2 list-disc">
               <li className="text-lg text-[#999999]">
                 Receive 4 week of sponsored ads on Ovation yearly (Estimated
-                Valuation ~2200 dollars).
-              </li>
-              <li className="text-lg text-[#999999]">
-                Holders are airdropped 10% of the $OVA token supply.
+                Valuation ~2200 dollars)
               </li>
               <li className="text-lg text-[#999999]">
                 Gain early (alpha/beta) access to start building your community
-                on Ovation before late adopters.​
+                on Ovation before late adopters.
               </li>
               <li className="text-lg text-[#999999]">
-                100% more $OVA earned through the platform.
+                One year business or personal Ovation+ subscription
               </li>
+
               <li className="text-lg text-[#999999]">
                 Unique Founder badge on Ovation profile.
               </li>
             </ul>
           </div>
 
-          <Image
-            src={`/assets/images/founder-nft/phone-gif.gif`}
-            alt="Illustration"
-            width={400}
-            height={400}
+          <video
+            src="/assets/images/founder-nft/phone.mp4"
+            width={550}
+            height={550}
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{ borderRadius: '20px' }}
           />
         </div>
 
         <div className="w-[95%] sm:w-fit sm:container sm:px-0 flex flex-wrap lg:flex-nowrap items-center gap-[75px] justify-center">
-          <div className="flex max-w-[400px] h-fit">
-            <p
-              className="text-[70px] md:text-[105px] 2xl:text-[135px] font-bold text-transparent font-heading"
-              style={{ WebkitTextStroke: '3px #4D4D4D' }}
-            >
-              Coming Soon
-            </p>
-          </div>
+          <Image
+            src={'/assets/images/founder-nft/bot.png'}
+            alt="Illustration"
+            width={550}
+            height={778}
+          />
 
           <div className="flex flex-col gap-1.5 max-w-[576px]">
             <p className="text-[#CFF073]">PFP COLLECTION OF 2000</p>
@@ -138,15 +144,14 @@ export default function FounderNfts() {
             </p>
             <ul className="gap-2 list-disc">
               <li className="text-lg text-[#999999]">
-                Holders are airdropped 5% of the $OVA token supply.​
-              </li>
-              <li className="text-lg text-[#999999]">
                 Gain early beta access to start building your community on
-                Ovation before late adopters.
+                Ovation before late adopters
               </li>
               <li className="text-lg text-[#999999]">
-                50% more $OVA earned through the platform. Unique Enthusiast
-                Ovation badge on profile
+                50% more OVA points earned through the platform.
+              </li>
+              <li className="text-lg text-[#999999]">
+                More visibility on posts and Ovation+ subscription for a year
               </li>
               <li className="text-lg text-[#999999]">
                 Unique Enthusiast Ovation badge on profile
@@ -158,5 +163,5 @@ export default function FounderNfts() {
 
       <Socials />
     </main>
-  )
+  );
 }

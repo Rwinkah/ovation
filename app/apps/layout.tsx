@@ -8,7 +8,7 @@ export default function AsideLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col items-center justify-center">
+      <body className="flex flex-col items-center justify-center relative">
         <TimelineHeader />
         <main className="flex w-full other-link overflow-y-scroll max-[1440px]">
           <Aside />
